@@ -1,0 +1,81 @@
+.selectReportar{
+  margin-top: 40px;
+  margin-bottom: 5px;
+  display:inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  vertical-align:middle;
+  margin-left:20px;
+  height: 30px;
+  width: 408px;
+  border-width: 2px;
+  border-color: #1F4E79;
+}
+
+.textoReportar {
+    display:inline-block;
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    float: left;
+    padding-top: 43px;
+    text-align: left;
+    width: 310px;
+    font-size: 16px;
+}
+
+
+.botonReportar{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display:inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  vertical-align: middle;
+  margin-left: 50px;
+  width: 150px;
+  background-color: #4472C4;
+  padding: 0.3rem 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  backface-visibility: hidden;
+  border: 0.15rem solid transparent;
+  border-radius: 0.5rem;
+  border-color: #fff;
+  cursor:pointer;
+}
+
+.botonReportar:hover{
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
+.formReportar {
+  position: fixed;
+  margin-top: 2%;
+  margin-left: 17%;
+  z-index: 1;
+}
+
+.commentReportar{
+  margin-top: 40px;
+  margin-bottom: 5px;
+  display:inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  vertical-align:middle;
+  margin-left:20px;
+  height: 150px;
+  width: 500px;
+  border-width: 2px;
+  border-color: #1F4E79;
+}
+
+.reporteReportar{
+  height: 289px;
+  width: 900px;
+  margin-left: 10%;
+  padding-top: 40px;
+}
