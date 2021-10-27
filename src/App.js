@@ -9,6 +9,7 @@ import Configuracion from "./components/configuracion/Configuracion";
 import Automatizar from "./components/automatizar/Automatizar";
 import Limites from "./components/automatizar/Limites";
 import Flujos from "./components/automatizar/Flujos";
+import CreateFromTemplate from "./components/automatizar/CreateFromTemplate";
 import EditarFlujos from "./components/automatizar/EditarFlujos";
 import ConfigAutomatizar from "./components/automatizar/ConfigAutomatizar";
 import Login from "./components/login/Login";
@@ -47,6 +48,9 @@ function App() {
             </Route>
             <Route path="/flujos"> {/*AQUI EMPIEZA LA PAGINA DE MIS FLUJOS*/}
               <Flujos/>
+            </Route>
+            <Route path="/crear-desde-plantilla"> {/*AQUI EMPIEZA LA PAGINA DE MIS FLUJOS*/}
+              <CreateFromTemplate/>
             </Route>
             <Route path="/editar-flujos"> {/*AQUI EMPIEZA LA PAGINA DE EDITAR FLUJOS*/}
                 <EditarFlujos/>

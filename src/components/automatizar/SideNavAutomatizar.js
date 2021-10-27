@@ -16,6 +16,7 @@ export default function SideNavAutomatizar() {
       <li className="subTextAutomatizar"><Link to="/limites" className="link">Límites de disparo</Link></li>
       <li className="subTextAutomatizar"><Link to="/editar-flujos" className="link">Editor de flujos</Link></li>
       <li className="subTextAutomatizar"><Link to="/config-automatizar" className="link">Configuración</Link></li>
+      <li className="subTextAutomatizar"><Link to="/crear-desde-plantilla" className="link">Flujo desde plantilla</Link></li>
     <li className="sideText"><Link to="/config" className="link">Configuración</Link></li>
 
       <div>

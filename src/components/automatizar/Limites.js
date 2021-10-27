@@ -41,10 +41,12 @@ export default function Limites() {
 
       var data = JSON.stringify(reply)
         console.log('enviando datos...' + reply.min + ' ' + reply.max)
-      fetch("https://factorybibackend.herokuapp.com/formulario",
+        //http://localhost:8080
+      fetch("https://factorybibackend.herokuapp.com/limites",
       {
         headers: {
-         'Content-type': 'application/json; charset=UTF-8'
+         'Content-type': 'application/json; charset=UTF-8',
+         'Access-Control-Allow-Origin': '*'
        },
            method: "POST",
            body: data

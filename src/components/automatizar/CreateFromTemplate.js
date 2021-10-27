@@ -1,0 +1,64 @@
+import React, {Fragment, useState, useEffect} from 'react';
+import SideNavAutomatizar from './SideNavAutomatizar';
+import './flujos.css';
+
+declare var sdk: any;
+declare var myMSALObj: any;
+declare var applicationConfig: any;
+export default function CreateFromTemplate() {
+
+
+  function signIn() {
+      myMSALObj.loginPopup(applicationConfig.flowScopes).then(function (idToken) {
+          //Login Success
+          var loginbutton = document.getElementById('loginButton');
+          loginbutton.innerHTML = myMSALObj.getUser().name;
+          acquireTokenPopupAndLoadFlowsWidget();
+      }, function (error) {
+          console.log(error);
+      });
+  }
+  function acquireTokenPopupAndLoadFlowsWidget() {
+       //Call acquireTokenSilent (iframe) to obtain a token for Microsoft Flow
+       myMSALObj.acquireTokenSilent(applicationConfig.flowScopes).then(function (accessToken) {
+           console.log(accessToken);
+           var widget = sdk.renderWidget('templates', {
+               container: 'flowDiv',
+               flowsSettings: {},
+               templatesSettings: {
+                 searchTerm: 'SQL'
+               },
+               approvalCenterSettings: {},
+               widgetStyleSettings: {}
+             },error=> console.log(error));
+           widget.listen("GET_ACCESS_TOKEN", function(requestParam, widgetDoneCallback) {
+               widgetDoneCallback(null, {
+               token:  accessToken
+               });
+           });
+       }, function (error) {
+           console.log(error);
+           // Call acquireTokenPopup (popup window) in case of acquireTokenSilent failure due to consent or interaction required ONLY
+           if (error.indexOf("consent_required") !== -1 || error.indexOf("interaction_required") !== -1 || error.indexOf("login_required") !== -1) {
+               myMSALObj.acquireTokenPopup(applicationConfig.flowScopes).then(function (accessToken) {
+                 console.log(accessToken);
+               }, function (error) {
+                   console.log(error);
+               });
+           }
+       });
+   }
+
+
+
+
+  return (
+  <Fragment>
+    <SideNavAutomatizar/>
+    <script  type="text/javascript" src="https://flow.microsoft.com/Content/msflowsdk-1.1.js"></script>
+    <div id="flowDiv" className="flowContainer"></div>
+    <button type="button" className="btn" id="loginButton" onClick={signIn}>Log in</button>
+
+  </Fragment>
+  )
+}
