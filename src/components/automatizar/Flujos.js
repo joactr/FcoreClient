@@ -22,6 +22,18 @@ export default function Flujos() {
        //Call acquireTokenSilent (iframe) to obtain a token for Microsoft Flow
        myMSALObj.acquireTokenSilent(applicationConfig.flowScopes).then(function (accessToken) {
            console.log(accessToken);
+           var widget = sdk.renderWidget('flows', {
+               container: 'flowDiv',
+               flowsSettings: {},
+               templatesSettings: {},
+               approvalCenterSettings: {},
+               widgetStyleSettings: {}
+             },error=> console.log(error));
+           widget.listen("GET_ACCESS_TOKEN", function(requestParam, widgetDoneCallback) {
+               widgetDoneCallback(null, {
+               token:  accessToken
+               });
+           });
        }, function (error) {
            console.log(error);
            // Call acquireTokenPopup (popup window) in case of acquireTokenSilent failure due to consent or interaction required ONLY
@@ -34,21 +46,10 @@ export default function Flujos() {
            }
        });
    }
-  useEffect(() => {
-    // code to run after render goes here
-    var widget = sdk.renderWidget('flows', {
-        container: 'flowDiv',
-        flowsSettings: {},
-        templatesSettings: {},
-        approvalCenterSettings: {},
-        widgetStyleSettings: {}
-      },error=> console.log(error));
-    widget.listen("GET_ACCESS_TOKEN", function(requestParam, widgetDoneCallback) {
-        widgetDoneCallback(null, {
-        token:  ''
-    });
-});
-},[]);
+
+
+
+
   return (
   <Fragment>
     <SideNavAutomatizar/>

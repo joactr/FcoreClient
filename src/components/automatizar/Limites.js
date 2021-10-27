@@ -41,7 +41,7 @@ export default function Limites() {
 
       var data = JSON.stringify(reply)
         console.log('enviando datos...' + reply.min + ' ' + reply.max)
-      fetch("../../formulario",
+      fetch("https://factorybibackend.herokuapp.com/formulario",
       {
         headers: {
          'Content-type': 'application/json; charset=UTF-8'

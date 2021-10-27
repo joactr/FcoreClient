@@ -1,13 +1,13 @@
 .selectReportar{
-  margin-top: 40px;
+  margin-top: 3vh;
   margin-bottom: 5px;
   display:inline-block;
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/
   vertical-align:middle;
-  margin-left:20px;
-  height: 30px;
-  width: 408px;
+  margin-left:3vw;
+  height: 4vh;
+  width: 25vw;
   border-width: 2px;
   border-color: #1F4E79;
 }
@@ -17,10 +17,10 @@
     *display: inline;     /* for IE7*/
     zoom:1;              /* for IE7*/
     float: left;
-    padding-top: 43px;
+    padding-top: 3vh;
     text-align: left;
     width: 310px;
-    font-size: 16px;
+    font-size: 0.9vw;
 }
 
 
@@ -31,8 +31,8 @@
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/
   vertical-align: middle;
-  margin-left: 50px;
-  width: 150px;
+  margin-left: 8vw;
+  width: 8vw;
   background-color: #4472C4;
   padding: 0.3rem 1rem;
   font-family: "Poppins", sans-serif;
@@ -60,22 +60,22 @@
 }
 
 .commentReportar{
-  margin-top: 40px;
+  margin-top: 3vh;
   margin-bottom: 5px;
   display:inline-block;
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/
   vertical-align:middle;
-  margin-left:20px;
-  height: 150px;
-  width: 500px;
+  margin-left:3vw;
+  height: 20vh;
+  width: 25vw;
   border-width: 2px;
   border-color: #1F4E79;
 }
 
 .reporteReportar{
-  height: 289px;
-  width: 900px;
+  height: 33vh;
+  width: 50vw;
   margin-left: 10%;
-  padding-top: 40px;
+  padding-top: 5vh;
 }
