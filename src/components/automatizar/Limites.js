@@ -52,7 +52,6 @@ export default function Limites() {
            method: "POST",
            body: data
 
-
       }).then((response)=> {
         if(response.ok){
           if(reply.min !=='' && reply.max !==''){
