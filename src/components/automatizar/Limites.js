@@ -40,7 +40,7 @@ export default function Limites() {
       resetForm(nombre+"Form"); //LIMPIA LOS INPUTS DEL FORMULARIO INTRODUCIDO
 
       var data = JSON.stringify(reply)
-        console.log('enviando datos...' + reply.min + ' ' + reply.max)
+        console.log('enviando cambio de limite' + reply.min + ' ' + reply.max)
         //http://localhost:8080
         //https://factorybibackend.herokuapp.com
       fetch("https://factorybibackend.herokuapp.com/limites" ,
@@ -76,25 +76,25 @@ export default function Limites() {
     //PARA AÑADIR VARIABLES PONER ID AL BOTON CON NOMBRE, Y EL FORM CON ESE NOMBRE+"FORM"
     <div className="divLimite">
     <form className="formLimite" id="temperaturaForm">
-      <label className="textoLimite">Temperatura:</label>
+      <label className="textoLimite">Temperatura</label>
       <input type="number" placeholder="min" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
       <input type="number" placeholder="max" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
       <button type="button" onClick={enviarDatos} className="botonLimite" id="temperatura">Introducir</button>
     </form>
     <form className="formLimite" id="vibracionesForm">
-      <label className="textoLimite">Vibraciones:</label>
+      <label className="textoLimite">Vibraciones</label>
       <input type="number" placeholder="min" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
       <input type="number" placeholder="max" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
       <button type="button" onClick={enviarDatos} className="botonLimite" id="vibraciones">Introducir</button>
     </form>
     <form className="formLimite" id="piezasForm">
-      <label className="textoLimite">Número de piezas:</label>
+      <label className="textoLimite">Número de piezas</label>
       <input type="number" placeholder="min" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
       <input type="number" placeholder="max" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
       <button type="button" onClick={enviarDatos} className="botonLimite" id="piezas">Introducir</button>
     </form>
     <form className="formLimite" id="horasForm">
-      <label className="textoLimite">Número de horas:</label>
+      <label className="textoLimite">Número de horas</label>
       <input type="number" placeholder="min" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
       <input type="number" placeholder="max" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
       <button type="button" onClick={enviarDatos} className="botonLimite" id="horas">Introducir</button>
