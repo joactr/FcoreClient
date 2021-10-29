@@ -43,7 +43,7 @@ export default function Limites() {
         console.log('enviando datos...' + reply.min + ' ' + reply.max)
         //http://localhost:8080
         //https://factorybibackend.herokuapp.com
-      fetch("https://factorybibackend.herokuapp.com/limites",
+      fetch("https://factorybibackend.herokuapp.com/limites" ,
       {
         headers: {
          'Content-type': 'application/json; charset=UTF-8',
