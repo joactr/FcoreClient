@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import SideNavAutomatizar from './SideNavAutomatizar';
+import SideNavProduccion from '../../sideNav/SideNavProduccion';
 import './limites.css';
 
 export default function Limites() {
@@ -70,32 +70,40 @@ export default function Limites() {
     }
   }
 
+  //PARA AÑADIR VARIABLES PONER ID AL BOTON CON NOMBRE, Y EL FORM CON ESE NOMBRE+"FORM"
   return (
   <Fragment>
-    <SideNavAutomatizar/>
-    //PARA AÑADIR VARIABLES PONER ID AL BOTON CON NOMBRE, Y EL FORM CON ESE NOMBRE+"FORM"
+    <SideNavProduccion/>
     <div className="divLimite">
     <form className="formLimite" id="temperaturaForm">
       <label className="textoLimite">Temperatura</label>
+      <label className="indicador">Mayor que</label>
       <input type="number" placeholder="min" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
+      <label className="indicador">Menor que</label>
       <input type="number" placeholder="max" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
       <button type="button" onClick={enviarDatos} className="botonLimite" id="temperatura">Introducir</button>
     </form>
     <form className="formLimite" id="vibracionesForm">
       <label className="textoLimite">Vibraciones</label>
+      <label className="indicador">Mayor que</label>
       <input type="number" placeholder="min" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
+      <label className="indicador">Menor que</label>
       <input type="number" placeholder="max" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
       <button type="button" onClick={enviarDatos} className="botonLimite" id="vibraciones">Introducir</button>
     </form>
     <form className="formLimite" id="piezasForm">
       <label className="textoLimite">Número de piezas</label>
+      <label className="indicador">Mayor que</label>
       <input type="number" placeholder="min" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
+      <label className="indicador">Menor que</label>
       <input type="number" placeholder="max" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
       <button type="button" onClick={enviarDatos} className="botonLimite" id="piezas">Introducir</button>
     </form>
     <form className="formLimite" id="horasForm">
       <label className="textoLimite">Número de horas</label>
+      <label className="indicador">Mayor que</label>
       <input type="number" placeholder="min" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
+      <label className="indicador">Menor que</label>
       <input type="number" placeholder="max" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
       <button type="button" onClick={enviarDatos} className="botonLimite" id="horas">Introducir</button>
     </form>

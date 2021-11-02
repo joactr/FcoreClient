@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import SideNav from "../sideNav/SideNav";
+import SideNav from "../sideNav/SideNavProduccion";
 export default function reporte() {
 
   function urlChange(url) {
@@ -12,7 +12,7 @@ const src = "https://app.powerbi.com/view?r=eyJrIjoiNWFkZjE4MmMtNWM5ZS00NmNjLWE2
   return (
   <Fragment>
     <SideNav/>
-    <iframe className="reporte" id="templates" title="reportePowerBI" src={src} frameborder="0" allowFullScreen="true"></iframe>;
+    <iframe className="reporte" id="templates" title="reportePowerBI" src={src} frameborder="0" allowFullScreen={true}></iframe>;
     <button type="button" onClick={() => {urlChange('https://google.com');}}>Change</button>
   </Fragment>
   )

@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react';
-import SideNav from "../sideNav/SideNav";
+import SideNav from "../sideNav/SideNavProduccion";
 
-const Configuracion = () => {
+const ConfiguracionProduccion = () => {
 
     const enviarDatos = (event) => {
       window.alert("Datos enviados");
@@ -36,4 +36,4 @@ const Configuracion = () => {
     );
 }
 
-export default Configuracion;
+export default ConfiguracionProduccion;

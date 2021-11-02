@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import SideNav from "../sideNav/SideNav";
+import SideNav from "../sideNav/SideNavProduccion";
 import './reportar.css';
 
 const Reportar = () => {

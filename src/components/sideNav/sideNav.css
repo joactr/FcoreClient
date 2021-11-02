@@ -2,18 +2,38 @@
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 13%; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
+  z-index: 1000; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #fff; /* Blanco */
+  background-color: #F2F2F2; /* Blanco */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 10%;
+  list-style-type: none;
+  padding-left: 20px;
+  font-size: max(1.1vw,13px);
 }
 
-.sideText{
-  margin-top: 30px;
+.subText, .subSubText, .subTextActive, .subSubTextActive{
   text-align: left;
-  font-size: 1vw;
+  padding-right: 5px;
+  padding-top: 4px;
+  font-size: max(0.85vw,10px);
+  position: relative;
+}
+
+
+
+.subSubText{
+  padding-left: 20px;
+}
+
+.sideText, .sideTextActive{
+  margin-top: 2vh;
+  text-align: left;
+}
+
+.sideTextActive, .subTextActive, .subSubTextActive{
+  font-weight: bold;
 }
 
 .link{

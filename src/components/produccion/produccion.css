@@ -6,13 +6,28 @@
   margin-left:20px;
   height: clamp(0.1rem, 3.2vh , 5rem);
   width: 30%;
-  border-color: #1F4E79;
+  border-color: #E0E0E0;
+  background-color: #F2F2F2;
+}
+
+.selectProd {
+  display:inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  vertical-align:middle;
+  margin-left:20px;
+  height: clamp(0.1rem, 3.8vh , 5rem);
+  width: 30.8%;
+  border-color: #E0E0E0;
+  border-width: 2px;
+  background-color: #F2F2F2;
+  text-align: center;
 }
 
 .prod{
   position: relative;
   padding-left: 5%;
-  padding-top: clamp(0.1rem, 2.8vh , 10rem);
+  padding-top: clamp(0.1rem, 2vh , 10rem);
 }
 
 .textoProd {
@@ -23,7 +38,7 @@
   padding-top: 4px;
   text-align: left;
   width: 23%;
-  font-size: clamp(0.3rem, 1vw , 10rem);
+  font-size: clamp(0.4rem, 0.9vw , 10rem);
 }
 
 .divProduccion{
@@ -53,31 +68,6 @@
 
 .botonProd:hover{
   transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
-}
-
-.stopProd{
-  position: fixed;
-  right: 8%;
-  top: 45%;
-
-}
-
-.textoStopProd {
-  display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
-  vertical-align: middle;
-  font-size: 1vw;
-}
-
-.stopLogo{
-  height: 7vw;
-  cursor:pointer;
-  display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
-  vertical-align: middle;
-  margin-left: 0.5vw;
 }
 
 .divBorde{

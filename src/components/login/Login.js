@@ -13,7 +13,7 @@ function Login(){
       <input type="text" className="inputLogin"/>
       <label className="textoLogin">Contraseña:</label>
       <input type="password" className="inputLogin"/>
-      <Link to="/produccion" className="buttonLogin">Entrar</Link>
+      <Link to="/home" className="buttonLogin">Entrar</Link>
     </form>
 
     <img src={background} className="backgroundLogin" alt="backgroundLogin"/>

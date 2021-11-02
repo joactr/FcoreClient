@@ -1,109 +1,81 @@
 import React, {Fragment, useState} from 'react';
-import stop from "./Stop.png";
-import SideNav from "../sideNav/SideNav";
+import SideNavProduccion from "../sideNav/SideNavProduccion";
 import './produccion.css'
 
 const Produccion = () => {
-    const [datos, setDatos] = useState({
-        horas: '',
-        minutos: '',
-        segundos: '',
-        atributo: '',
-        valor: '',
-        comentario: ''
-    })
-    var fechabase = new Date()
-    const [startDate, setStartDate] = useState(fechabase);
-
-    const handleInputChange = (event) => {
-        setDatos({
-            ...datos,
-            [event.target.name] : event.target.value
-        })
+    const onEnterPress = (e) => {
+      /*if(e.keyCode === 13 && e.shiftKey === false) {
+        e.preventDefault();
+        window.alert(`Variable ${e.target.id} introducida con el valor: ${e.target.value}`);
+      }*/
     }
-
-    const enviarDatos = (event) => {
-      window.alert("Datos enviados");
+    const onChange = (e) => {
+      /*if(e.target.value === "SI"){
+        window.alert(`Se ha parado la producción`);
+      }else{
+        window.alert(`Se ha reanudado la producción`);
+      }*/
     }
-
-    function clicked(){
-      window.alert('Variable introducida');
-    }
-
-    function parar(){
-      window.alert('Producción parada');
-    }
-//<div className="divProduccion">
-
 
     return (
         <Fragment>
-          <SideNav/>
+          <SideNavProduccion/>
 
           <label className="title">Datos producción en curso</label>
 
           <div className="divBorde">
-            <div className="stopProd">
-              <div>
-                <img src={stop} className="stopLogo" alt="logo" onClick={parar}/>
-              </div>
-              <label className="textoStopProd">Paro Programado</label>
-            </div>
 
             <div className="prod">
                 <label className="textoProd">Número de perfiles (#)</label>
-                <input type="text" className="inputProd"/>
-                <button type="button" onClick={clicked} className="botonProd">Introducir</button>
+                <input type="text" className="inputProd" id="perfiles" onKeyDown={onEnterPress}/>
             </div>
             <div className="prod">
                 <label className="textoProd">Hora Inicio Turno (dd/mm/aaa hh:mm)</label>
-                <input type="text" className="inputProd"/>
-                <button type="button" onClick={clicked} className="botonProd">Introducir</button>
+                <input type="text" className="inputProd" id="inicio_turno" onKeyDown={onEnterPress}/>
             </div>
             <div className="prod">
                 <label className="textoProd">Hora Final turno (dd/mm/aaa hh:mm)</label>
-                <input type="text" className="inputProd"/>
-                <button type="button" onClick={clicked} className="botonProd">Introducir</button>
+                <input type="text" className="inputProd" id="final_turno" onKeyDown={onEnterPress}/>
             </div>
             <div className="prod">
                 <label className="textoProd">Artículo (#)</label>
-                <input type="text" className="inputProd"/>
-                <button type="button" onClick={clicked} className="botonProd">Introducir</button>
+                <input type="text" className="inputProd" id="articulo" onKeyDown={onEnterPress}/>
             </div>
             <div className="prod">
                 <label className="textoProd">Orden de Fabr. (#)</label>
-                <input type="text" className="inputProd"/>
-                <button type="button" onClick={clicked} className="botonProd">Introducir</button>
+                <input type="text" className="inputProd" id="orden" onKeyDown={onEnterPress}/>
             </div>
             <div className="prod">
                 <label className="textoProd">Tiempo de ciclo (s.)</label>
-                <input type="text" className="inputProd"/>
-                <button type="button" onClick={clicked} className="botonProd">Introducir</button>
+                <input type="text" className="inputProd" id="tiempo_ciclo" onKeyDown={onEnterPress}/>
             </div>
             <div className="prod">
                 <label className="textoProd">Ratio de Merma (%)</label>
-                <input type="text" className="inputProd"/>
-                <button type="button" onClick={clicked} className="botonProd">Introducir</button>
+                <input type="text" className="inputProd" id="ratio_merma" onKeyDown={onEnterPress}/>
             </div>
             <div className="prod">
                 <label className="textoProd">Tiempo de Microparo (s.)</label>
-                <input type="text" className="inputProd"/>
-                <button type="button" onClick={clicked} className="botonProd">Introducir</button>
+                <input type="text" className="inputProd" id="tiempo_microparo" onKeyDown={onEnterPress}/>
             </div>
             <div className="prod">
                 <label className="textoProd">Tiempo de avería (s.)</label>
-                <input type="text" className="inputProd"/>
-                <button type="button" onClick={clicked} className="botonProd">Introducir</button>
+                <input type="text" className="inputProd" id="tiempo_averia" onKeyDown={onEnterPress}/>
             </div>
             <div className="prod">
                 <label className="textoProd">Tiempo de Falta Material (s.)</label>
-                <input type="text" className="inputProd"/>
-                <button type="button" onClick={clicked} className="botonProd">Introducir</button>
+                <input type="text" className="inputProd" id="tiempo_falta_material" onKeyDown={onEnterPress}/>
             </div>
             <div className="prod">
                 <label className="textoProd">Tiempo de Paro 1 (s.)</label>
-                <input type="text" className="inputProd"/>
-                <button type="button" onClick={clicked} className="botonProd">Introducir</button>
+                <input type="text" className="inputProd" id="tiempo_paro" onKeyDown={onEnterPress}/>
+            </div>
+            <div className="prod">
+                <label className="textoProd">Pausa producción</label>
+                <select className="selectReportar" className="selectProd" onChange={onChange} defaultValue={''} >
+                  <option selected disabled hidden></option>
+                  <option value="SI">SI</option>
+                  <option value="NO">NO</option>
+                </select>
             </div>
 
 

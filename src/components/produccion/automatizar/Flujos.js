@@ -1,11 +1,11 @@
 import React, {Fragment, useState, useEffect} from 'react';
-import SideNavAutomatizar from './SideNavAutomatizar';
+import SideNavProduccion from '../../sideNav/SideNavProduccion';
 import './flujos.css';
 
 declare var sdk: any;
 declare var myMSALObj: any;
 declare var applicationConfig: any;
-export default function CreateFromTemplate() {
+export default function Flujos() {
 
 
   function signIn() {
@@ -22,12 +22,10 @@ export default function CreateFromTemplate() {
        //Call acquireTokenSilent (iframe) to obtain a token for Microsoft Flow
        myMSALObj.acquireTokenSilent(applicationConfig.flowScopes).then(function (accessToken) {
            console.log(accessToken);
-           var widget = sdk.renderWidget('templates', {
+           var widget = sdk.renderWidget('flows', {
                container: 'flowDiv',
                flowsSettings: {},
-               templatesSettings: {
-                 searchTerm: 'SQL'
-               },
+               templatesSettings: {},
                approvalCenterSettings: {},
                widgetStyleSettings: {}
              },error=> console.log(error));
@@ -54,7 +52,7 @@ export default function CreateFromTemplate() {
 
   return (
   <Fragment>
-    <SideNavAutomatizar/>
+    <SideNavProduccion/>
     <script  type="text/javascript" src="https://flow.microsoft.com/Content/msflowsdk-1.1.js"></script>
     <div id="flowDiv" className="flowContainer"></div>
     <button type="button" className="btn" id="loginButton" onClick={signIn}>Log in</button>

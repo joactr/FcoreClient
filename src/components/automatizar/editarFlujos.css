@@ -1,7 +1,0 @@
-.powAuto{
-  position: fixed;
-  width: 87%;
-  height: auto;
-  z-index: 1000;
-  margin-left: max(150px, 13%);
-}
