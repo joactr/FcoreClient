@@ -9,6 +9,11 @@
   padding-top: 40px;
 }
 
+.indicador{
+  padding-top: 5px;
+  color: #F2F2F2;
+}
+
 .flow{
     position: fixed;
     margin-left: 13%;

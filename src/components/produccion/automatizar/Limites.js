@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import SideNavProduccion from '../../sideNav/SideNavProduccion';
+import SideNav from '../../sideNav/SideNav';
 import './limites.css';
 
 export default function Limites() {
@@ -73,7 +73,7 @@ export default function Limites() {
   //PARA AÑADIR VARIABLES PONER ID AL BOTON CON NOMBRE, Y EL FORM CON ESE NOMBRE+"FORM"
   return (
   <Fragment>
-    <SideNavProduccion/>
+    <SideNav/>
     <div className="divLimite">
     <form className="formLimite" id="temperaturaForm">
       <label className="textoLimite">Temperatura</label>

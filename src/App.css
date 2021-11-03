@@ -4,11 +4,12 @@
   color: black;
 }
 
-.App-logo {
-  width: 13%;
+.homeLogo {
+  width: 40%;
   position: fixed;
-  bottom: 0;
+  padding-top: 12%;
   margin-bottom: 15px;
+  padding-left: 30%
 }
 
 .App-body {
@@ -23,7 +24,7 @@
   position: fixed;
   margin-left: 14%;
   width: 86%;
-  height: 96%;
+  height: calc(100% - 100px);
   z-index: 1;
 }
 

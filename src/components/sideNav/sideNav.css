@@ -10,7 +10,7 @@
   padding-top: 10%;
   list-style-type: none;
   padding-left: 20px;
-  font-size: max(1.1vw,13px);
+  font-size: max(1.1vw,1rem);
 }
 
 .subText, .subSubText, .subTextActive, .subSubTextActive{
@@ -21,7 +21,12 @@
   position: relative;
 }
 
-
+.App-logo {
+  width: 11.5%;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 15px;
+}
 
 .subSubText{
   padding-left: 20px;

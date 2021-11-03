@@ -1,28 +1,25 @@
 import React, {Fragment, useState} from 'react';
-import SideNavProduccion from "../sideNav/SideNavProduccion";
+import SideNav from '../sideNav/SideNav';
 import './produccion.css'
 
 const Produccion = () => {
     const onEnterPress = (e) => {
-      /*if(e.keyCode === 13 && e.shiftKey === false) {
+      if(e.keyCode === 13 && e.shiftKey === false) {
         e.preventDefault();
         window.alert(`Variable ${e.target.id} introducida con el valor: ${e.target.value}`);
-      }*/
+      }
     }
     const onChange = (e) => {
-      /*if(e.target.value === "SI"){
+      if(e.target.value === "SI"){
         window.alert(`Se ha parado la producción`);
       }else{
         window.alert(`Se ha reanudado la producción`);
-      }*/
+      }
     }
 
     return (
         <Fragment>
-          <SideNavProduccion/>
-
-          <label className="title">Datos producción en curso</label>
-
+          <SideNav/>
           <div className="divBorde">
 
             <div className="prod">

@@ -1,45 +1,35 @@
-.inputProd {
+.inputMant {
   display:inline-block;
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/
   vertical-align:middle;
-  margin-left:20px;
   height: clamp(0.1rem, 3.2vh , 5rem);
-  width: 30%;
+  width: clamp(2px, 15vw , 350px);
   border-color: #E0E0E0;
   background-color: #F2F2F2;
 }
 
-.selectProd {
-  display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
-  vertical-align:middle;
-  margin-left:20px;
-  height: clamp(0.1rem, 3.8vh , 5rem);
-  width: 30.8%;
-  border-color: #E0E0E0;
-  border-width: 2px;
-  background-color: #F2F2F2;
-  text-align: center;
-}
-
-.prod{
+.divMant{
+  z-index: 1;
   position: relative;
   padding-left: 5%;
   padding-top: clamp(0.1rem, 2vh , 10rem);
 }
 
-.textoProd {
+.textoMant,.textoDer {
   display:inline-block;
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/
-  float: left;
   padding-top: 7px;
   text-align: left;
   width: 23%;
   font-size: clamp(0.7rem, 0.8vw , 10rem);
 }
+
+.textoDer{
+  margin-left: 5%;
+}
+
 
 .divProduccion{
   position: relative;
@@ -82,11 +72,12 @@
   height: 80%;
 }
 
-.title{
+.fotoMaquina{
   position: fixed;
-  font-size: clamp(0.3rem, 1.5vw , 10rem);
-  z-index: 50;
-  margin-top: 2%;
-  margin-left: 18%;
-  font-weight: bold;
+  right: 0;
+  bottom: 0;
+  width: min(35%,500px);
+  margin-bottom: 20vh;
+  margin-right: 10vw;
+
 }

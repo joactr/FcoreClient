@@ -1,5 +1,5 @@
 import React, {Fragment, useState, useEffect} from 'react';
-import SideNavProduccion from '../../sideNav/SideNavProduccion';
+import SideNav from '../../sideNav/SideNav';
 import './flujos.css';
 
 declare var sdk: any;
@@ -52,10 +52,10 @@ export default function Flujos() {
 
   return (
   <Fragment>
-    <SideNavProduccion/>
+    <SideNav/>
     <script  type="text/javascript" src="https://flow.microsoft.com/Content/msflowsdk-1.1.js"></script>
     <div id="flowDiv" className="flowContainer"></div>
-    <button type="button" className="btn" id="loginButton" onClick={signIn}>Log in</button>
+    <button type="button" className="btn" id="loginButton" onClick={signIn}>Entrar con Microsoft</button>
 
   </Fragment>
   )

@@ -9,7 +9,8 @@
   height: 4vh;
   width: 25vw;
   border-width: 2px;
-  border-color: #1F4E79;
+  border-color: #E0E0E0;
+  background-color: #F2F2F2;
 }
 
 .textoReportar {
@@ -17,10 +18,10 @@
     *display: inline;     /* for IE7*/
     zoom:1;              /* for IE7*/
     float: left;
-    padding-top: 3vh;
+    padding-top: 3.55vh;
     text-align: left;
     width: 310px;
-    font-size: 0.9vw;
+    font-size: max(0.8rem,0.8vw);
 }
 
 
@@ -31,21 +32,20 @@
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/
   vertical-align: middle;
-  margin-left: 8vw;
+  margin-left: 2vw;
   width: 8vw;
-  background-color: #4472C4;
   padding: 0.3rem 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: 550;
   font-size: 12px;
   text-align: center;
   text-decoration: none;
-  color: #fff;
   backface-visibility: hidden;
   border: 0.15rem solid transparent;
   border-radius: 0.5rem;
-  border-color: #fff;
+  border-color: black;
   cursor:pointer;
+
 }
 
 .botonReportar:hover{
@@ -67,10 +67,11 @@
   zoom:1;              /* for IE7*/
   vertical-align:middle;
   margin-left:3vw;
-  height: 20vh;
+  height: 15vh;
   width: 25vw;
   border-width: 2px;
-  border-color: #1F4E79;
+  border-color: #E0E0E0;
+  background-color: #F2F2F2;
 }
 
 .reporteReportar{

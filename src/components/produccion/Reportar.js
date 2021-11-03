@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import SideNav from "../sideNav/SideNavProduccion";
+import SideNav from '../sideNav/SideNav';
 import './reportar.css';
 
 const Reportar = () => {
@@ -32,6 +32,14 @@ const Reportar = () => {
           <SideNav/>
           <form className="formReportar" onSubmit={enviarDatos}>
               <div>
+                <label className="textoReportar">Línea:</label>
+                <select className="selectReportar" >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div>
                 <label className="textoReportar">Selección incidencia (dd/mm/aaaa hh:mm):</label>
                 <select className="selectReportar" >
                   <option value="03/10/2021 13:43">03/10/2021 13:43</option>
@@ -54,6 +62,8 @@ const Reportar = () => {
                   <option value="01/10/2021 11:01">09/08/2021 10:41</option>
                 </select>
               </div>
+              <iframe className="reporteReportar" id="reporteReportar" title="reporteReportar" src="https://app.powerbi.com/view?r=eyJrIjoiMTBkZmRhNzUtYjgwYy00OTBjLTg3MzMtNzM1OWI0NWY2MDA4IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9" frameBorder="0" allowFullScreen={true}></iframe>
+
               <div>
                 <label className="textoReportar">Etiquetar incidencia:</label>
                 <select className="selectReportar">
@@ -68,9 +78,6 @@ const Reportar = () => {
                 <label className="textoReportar">Añadir comentario:</label>
                 <textarea className="commentReportar"/>
                 <button type="submit" className="botonReportar">Enviar</button>
-              </div>
-              <div>
-              <iframe className="reporteReportar" id="reporteReportar" title="reporteReportar" src="https://app.powerbi.com/view?r=eyJrIjoiMTBkZmRhNzUtYjgwYy00OTBjLTg3MzMtNzM1OWI0NWY2MDA4IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9" frameBorder="0" allowFullScreen={true}></iframe>
               </div>
           </form>
         </Fragment>
