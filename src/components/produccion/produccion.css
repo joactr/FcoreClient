@@ -1,23 +1,20 @@
 .inputProd {
-  display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
-  vertical-align:middle;
-  margin-left:20px;
+  display:table;
+  margin-left:10%;
   height: clamp(0.1rem, 3.2vh , 5rem);
-  width: 30%;
+  width: 22.4vw;
+
+
   border-color: #E0E0E0;
   background-color: #F2F2F2;
 }
 
 .selectProd {
-  display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
+  display:table;
   vertical-align:middle;
-  margin-left:20px;
+
   height: clamp(0.1rem, 3.8vh , 5rem);
-  width: 30.8%;
+  width: 23vw;
   border-color: #E0E0E0;
   border-width: 2px;
   background-color: #F2F2F2;
@@ -31,43 +28,18 @@
 }
 
 .textoProd {
-  display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
+  max-width: 350px;
+  width: auto;
+  display: table-caption;
   float: left;
-  padding-top: 7px;
+  padding-top: 6px;
   text-align: left;
-  width: 23%;
-  font-size: clamp(0.7rem, 0.8vw , 10rem);
+  width: 300px;
 }
 
 .divProduccion{
   position: relative;
   padding-top: 6%;
-}
-
-.botonProd{
-  display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
-  vertical-align: middle;
-  margin-left: clamp(0.1rem, 4vh , 10rem);
-  width: 10%;
-  height: clamp(0.1rem, 4vh , 5rem);
-  background-color: #4472C4;
-  font-family: "calibri";
-  font-size: clamp(0.2rem, 1vw , 10rem);
-  text-align: center;
-  color: #fff;
-  backface-visibility: hidden;
-  border: 0.15rem solid transparent;
-  border-radius: 0.5rem;
-  border-color: #fff;
-  cursor:pointer;
-}
-
-.botonProd:hover{
-  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }
 
 .divBorde{
@@ -80,13 +52,4 @@
   margin-top: 5%;
   width: 82%;
   height: 80%;
-}
-
-.title{
-  position: fixed;
-  font-size: clamp(0.3rem, 1.5vw , 10rem);
-  z-index: 50;
-  margin-top: 2%;
-  margin-left: 18%;
-  font-weight: bold;
 }

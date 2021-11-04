@@ -10,14 +10,14 @@
   padding-top: 10%;
   list-style-type: none;
   padding-left: 20px;
-  font-size: max(1.1vw,1rem);
+  font-size: 20px;
 }
 
 .subText, .subSubText, .subTextActive, .subSubTextActive{
   text-align: left;
   padding-right: 5px;
   padding-top: 4px;
-  font-size: max(0.85vw,10px);
+  font-size: 15px;
   position: relative;
 }
 

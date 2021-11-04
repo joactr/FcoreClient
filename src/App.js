@@ -28,11 +28,7 @@ function App() {
             <Route path="/produccion/informes" component={Informes}/>
               <Route path="/produccion/automatizar/limites" component={Limites}/> {/*AQUI EMPIEZA LA PAGINA DE AUTOMATIZAR*/}
               <Route path="/produccion/automatizar/flujos" component={Flujos}/>
-            <Route path="/produccion/config">
-              <div className="divProduccion">
-                <ConfiguracionProduccion/>
-              </div>
-            </Route>
+            <Route path="/produccion/config" component={ConfiguracionProduccion}/>
 
             <Route path="/mantenimiento/parametros" component={Parametros}/>
 

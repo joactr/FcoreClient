@@ -1,50 +1,32 @@
 .divLimite{
   position: fixed;
   padding-top: 2%;
-  margin-left: 17%;
+  margin-left: 20%;
   z-index: 10000;
 }
 
 .formLimite{
-  padding-top: 40px;
+  margin-top: 2vh;
 }
 
-.indicador{
-  padding-top: 5px;
-  color: #F2F2F2;
-}
-
-.flow{
-    position: fixed;
-    margin-left: 13%;
-    width: 87%;
-    height: 96%;
-    z-index: 1;
+.inputLimiteMin,.inputLimiteMax{
+  display:inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  vertical-align:middle;
+  height: 23px;
+  width: 150px;
+  border-color: #E2E2E2;
+  background-color: #F2F2F2;
 }
 
 .inputLimiteMin{
-  margin-top: 5px;
-  margin-bottom: 5px;
-  display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
-  vertical-align:middle;
   margin-left:20px;
-  height: 23px;
-  width: 150px;
-  border-color: #1F4E79;
+
 }
 
 .inputLimiteMax{
-  margin-top: 5px;
-  margin-bottom: 5px;
-  display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
-  vertical-align:middle;
-  height: 23px;
-  width: 150px;
-  border-color: #1F4E79;
+  margin-left: 40px;
 }
 
 .textoLimite{
@@ -52,33 +34,8 @@
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/
   float: left;
-  padding-top: 10px;
+  padding-top: 5px;
   text-align: left;
-  width: 140px;
+  width: 300px;
   font-size: 16px;
-}
-
-.botonLimite{
-  margin-bottom: 5px;
-  display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
-  vertical-align: middle;
-  margin-left: 50px;
-  width: 130px;
-  height: 33px;
-  background-color: #4472C4;
-  font-family: "calibri";
-  font-size: 16px;
-  text-align: center;
-  color: #fff;
-  backface-visibility: hidden;
-  border: 0.15rem solid transparent;
-  border-radius: 0.5rem;
-  border-color: #fff;
-  cursor:pointer;
-  }
-
-.botonLimite:hover{
-  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }

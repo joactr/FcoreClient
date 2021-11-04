@@ -21,7 +21,6 @@
     padding-top: 3.55vh;
     text-align: left;
     width: 310px;
-    font-size: max(0.8rem,0.8vw);
 }
 
 
@@ -35,7 +34,6 @@
   margin-left: 2vw;
   width: 8vw;
   padding: 0.3rem 1rem;
-  font-family: "Poppins", sans-serif;
   font-weight: 550;
   font-size: 12px;
   text-align: center;
