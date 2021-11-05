@@ -5,6 +5,8 @@
   vertical-align:middle;
   height: clamp(0.1rem, 3.2vh , 5rem);
   width: clamp(2px, 15vw , 350px);
+  border-width: 2px;
+  border-style: solid;
   border-color: #E0E0E0;
   background-color: #F2F2F2;
 }

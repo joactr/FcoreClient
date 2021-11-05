@@ -16,7 +16,9 @@
   vertical-align:middle;
   height: 23px;
   width: 150px;
-  border-color: #E2E2E2;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #E0E0E0;
   background-color: #F2F2F2;
 }
 

@@ -6,11 +6,11 @@
 }
 
 .homeLogo {
-  width: 40%;
+  width: 30%;
   position: fixed;
-  padding-top: 12%;
+  padding-top: 13%;
   margin-bottom: 15px;
-  padding-left: 30%
+  padding-left: 33%
 }
 
 .App-body {
@@ -22,11 +22,10 @@
 
 }
 
-.reporte{
+.fotoReporte{
   position: fixed;
   margin-left: 14%;
-  width: 86%;
-  height: calc(100% - 100px);
+  width: calc(100% - 40px);
   z-index: 1;
 }
 

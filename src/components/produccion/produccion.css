@@ -3,8 +3,7 @@
   margin-left:10%;
   height: clamp(0.1rem, 3.2vh , 5rem);
   width: 22.4vw;
-
-
+  border-style: solid;
   border-color: #E0E0E0;
   background-color: #F2F2F2;
 }
@@ -14,9 +13,10 @@
   vertical-align:middle;
 
   height: clamp(0.1rem, 3.8vh , 5rem);
-  width: 23vw;
-  border-color: #E0E0E0;
+  width: 22.93vw;
   border-width: 2px;
+  border-style: solid;
+  border-color: #E0E0E0;
   background-color: #F2F2F2;
   text-align: center;
 }

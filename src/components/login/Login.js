@@ -1,6 +1,9 @@
 import React, {Fragment, useState} from 'react';
 import background from "./backgroundLogin.png";
 import logo from "./logoLogin.png";
+import logoGeneralitat from "./logoGeneralitat.png";
+import logoUE from "./logoUE.png";
+import logoIVACE from "./logoIVACE.png";
 import './login.css'
 import {Link} from 'react-router-dom';
 function Login(){
@@ -20,6 +23,13 @@ function Login(){
     <div className="divisor"><img src={logo} className="logoLogin" alt="logo"/>
     <label className="descripcion">Visualiza, Controla  y Automatiza cualquier Proceso de tu Fábrica</label></div>
     <footer className="footerLogin">Copyright © 2021 Enira Engineering</footer>
+    <footer className="footerBlanco">
+      <div className="divText"><label className="footerBlancoText" >Proyecto innovador</label></div>
+      <img src={logoIVACE} className="logoIVACE" alt="logoIVACE"/>
+      <img src={logoGeneralitat} className="logoGeneralitat" alt="logoGeneralitat"/>
+      <img src={logoUE} className="logoUE" alt="logoUE"/>
+    </footer>
+
   </Fragment>
   )
 

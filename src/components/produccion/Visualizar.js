@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import SideNav from '../sideNav/SideNav';
-import imagen from './reporte.png';
+import './visualizar.css'
 export default function reporte() {
 
   function urlChange(url) {
@@ -9,18 +9,18 @@ export default function reporte() {
 }
 //
 const src = "https://app.powerbi.com/view?r=eyJrIjoiNWFkZjE4MmMtNWM5ZS00NmNjLWE2YTAtYjQ0MWJlNjZmMmNjIiwidCI6ImJlNDY1NWRmLWFjNzMtNDAxZi1hN2FlLTE5OGMzYjcyZDBjNiIsImMiOjh9&pageName=ReportSection"
-/*return (
+return (
 <Fragment>
   <SideNav/>
+  <div className="divReporte">
+    <label className="textoReporteBold">Línea perfiladora 1</label>
+    <label className="textoReporte">Línea perfiladora 2</label>
+    <label className="textoReporte">Línea perfiladora 3</label>
+
+  </div>
   <iframe className="reporte" id="templates" title="reportePowerBI" src={src} frameborder="0" allowFullScreen={true}></iframe>;
   <button type="button" onClick={() => {urlChange('https://google.com');}}>Change</button>
 </Fragment>
-)*/
-
-return(
-<Fragment>
-  <SideNav/>
-  <img src={imagen} alt="informe" className="reporte" height="auto"/>
-</Fragment>
 )
+
 }

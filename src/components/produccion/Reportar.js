@@ -62,7 +62,6 @@ const Reportar = () => {
                   <option value="01/10/2021 11:01">09/08/2021 10:41</option>
                 </select>
               </div>
-              <iframe className="reporteReportar" id="reporteReportar" title="reporteReportar" src="https://app.powerbi.com/view?r=eyJrIjoiMTBkZmRhNzUtYjgwYy00OTBjLTg3MzMtNzM1OWI0NWY2MDA4IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9" frameBorder="0" allowFullScreen={true}></iframe>
 
               <div>
                 <label className="textoReportar">Etiquetar incidencia:</label>
@@ -79,7 +78,10 @@ const Reportar = () => {
                 <textarea className="commentReportar"/>
                 <button type="submit" className="botonReportar">Enviar</button>
               </div>
+              <iframe className="reporteReportar" id="reporteReportar" title="reporteReportar" src="https://app.powerbi.com/view?r=eyJrIjoiMTBkZmRhNzUtYjgwYy00OTBjLTg3MzMtNzM1OWI0NWY2MDA4IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9" frameBorder="0" allowFullScreen={true}></iframe>
+
           </form>
+
         </Fragment>
     );
 }

@@ -64,7 +64,7 @@
 .footerLogin{
   position:fixed;
   left:0px;
-  bottom:0px;
+  bottom: 70px;
   height:40px;
   width:100%;
   background-color: #1f3864ff;
@@ -72,6 +72,48 @@
   text-align: center;
   padding-top: 10px;
   color: #fff;
+}
+
+.footerBlanco{
+  display: inline-block;
+  position:fixed;
+  left:0;
+  bottom: 0;
+  height:70px;
+  width:100%;
+  background-color: white;
+  z-index: 200;
+  text-align: right;
+  padding-top: 10px;
+  color: #fff;
+}
+.divText{
+  position: fixed;
+  right: 0;
+  padding-right: 460px;
+  padding-top: 30px;
+}
+.footerBlancoText{
+  color: black;
+}
+
+.logoIVACE, .logoUE, .logoGeneralitat{
+  position: relative;
+  z-index: 200;
+}
+
+.logoUE{
+  width: 210px;
+  margin-bottom: 15px;
+}
+
+.logoIVACE{
+  width: 120px;
+  margin-bottom: 4px;
+}
+
+.logoGeneralitat{
+  width: 120px;
 }
 
 .divisor{

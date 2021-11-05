@@ -1,6 +1,7 @@
 import React, {Fragment, useState, useEffect} from 'react';
 import SideNav from '../../sideNav/SideNav';
 import './flujos.css';
+import  logo from './logoPowAuto.png'
 
 declare var sdk: any;
 declare var myMSALObj: any;
@@ -55,7 +56,8 @@ export default function Flujos() {
     <SideNav/>
     <script  type="text/javascript" src="https://flow.microsoft.com/Content/msflowsdk-1.1.js"></script>
     <div id="flowDiv" className="flowContainer"></div>
-    <button type="button" className="btn" id="loginButton" onClick={signIn}>Entrar con Microsoft</button>
+    <img src={logo} className="logoPowAuto"/>
+    <button type="button" className="btn" id="loginButton" onClick={signIn}>Login</button>
 
   </Fragment>
   )

@@ -18,11 +18,12 @@
   padding-right: 5px;
   padding-top: 4px;
   font-size: 15px;
+  font-weight: 500;
   position: relative;
 }
 
 .App-logo {
-  width: 11.5%;
+  width: 10%;
   position: fixed;
   bottom: 0;
   margin-bottom: 15px;

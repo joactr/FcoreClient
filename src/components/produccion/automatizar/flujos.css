@@ -9,17 +9,28 @@
   z-index: 34234234;
 }
 
+.logoPowAuto{
+  margin-left: 30%;
+  margin-top: 15%;
+  width: 50%;
+
+}
+
 .btn{
   position: fixed;
   z-index: 1;
-  width: 150px;
-  height: 60px;
+  width: 90px;
   top: 0;
   left: 0;
-  font-size: 18px;
+  font-size: 12px;
   margin-left: 55%;
-  margin-top: 20%;
-  border: 0.15rem solid transparent;
+  margin-top: 25%;
+  padding:  0.3rem;
+  background: transparent;
+  text-align: center;
+  text-decoration: none;
+  backface-visibility: hidden;
+  border: 0.12rem solid transparent;
   border-radius: 0.5rem;
   border-color: black;
   cursor:pointer;
