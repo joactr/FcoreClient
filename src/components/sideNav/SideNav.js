@@ -1,6 +1,6 @@
 import React, {Fragment, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../../logo.png'
+import logo from './logo.png'
 import './sideNav.css'
 
 export default function SideNav() {
