@@ -64,7 +64,7 @@
 .footerLogin{
   position:fixed;
   left:0px;
-  bottom: 70px;
+  bottom: 100px;
   height:40px;
   width:100%;
   background-color: #1f3864ff;
@@ -79,7 +79,7 @@
   position:fixed;
   left:0;
   bottom: 0;
-  height:70px;
+  height:100px;
   width:100%;
   background-color: white;
   z-index: 200;
@@ -90,8 +90,8 @@
 .divText{
   position: fixed;
   right: 0;
-  padding-right: 460px;
-  padding-top: 30px;
+  padding-right: 680px;
+  padding-top: 60px;
 }
 .footerBlancoText{
   color: black;
@@ -103,17 +103,21 @@
 }
 
 .logoUE{
-  width: 210px;
-  margin-bottom: 15px;
+  width: 320px;
+  margin-bottom: 10px;
+  flex: 1;
 }
 
 .logoIVACE{
-  width: 120px;
-  margin-bottom: 4px;
+  width: 145px;
+  margin-bottom: 10px;
+  flex: 1;
 }
 
 .logoGeneralitat{
-  width: 120px;
+  width: 195px;
+  margin-bottom: 8px;
+  flex: 1;
 }
 
 .divisor{

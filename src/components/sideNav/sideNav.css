@@ -27,6 +27,8 @@
   position: fixed;
   bottom: 0;
   margin-bottom: 15px;
+  resizeMode: 'contain';
+  flex: 1;
 }
 
 .subSubText{

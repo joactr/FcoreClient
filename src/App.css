@@ -10,7 +10,9 @@
   position: fixed;
   padding-top: 13%;
   margin-bottom: 15px;
-  padding-left: 33%
+  margin-left: 33%;
+  resizeMode: 'contain';
+  flex: 1;
 }
 
 .App-body {

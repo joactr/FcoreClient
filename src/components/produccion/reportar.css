@@ -25,8 +25,7 @@
 
 
 .botonReportar{
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10vh;
   display:inline-block;
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/

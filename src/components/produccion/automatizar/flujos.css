@@ -10,10 +10,10 @@
 }
 
 .logoPowAuto{
-  margin-left: 30%;
-  margin-top: 15%;
-  width: 50%;
-
+  margin-left: 37%;
+  margin-top: 17%;
+  width: 38%;
+  resizeMode: 'center';
 }
 
 .btn{

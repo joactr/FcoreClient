@@ -25,9 +25,9 @@ function Login(){
     <footer className="footerLogin">Copyright © 2021 Enira Engineering</footer>
     <footer className="footerBlanco">
       <div className="divText"><label className="footerBlancoText" >Proyecto innovador</label></div>
-      <img src={logoIVACE} className="logoIVACE" alt="logoIVACE"/>
-      <img src={logoGeneralitat} className="logoGeneralitat" alt="logoGeneralitat"/>
-      <img src={logoUE} className="logoUE" alt="logoUE"/>
+      <img src={logoIVACE} className="logoIVACE" alt="logoIVACE" resizeMode="contain"/>
+      <img src={logoGeneralitat} className="logoGeneralitat" alt="logoGeneralitat" resizeMode="contain"/>
+      <img src={logoUE} className="logoUE" alt="logoUE" resizeMode="contain"/>
     </footer>
 
   </Fragment>
