@@ -2,7 +2,9 @@ import "./App.css";
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Reportar from "./components/produccion/Reportar";
 import Visualizar from "./components/produccion/Visualizar";
-import Informes from "./components/produccion/Informes";
+import Informes from "./components/produccion/analisis/Informes";
+import CausaRaiz from "./components/produccion/analisis/CausaRaiz";
+import MachineLearning from "./components/produccion/analisis/MachineLearning";
 import Produccion from "./components/produccion/Produccion";
 import ConfiguracionProduccion from "./components/produccion/Configuracion";
 import Limites from "./components/produccion/automatizar/Limites";
@@ -10,6 +12,8 @@ import Flujos from "./components/produccion/automatizar/Flujos";
 import Login from "./components/login/Login";
 import Home from "./components/Home";
 import Parametros from "./components/mantenimiento/Parametros";
+import MonitorizacionMant from "./components/mantenimiento/MonitorizacionMant";
+
 
 function App() {
   return (
@@ -25,12 +29,18 @@ function App() {
             <Route path="/produccion/parametros-produccion" component={Produccion}/>
             <Route path="/produccion/reportar" component={Reportar}/>
             <Route path="/produccion/visualizar" component={Visualizar}/>
-            <Route path="/produccion/informes" component={Informes}/>
+
+              <Route path="/produccion/analisis/informes" component={Informes}/>
+              <Route path="/produccion/analisis/causa-raiz" component={CausaRaiz}/>
+              <Route path="/produccion/analisis/machine-learning" component={MachineLearning}/>
+
+
               <Route path="/produccion/automatizar/limites" component={Limites}/> {/*AQUI EMPIEZA LA PAGINA DE AUTOMATIZAR*/}
               <Route path="/produccion/automatizar/flujos" component={Flujos}/>
             <Route path="/produccion/config" component={ConfiguracionProduccion}/>
 
             <Route path="/mantenimiento/parametros" component={Parametros}/>
+            <Route path="/mantenimiento/monitorizacion" component={MonitorizacionMant}/>
 
 
           </Switch>

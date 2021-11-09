@@ -1,0 +1,84 @@
+input{
+  display:table;
+  height: clamp(0.1rem, 1.8vh , 5rem);
+  margin-top: 0.7vh;
+  width: 13vw;
+  border-style: solid;
+  border-color: #E0E0E0;
+  background-color: #F2F2F2;
+}
+
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+
+.textoSelect{
+  font-size: 18px;
+}
+
+.selector{
+  margin-left: 20%;
+  margin-top: 1.5%
+}
+
+select{
+  height: clamp(0.1rem, 3.8vh , 5rem);
+  width: 22.93vw;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #E0E0E0;
+  background-color: #F2F2F2;
+  text-align: center;
+  margin-left: 5%;
+
+}
+
+.titulo {
+  font-size: 26px;
+  padding-left: 20%;
+}
+
+.columna1, .columna2, .columna3, .columna4, .columna5{
+  margin-top: 2%;
+}
+
+.columna1{
+  position: fixed;
+  margin-left: 16%;
+}
+
+.columna2{
+  position: fixed;
+  margin-left: 32%;
+}
+
+.primero2W{
+  margin-top: 7.2vh;
+}
+
+.columna3{
+  position: fixed;
+  margin-left: 48%;
+}
+
+.primero3W{
+  margin-top: 13.7vh;
+}
+
+.columna4{
+  position: fixed;
+  margin-left: 64%;
+}
+
+.primero4W{
+  margin-top: 20.2vh;
+}
+
+.columna5{
+  position: fixed;
+  margin-left: 80%;
+}
+
+.primero5W{
+  margin-top: 26.7vh;
+}
