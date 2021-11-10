@@ -1,11 +1,13 @@
 import React, {Fragment, useState} from 'react';
 import SideNav from '../../sideNav/SideNav';
+import './machineLearning.css'
+import grafico from './graficaML.png'
 
 const MachineLearning = () => {
     const onEnterPress = (e) => {
       if(e.keyCode === 13 && e.shiftKey === false) {
         e.preventDefault();
-        window.alert(`Variable ${e.target.id} introducida con el valor: ${e.target.value}`);
+        window.alert(`Variable introducida con el valor: ${e.target.value}`);
       }
     }
     const onChange = (e) => {
@@ -19,47 +21,56 @@ const MachineLearning = () => {
     return (
         <Fragment>
           <SideNav/>
-          <div className="divBorde">
 
-            <div className="divMant">
-                <label className="textoMant">Velocidad de avance</label>
-                <input type="text" className="inputMant" id="vel_avance" onKeyDown={onEnterPress}/>
+            <h1 className="titulo">Simulación</h1>
+
+            <div className="divML">
+                <label className="textoML">Numero de perfiles</label>
+                <input type="text" onKeyDown={onEnterPress}/>
             </div>
-            <div className="divMant">
-                <label className="textoMant">Velocidad de corte</label>
-                <input type="text" className="inputMant" id="vel_corte" onKeyDown={onEnterPress}/>
+            <div className="divML">
+                <label className="textoML">Hora Inicio Turno (dd/mm/aaaa hh:mm)</label>
+                <input type="text" onKeyDown={onEnterPress}/>
             </div>
-            <div className="divMant">
-                <label className="textoMant">Ciclos en vacío</label>
-                <input type="text" className="inputMant" id="ciclos_vacio" onKeyDown={onEnterPress}/>
+            <div className="divML">
+                <label className="textoML">Línea de producción</label>
+                <input type="text" onKeyDown={onEnterPress}/>
             </div>
-            <div className="divMant">
-                <label className="textoMant">Velocidad Y (Carriage)</label>
-                <input type="text" className="inputMant" id="y_velocity" onKeyDown={onEnterPress}/>
+            <div className="divML">
+                <label className="textoML">Artículo</label>
+                <input type="text" onKeyDown={onEnterPress}/>
             </div>
-            <div className="divMant">
-                <label className="textoMant">Y(Target Pos) Scaled</label>
-                <input type="text" className="inputMant" id="y_scaled" onKeyDown={onEnterPress}/>
+            <div className="divML">
+                <label className="textoML">Tiempo de ciclo (s.)</label>
+                <input type="text" onKeyDown={onEnterPress}/>
             </div>
-            <div className="divMant">
-                <label className="textoMant">Y (Carriage) Position Error</label>
-                <input type="text" className="inputMant" id="y_posError" onKeyDown={onEnterPress}/>
+            <div className="divML">
+                <label className="textoML">Jefe de turno</label>
+                <input type="text" onKeyDown={onEnterPress}/>
             </div>
-            <div className="divMant">
-                <label className="textoMant">Y (Carriage) DAC Output</label>
-                <input type="text" className="inputMant" id="y_DAC" onKeyDown={onEnterPress}/>
+            <div className="divML">
+                <label className="textoML">Proveedor materia prima</label>
+                <input type="text" onKeyDown={onEnterPress}/>
             </div>
-            <div className="divMant">
-                <label className="textoMant">Y(Carriage) Acceleration</label>
-                <input type="text" className="inputMant" id="y_acceleration" onKeyDown={onEnterPress}/>
+            <div className="divML">
+                <label className="textoML">Temperatura ambiente</label>
+                <input type="text" onKeyDown={onEnterPress}/>
+            </div>
+            <h1 className="titulo2">Previsión Tendencia % OEEE</h1>
+            <img class="grafico" src={grafico}/>
+
+            <div className="divMerma">
+              <label className="subTitle">Prevision % Merma</label>
+              <div><label class="porcentajeMerma">3,22%</label></div>
+            </div>
+
+            <div className="divOEEE">
+              <label className="subTitle">Prevision % OEEE</label>
+              <div><label class="porcentajeOEEE">97,19%</label></div>
             </div>
 
 
 
-
-
-
-          </div>
         </Fragment>
     );
 }

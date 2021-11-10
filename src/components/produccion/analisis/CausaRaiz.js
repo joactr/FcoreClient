@@ -40,32 +40,34 @@ const CausaRaiz = () => {
             </select>
           </div>
 
-          <form className="columna1">
-            <label className="titulo">1W</label>
-            <input type="text" onKeyDown={onEnterPress} />
-            <input type="text" />
-            <input type="text" {...register('col1-2', { required: true })}/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-            <input type="text"/>
-          </form>
+          <div className="columna1">
+            <form>
+              <label className="titulo">1W</label>
+              <input type="text" onKeyDown={onEnterPress} />
+              <input type="text" />
+              <input type="text" {...register('col1-2', { required: true })}/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              <input type="text"/>
+              </form>
+          </div>
 
           <form className="columna2">
             <label className="titulo">2W</label>
