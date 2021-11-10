@@ -1,11 +1,12 @@
 input{
-  display:table;
+  display: inline-block;
   height: clamp(0.1rem, 1.8vh , 5rem);
   margin-top: 0.7vh;
   width: 13vw;
   border-style: solid;
   border-color: #E0E0E0;
   background-color: #F2F2F2;
+
 }
 
 body {
@@ -40,16 +41,19 @@ select{
 
 .columna1, .columna2, .columna3, .columna4, .columna5{
   margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .columna1{
   position: fixed;
-  margin-left: 16%;
+  left: 16%;
 }
 
 .columna2{
   position: fixed;
-  margin-left: 32%;
+  left: 32%;
 }
 
 .primero2W{
@@ -58,7 +62,7 @@ select{
 
 .columna3{
   position: fixed;
-  margin-left: 48%;
+  left: 48%;
 }
 
 .primero3W{
@@ -67,7 +71,7 @@ select{
 
 .columna4{
   position: fixed;
-  margin-left: 64%;
+  left: 64%;
 }
 
 .primero4W{
@@ -76,7 +80,7 @@ select{
 
 .columna5{
   position: fixed;
-  margin-left: 80%;
+  left: 80%;
 }
 
 .primero5W{

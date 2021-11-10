@@ -27,6 +27,7 @@ const CausaRaiz = () => {
     }
 
 
+
     return (
         <Fragment>
           <SideNav/>
@@ -41,7 +42,6 @@ const CausaRaiz = () => {
           </div>
 
           <div className="columna1">
-            <form>
               <label className="titulo">1W</label>
               <input type="text" onKeyDown={onEnterPress} />
               <input type="text" />
@@ -66,7 +66,6 @@ const CausaRaiz = () => {
               <input type="text"/>
               <input type="text"/>
               <input type="text"/>
-              </form>
           </div>
 
           <form className="columna2">
@@ -140,5 +139,9 @@ const CausaRaiz = () => {
         </Fragment>
     );
 }
+
+
+
+
 
 export default CausaRaiz;
