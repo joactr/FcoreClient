@@ -1,8 +1,13 @@
 import React, {Fragment, useState} from 'react';
+import AsyncSelect from 'react-select/async';
 import SideNav from '../sideNav/SideNav';
 import './reportar.css';
 
 const Reportar = () => {
+  const [items, setItems] = useState([]);
+  const [inputValue, setValue] = useState('');
+  const [selectedValue, setSelectedValue] = useState(null);
+
     const [datos, setDatos] = useState({
         horas: '',
         minutos: '',
@@ -13,19 +18,85 @@ const Reportar = () => {
     })
     var fechabase = new Date()
 
-    const handleInputChange = (event) => {
+    /*const handleInputChange = (event) => {
         setDatos({
             ...datos,
             [event.target.name] : event.target.value
         })
+    }*/
+
+    // handle input change event
+    const handleInputChange = value => {
+      setValue(value);
+    };
+
+    // handle selection
+    const handleChange = value => {
+
+      setSelectedValue(value);
     }
+
+    var fetchData = (inputValue, callback) => {
+      setTimeout(() => {
+        fetch("https://factorybibackend.herokuapp.com/getFechas",
+          {
+            method: "GET",
+          }
+        )
+          .then((resp) => {
+            return resp.json();
+          })
+          .then((data) => {
+            console.log(data)
+            const tempArray = [];
+            if (data) {
+              if (data.length) {
+                data.forEach((element) => {
+                  var fecha = element.Datetime.slice(0, 10)
+                  var hora = element.Datetime.slice(11, 19)
+                  tempArray.push({
+                    label: `${fecha} ${hora}`,
+                    value: element.Datetime,
+                  });
+                });
+              } else {
+                tempArray.push({
+                  label: `${data.Datetime}`,
+                  value: data.id,
+                });
+              }
+            }
+            callback(tempArray);
+          })
+          .catch((error) => {
+            console.log(error, "catch the hoop");
+          });
+      }, 1000);
+    };
 
     const enviarDatos = (event) => {
         event.preventDefault()
         window.alert("Datos enviados");
     }
 
+    var styles = {
+      color: 'black'
+  };
 
+
+  /*const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      background: "#F2F2F2",
+      // match with the menu
+      borderWidth: "2px",
+      // Overwrittes the different states of border
+      borderColor: "#E0E0E0",
+      height: "27px",
+
+    })
+  };*/
+ //                    styles={customStyles}
 
     return (
         <Fragment>
@@ -41,36 +112,28 @@ const Reportar = () => {
               </div>
               <div>
                 <label className="textoReportar">Selección incidencia (dd/mm/aaaa hh:mm):</label>
-                <select className="selectReportar" >
-                  <option value="03/10/2021 13:43">03/10/2021 13:43</option>
-                  <option value="01/10/2021 11:01">02/10/2021 11:01</option>
-                  <option value="03/10/2021 13:43">01/10/2021 13:43</option>
-                  <option value="01/10/2021 11:01">01/10/2021 10:41</option>
-                  <option value="03/10/2021 13:43">27/09/2021 18:50</option>
-                  <option value="01/10/2021 11:01">26/09/2021 10:51</option>
-                  <option value="03/10/2021 13:43">24/09/2021 08:10</option>
-                  <option value="01/10/2021 11:01">20/09/2021 11:11</option>
-                  <option value="03/10/2021 13:43">13/09/2021 23:12</option>
-                  <option value="01/10/2021 11:01">01/09/2021 01:23</option>
-                  <option value="03/10/2021 13:43">03/09/2021 23:00</option>
-                  <option value="01/10/2021 11:01">30/08/2021 14:03</option>
-                  <option value="03/10/2021 13:43">24/08/2021 16:34</option>
-                  <option value="01/10/2021 11:01">23/08/2021 09:45</option>
-                  <option value="03/10/2021 13:43">20/08/2021 12:43</option>
-                  <option value="01/10/2021 11:01">16/08/2021 11:37</option>
-                  <option value="03/10/2021 13:43">13/08/2021 19:20</option>
-                  <option value="01/10/2021 11:01">09/08/2021 10:41</option>
-                </select>
+                <AsyncSelect className="selectReportar"
+                    cacheOptions
+                    defaultOptions
+                    placeholder="Seleccione una fecha"
+
+                    value={selectedValue}
+                    loadOptions={fetchData}
+                    onInputChange={handleInputChange}
+                    onChange={handleChange}
+                    searchable="false"
+                    defaultOptions={true}
+                          />
               </div>
 
               <div>
                 <label className="textoReportar">Etiquetar incidencia:</label>
                 <select className="selectReportar">
-                <option value="03/10/2021 13:43">Falta de material</option>
-                <option value="01/10/2021 11:01">Paro programado</option>
-                <option value="03/10/2021 13:43">Avería</option>
-                <option value="01/10/2021 11:01">Avería proceso anterior</option>
-                <option value="03/10/2021 13:43">Paro calidad</option>
+                  <option value="03/10/2021 13:43">Falta de material</option>
+                  <option value="01/10/2021 11:01">Paro programado</option>
+                  <option value="03/10/2021 13:43">Avería</option>
+                  <option value="01/10/2021 11:01">Avería proceso anterior</option>
+                  <option value="03/10/2021 13:43">Paro calidad</option>
                 </select>
               </div>
               <div>

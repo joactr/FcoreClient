@@ -6,19 +6,21 @@
   zoom:1;              /* for IE7*/
   vertical-align:middle;
   margin-left:3vw;
-  height: 4vh;
+  height: 36px;
   width: 25vw;
   border-width: 2px;
   border-color: #E0E0E0;
   background-color: #F2F2F2;
+  text-align: center;
 }
 
 .textoReportar {
     display:inline-block;
+    vertical-align:middle;
     *display: inline;     /* for IE7*/
     zoom:1;              /* for IE7*/
     float: left;
-    padding-top: 3.55vh;
+    padding-top: 3.8vh;
     text-align: left;
     width: 310px;
 }
@@ -51,8 +53,8 @@
 
 .formReportar {
   position: fixed;
-  margin-top: 2%;
-  margin-left: 17%;
+  top: 1.5%;
+  left: 17%;
   z-index: 1;
 }
 
