@@ -36,6 +36,7 @@ const Reportar = () => {
       setSelectedValue(value);
     }
 
+    //Coge los datos de últimas fechas del back-end
     var fetchData = (inputValue, callback) => {
       setTimeout(() => {
         fetch("https://factorybibackend.herokuapp.com/getFechas",
@@ -52,10 +53,14 @@ const Reportar = () => {
             if (data) {
               if (data.length) {
                 data.forEach((element) => {
-                  var fecha = element.Datetime.slice(0, 10)
+
+                  //SE LE DA FORMATO DESEADO A LA FECHA AL MOSTRAR
+                  var año = element.Datetime.slice(0, 4)
+                  var mes = element.Datetime.slice(5, 7)
+                  var dia = element.Datetime.slice(8, 10)
                   var hora = element.Datetime.slice(11, 19)
                   tempArray.push({
-                    label: `${fecha} ${hora}`,
+                    label: `${dia}/${mes}/${año}  ${hora}`,
                     value: element.Datetime,
                   });
                 });
@@ -84,19 +89,17 @@ const Reportar = () => {
   };
 
 
-  /*const customStyles = {
+  const customStyles = {
     control: (base, state) => ({
       ...base,
       background: "#F2F2F2",
-      // match with the menu
       borderWidth: "2px",
-      // Overwrittes the different states of border
       borderColor: "#E0E0E0",
       height: "27px",
 
     })
-  };*/
- //                    styles={customStyles}
+  };
+
 
     return (
         <Fragment>
@@ -116,12 +119,11 @@ const Reportar = () => {
                     cacheOptions
                     defaultOptions
                     placeholder="Seleccione una fecha"
-
+                    styles={customStyles}
                     value={selectedValue}
                     loadOptions={fetchData}
                     onInputChange={handleInputChange}
                     onChange={handleChange}
-                    searchable="false"
                     defaultOptions={true}
                           />
               </div>
@@ -138,7 +140,7 @@ const Reportar = () => {
               </div>
               <div>
                 <label className="textoReportar">Añadir comentario:</label>
-                <textarea className="commentReportar"/>
+                <textarea className="commentReportar" id="commentReportar"/>
                 <button type="submit" className="botonReportar">Enviar</button>
               </div>
               <iframe className="reporteReportar" id="reporteReportar" title="reporteReportar" src="https://app.powerbi.com/view?r=eyJrIjoiMTBkZmRhNzUtYjgwYy00OTBjLTg3MzMtNzM1OWI0NWY2MDA4IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9" frameBorder="0" allowFullScreen={true}></iframe>

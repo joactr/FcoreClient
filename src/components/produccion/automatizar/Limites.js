@@ -20,6 +20,18 @@ export default function Limites() {
       })
   }
 
+  const onEnterPress = (e) => {
+    if(e.keyCode === 13 && e.shiftKey === false) {
+      if(e.target.value !== ''){
+        e.preventDefault();
+        window.alert(`Variable introducida con el valor: ${e.target.value}`);
+        e.target.value ='';
+      }else{
+        window.alert(`Por favor introduzca un valor válido`);
+      }
+    }
+  }
+
   const resetForm = (formID) =>{
     document.getElementById(formID).reset();
   }
@@ -77,73 +89,73 @@ export default function Limites() {
     <div className="divLimite">
     <form className="formLimite" id="temperaturaForm">
       <label className="textoLimite">Numero de perfiles orden línea 3</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="vibracionesForm">
       <label className="textoLimite">Tiempo de paro línea 2 (m)</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="piezasForm">
       <label className="textoLimite">Piezas NOK consecutivas</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="horasForm">
       <label className="textoLimite">% Merma</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="horasForm">
       <label className="textoLimite">% Avería</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="horasForm">
       <label className="textoLimite">Trabajo en curso</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="horasForm">
       <label className="textoLimite">Operarios en la línea</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="horasForm">
       <label className="textoLimite">Consumo energético Línea 1</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="horasForm">
       <label className="textoLimite">Piezas O.T. ERP</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="horasForm">
       <label className="textoLimite">% Lluvia previsión meteorológica AMET</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="horasForm">
       <label className="textoLimite">Email Dirección general</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="horasForm">
       <label className="textoLimite">Temperatura del horno línea 2 zona B</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="horasForm">
       <label className="textoLimite">Numero de repuestos quemador línea 2</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
     <form className="formLimite" id="horasForm">
       <label className="textoLimite">Conductividad depósito 2A</label>
-      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMin" name="min"/>
-      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} className="inputLimiteMax" name="max"/>
+      <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
+      <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
     </form>
 
 

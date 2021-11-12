@@ -6,8 +6,13 @@ import grafico from './graficaML.png'
 const MachineLearning = () => {
     const onEnterPress = (e) => {
       if(e.keyCode === 13 && e.shiftKey === false) {
-        e.preventDefault();
-        window.alert(`Variable introducida con el valor: ${e.target.value}`);
+        if(e.target.value !== ''){
+          e.preventDefault();
+          window.alert(`Variable introducida con el valor: ${e.target.value}`);
+          e.target.value ='';
+        }else{
+          window.alert(`Por favor introduzca un valor válido`);
+        }
       }
     }
     const onChange = (e) => {

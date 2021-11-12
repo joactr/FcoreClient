@@ -12,7 +12,6 @@ export default function SideNav() {
     try {
       var elemento = document.getElementById(window.location.pathname);
       if (elemento!=null){
-        console.log(elemento.id)
         if(oneNest){elemento.classList.toggle('subTextActive');}
         else if(twoNests){elemento.classList.toggle('subSubTextActive')}
 

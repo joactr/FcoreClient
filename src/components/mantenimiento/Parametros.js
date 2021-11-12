@@ -5,12 +5,17 @@ import foto from './fotoMaquina.png'
 
 
 const Parametros = () => {
-    const onEnterPress = (e) => {
-      if(e.keyCode === 13 && e.shiftKey === false) {
+  const onEnterPress = (e) => {
+    if(e.keyCode === 13 && e.shiftKey === false) {
+      if(e.target.value !== ''){
         e.preventDefault();
         window.alert(`Variable ${e.target.id} introducida con el valor: ${e.target.value}`);
+        e.target.value ='';
+      }else{
+        window.alert(`Por favor introduzca un valor válido`);
       }
     }
+  }
     const onChange = (e) => {
       if(e.target.value === "SI"){
         window.alert(`Se ha parado la producción`);
