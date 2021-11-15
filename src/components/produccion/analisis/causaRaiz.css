@@ -19,7 +19,7 @@ body {
 
 .selector{
   margin-left: 20%;
-  margin-top: 1.5%
+  margin-top: 1.5%;
 }
 
 select{
@@ -36,11 +36,11 @@ select{
 
 .titulo {
   font-size: 26px;
-  padding-left: 20%;
+  margin-left: 16%;
 }
 
 .columna1, .columna2, .columna3, .columna4, .columna5{
-  margin-top: 2%;
+  margin-top: 1%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;

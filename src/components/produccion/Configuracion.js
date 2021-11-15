@@ -12,11 +12,42 @@ const ConfiguracionProduccion = () => {
       alert('Permisos cambiados');
     }
 
+    const onEnterPress = (e) => {
+      if(e.keyCode === 13 && e.shiftKey === false) {
+        if(e.target.value !== ''){
+          e.preventDefault();
+          var data = {link: e.target.value}
+          data = JSON.stringify(data);
+          //https://factorybibackend.herokuapp.com/setReporteBI
+          //http://localhost:8080/setReporteBI
+            fetch("https://factorybibackend.herokuapp.com/setReporteBI" ,
+            {
+              headers: {
+               'Content-type': 'application/json; charset=UTF-8',
+               'Access-Control-Allow-Origin': '*'
+             },
+                 method: "POST",
+                 body: data
+
+            }).then((response)=> {
+              if(response.ok){
+                  window.alert(`Link de PowerBI actualizado`);
+              }else {
+                  window.alert('Error al publicar link, contacte al administrador');
+              }
+            }).catch((error) => {window.alert("Error de conexión");})
+          e.target.value ='';
+        }else{
+          window.alert(`Por favor introduzca un enlace válido`);
+        }
+      }
+    }
+
     return (
         <Fragment>
           <SideNav/>
           <div className="wrapper">
-              <label className="titulo">Perfil de usuario:</label>
+              <label className="tituloConfig">Perfil de usuario:</label>
               <div className="config">
                   <label className="textoConfig">Acceso a Parámetros producción</label>
                   <select className="selectConfig" onChange={onChange}>
@@ -64,6 +95,11 @@ const ConfiguracionProduccion = () => {
                     <option value="SI">SI</option>
                     <option value="NO">NO</option>
                   </select>
+              </div>
+              <div className="config">
+                  <label className="textoConfig">Link reporte PowerBI</label>
+                  <input type="text" className="inputConfig" onKeyDown={onEnterPress}/>
+
               </div>
           </div>
 

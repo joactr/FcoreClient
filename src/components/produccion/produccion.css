@@ -6,6 +6,8 @@
   border-style: solid;
   border-color: #E0E0E0;
   background-color: #F2F2F2;
+  vertical-align:middle;
+
 }
 
 .selectProd {
@@ -29,10 +31,12 @@
 
 .textoProd {
   max-width: 350px;
+  vertical-align:middle;
+
   width: auto;
   display: table-caption;
   float: left;
-  padding-top: 6px;
+  padding-top: 1vh;
   text-align: left;
   width: 300px;
 }

@@ -6,7 +6,7 @@
 }
 
 .formLimite{
-  margin-top: 2vh;
+  margin-top: min(1.2vh,40px);
 }
 
 .inputLimiteMin,.inputLimiteMax{
@@ -36,7 +36,7 @@
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/
   float: left;
-  padding-top: 5px;
+  padding-top: 1vh;
   text-align: left;
   width: 300px;
   font-size: 16px;
