@@ -97,7 +97,7 @@ const ConfiguracionProduccion = () => {
                   </select>
               </div>
               <div className="config">
-                  <label className="textoConfig">Link reporte PowerBI</label>
+                  <label className="textoConfig">Link informe PowerBI</label>
                   <input type="text" className="inputConfig" onKeyDown={onEnterPress}/>
 
               </div>

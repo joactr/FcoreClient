@@ -7,6 +7,9 @@ export default function Reporte() {
     var site = url+'?toolbar=0&amp;navpanes=0&amp;scrollbar=0';
     document.getElementById('reportePowerBI').src = site;
 }
+
+
+
 //
 const src = "https://app.powerbi.com/view?r=eyJrIjoiMjI4NzY2MjMtOTA4MS00MDBhLWE1MmMtMzc4NmRmMDBiNTEzIiwidCI6ImJlNDY1NWRmLWFjNzMtNDAxZi1hN2FlLTE5OGMzYjcyZDBjNiIsImMiOjh9"
 
@@ -14,7 +17,9 @@ const [linkReporte, setlinkReporte] = useState(null);
 
   //Actualiza el link del reporte con el recogido del back-end
   useEffect(() => {
-    setlinkReporte('https://app.powerbi.com/view?r=eyJrIjoiMjI4NzY2MjMtOTA4MS00MDBhLWE1MmMtMzc4NmRmMDBiNTEzIiwidCI6ImJlNDY1NWRmLWFjNzMtNDAxZi1hN2FlLTE5OGMzYjcyZDBjNiIsImMiOjh9');
+    fetch('https://factorybibackend.herokuapp.com/getReporteBI')
+      .then(response => response.json())
+      .then(data => setlinkReporte(data));
   });
 
 return (
@@ -30,7 +35,6 @@ return (
 
   </div>
   <iframe className="reporteInforme" id="templates" title="reportePowerBI" src={linkReporte} frameborder="0" allowFullScreen={true}></iframe>;
-  <button type="button" onClick={() => {urlChange('https://google.com');}}>Change</button>
 </Fragment>
 )
 
