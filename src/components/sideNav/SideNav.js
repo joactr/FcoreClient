@@ -64,7 +64,9 @@ export default function SideNav() {
 
   function Mantenimiento(){
     var listaProd = ["/mantenimiento/parametros",
-    "/mantenimiento/monitorizacion"
+    "/mantenimiento/monitorizacion",
+    "/mantenimiento/reportar",
+    "/mantenimiento/automatizar/limites"
     ]
     if(listaProd.includes(window.location.pathname)){
       oneNest = true;
@@ -74,6 +76,8 @@ export default function SideNav() {
         <li class="sideTextActive" id=""><Link to="/mantenimiento/parametros" className="link">Mantenimiento</Link></li>
           <li class="subText" id="/mantenimiento/parametros"><Link to="/mantenimiento/parametros" className="link">Parámetros máquina</Link></li>
           <li class="subText" id="/mantenimiento/monitorizacion"><Link to="/mantenimiento/monitorizacion" className="link">Monitorización TR</Link></li>
+          <li class="subText" id="/mantenimiento/reportar"><Link to="/mantenimiento/reportar" className="link">Reportar</Link></li>
+          <li class="subText" id="/mantenimiento/automatizar/limites"><Link to="/mantenimiento/automatizar/limites" className="link">Automatizar</Link></li>
 
         <li class="sideText" id=""><Link to="/home" className="link">Calidad</Link></li>
         <li class="sideText" id=""><Link to="/home" className="link">Costes</Link></li>
@@ -101,7 +105,7 @@ export default function SideNav() {
             <li class="subSubText" id="/produccion/automatizar/flujos"><Link to="/produccion/automatizar/flujos" className="link">Mis flujos</Link></li>
           <li class="subText" id="/config"><Link to="/produccion/config" className="link">Configuración</Link></li>
 
-        <li class="sideText" id=""><Link to="/home" className="link">Mantenimiento</Link></li>
+        <li class="sideText" id=""><Link to="/mantenimiento/parametros" className="link">Mantenimiento</Link></li>
         <li class="sideText" id=""><Link to="/home" className="link">Calidad</Link></li>
         <li class="sideText" id=""><Link to="/home" className="link">Costes</Link></li>
         <li class="sideText" id=""><Link to="/home" className="link">Configuración</Link></li>
@@ -129,7 +133,7 @@ export default function SideNav() {
           <li class="subText"><Link to="/produccion/automatizar/limites" className="link">Automatizar</Link></li>
           <li class="subText" id="/config"><Link to="/produccion/config" className="link">Configuración</Link></li>
 
-        <li class="sideText" id=""><Link to="/home" className="link">Mantenimiento</Link></li>
+        <li class="sideText" id=""><Link to="/mantenimiento/parametros" className="link">Mantenimiento</Link></li>
         <li class="sideText" id=""><Link to="/home" className="link">Calidad</Link></li>
         <li class="sideText" id=""><Link to="/home" className="link">Costes</Link></li>
         <li class="sideText" id=""><Link to="/home" className="link">Configuración</Link></li>

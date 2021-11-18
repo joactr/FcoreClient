@@ -13,6 +13,8 @@ import Login from "./components/login/Login";
 import Home from "./components/Home";
 import Parametros from "./components/mantenimiento/Parametros";
 import MonitorizacionMant from "./components/mantenimiento/MonitorizacionMant";
+import ReportarMant from "./components/mantenimiento/ReportarMant";
+import LimitesMant from "./components/mantenimiento/automatizar/LimitesMant";
 
 
 function App() {
@@ -41,7 +43,8 @@ function App() {
 
             <Route path="/mantenimiento/parametros" component={Parametros}/>
             <Route path="/mantenimiento/monitorizacion" component={MonitorizacionMant}/>
-
+            <Route path="/mantenimiento/reportar" component={ReportarMant}/>
+            <Route path="/mantenimiento/automatizar/limites" component={LimitesMant}/>
 
           </Switch>
         </BrowserRouter>

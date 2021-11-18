@@ -1,0 +1,71 @@
+.divLimiteMant{
+  position: fixed;
+  top: 7%;
+  left: 30vw;
+  z-index: 10000;
+}
+
+.formLimiteMant{
+
+  margin-top: min(1.2vh,40px);
+}
+
+.inputLimiteMinMant,.inputLimiteMaxMant{
+  display:inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  vertical-align:middle;
+  height: 25px;
+  width: 150px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #E0E0E0;
+  background-color: #F2F2F2;
+}
+
+.inputLimiteMinMant{
+  margin-left:20px;
+
+}
+
+.inputLimiteMaxMant{
+  margin-left: 40px;
+}
+
+.textoLimiteMant{
+  display:inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  float: left;
+  padding-top: 1vh;
+  text-align: left;
+  width: 300px;
+  font-size: 16px;
+}
+
+.textoCambioPagMant{
+
+}
+
+.botonCambioPagMant{
+  margin-left: 15px;
+  width: 30px;
+  height: 30px;
+  font-weight: 550;
+  font-size: 12px;
+  text-decoration: none;
+  backface-visibility: hidden;
+  border: 0.15rem solid transparent;
+  border-radius: 0.5rem;
+  border-color: black;
+  cursor:pointer;
+}
+
+.botonCambioPagMant:hover{
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
+.wrapperCambioPagMant{
+  padding-top: 20px;
+  padding-left: 45vw;
+}

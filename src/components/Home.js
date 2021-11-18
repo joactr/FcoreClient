@@ -9,8 +9,8 @@ const Home = () => {
         <a href="http://www.enira.es" target="_blank" rel="noreferrer">
           <img src={logo} className="homeLogo" alt="logo"/>
         </a>
+
       </Fragment>
   );
 }
-
 export default Home;

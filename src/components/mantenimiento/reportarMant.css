@@ -1,0 +1,89 @@
+.selectReportarMant{
+  margin-top: 3vh;
+  margin-bottom: 5px;
+  display: inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  vertical-align:middle;
+  margin-left:3vw;
+  height: 36px;
+  width: 22vw;
+  border-width: 2px;
+  border-color: #E0E0E0;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+
+.css-1mh47vk-control {
+  width: 100%;
+}
+
+.textoReportarMant, .textoReportarMantDer {
+    display:inline-block;
+    vertical-align:middle;
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    padding-top: 2.5vh;
+    text-align: left;
+    width: 200px;
+}
+
+.textoReportarMantDer{
+  padding-left: 60px;
+  width: 90px;
+}
+
+
+.botonReportarMant{
+  margin-bottom: 10vh;
+  display:inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  vertical-align: middle;
+  margin-left: 2vw;
+  width: 8vw;
+  padding: 0.3rem 1rem;
+  font-weight: 550;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+  backface-visibility: hidden;
+  border: 0.15rem solid transparent;
+  border-radius: 0.5rem;
+  border-color: black;
+  cursor:pointer;
+
+}
+
+.botonReportarMant:hover{
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
+.formReportarMant {
+  position: fixed;
+  top: 1.5%;
+  left: 17%;
+  z-index: 1;
+}
+
+.commentReportarMant{
+  margin-top: 3vh;
+  margin-bottom: 5px;
+  display:inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  vertical-align:middle;
+  margin-left:3vw;
+  height: 15vh;
+  width: 21.7vw;
+  border-width: 2px;
+  border-color: #E0E0E0;
+  background-color: #F2F2F2;
+}
+
+.reporteReportarMant{
+  height: 33vh;
+  width: 50vw;
+  margin-left: calc(200px + 3vw);
+  padding-top: 5vh;
+}

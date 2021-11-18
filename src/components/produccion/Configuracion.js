@@ -14,7 +14,8 @@ const ConfiguracionProduccion = () => {
 
     const onEnterPress = (e) => {
       if(e.keyCode === 13 && e.shiftKey === false) {
-        if(e.target.value !== ''){
+        //Si el link no es vacío y empieza por la string seguimos
+        if(e.target.value.trim() !== '' && e.target.value.trim().startsWith('https://app.powerbi.com')){
           e.preventDefault();
           var data = {link: e.target.value}
           data = JSON.stringify(data);
@@ -38,7 +39,7 @@ const ConfiguracionProduccion = () => {
             }).catch((error) => {window.alert("Error de conexión");})
           e.target.value ='';
         }else{
-          window.alert(`Por favor introduzca un enlace válido`);
+          window.alert(`Para que el link sea válido debe empezar por "https://app.powerbi.com"`);
         }
       }
     }

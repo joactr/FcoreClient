@@ -3,15 +3,9 @@ import SideNav from '../../sideNav/SideNav';
 import informes from './informes.png';
 export default function Reporte() {
 
-  function urlChange(url) {
-    var site = url+'?toolbar=0&amp;navpanes=0&amp;scrollbar=0';
-    document.getElementById('reportePowerBI').src = site;
-}
 
 
-
-//
-const src = "https://app.powerbi.com/view?r=eyJrIjoiMjI4NzY2MjMtOTA4MS00MDBhLWE1MmMtMzc4NmRmMDBiNTEzIiwidCI6ImJlNDY1NWRmLWFjNzMtNDAxZi1hN2FlLTE5OGMzYjcyZDBjNiIsImMiOjh9"
+//https://app.powerbi.com/view?r=eyJrIjoiMjI4NzY2MjMtOTA4MS00MDBhLWE1MmMtMzc4NmRmMDBiNTEzIiwidCI6ImJlNDY1NWRmLWFjNzMtNDAxZi1hN2FlLTE5OGMzYjcyZDBjNiIsImMiOjh9
 
 const [linkReporte, setlinkReporte] = useState(null);
 
@@ -19,7 +13,10 @@ const [linkReporte, setlinkReporte] = useState(null);
   useEffect(() => {
     fetch('https://factorybibackend.herokuapp.com/getReporteBI')
       .then(response => response.json())
-      .then(data => setlinkReporte(data));
+      .then(data => {
+        setlinkReporte(data);
+      }
+    );
   });
 
 return (
@@ -34,14 +31,8 @@ return (
     <label className="textoReporte">Otros gráficos Perfiladora 3</label>
 
   </div>
-  <iframe className="reporteInforme" id="templates" title="reportePowerBI" src={linkReporte} frameborder="0" allowFullScreen={true}></iframe>;
+  <iframe className="reporteInforme" id="templates" title="reportePowerBI" src={linkReporte} frameborder="0" allowFullScreen={true}></iframe>
 </Fragment>
 )
 
-/*return(
-  <Fragment>
-    <SideNav/>
-    <img src={informes} alt="informe" className="fotoReporte" height="auto"/>
-  </Fragment>
-)*/
 }
