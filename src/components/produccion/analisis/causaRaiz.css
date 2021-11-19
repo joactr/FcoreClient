@@ -9,17 +9,13 @@ input{
 
 }
 
-body {
-  overflow: hidden; /* Hide scrollbars */
-}
-
 .textoSelect{
   font-size: 18px;
 }
 
 .selector{
-  margin-left: 20%;
-  margin-top: 1.5%;
+  padding-left: 20%;
+  padding-top: 1.5%;
 }
 
 select{

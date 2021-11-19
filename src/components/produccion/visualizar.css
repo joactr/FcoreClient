@@ -6,20 +6,6 @@
   z-index: 1;
 }
 
-.reporteInforme{
-  position: fixed;
-  right:0;
-  width: 65%;
-  height: calc(100% - 40px);
-  z-index: 1;
-}
-
-.divReporte{
-  position: fixed;
-  margin-left: 15%;
-  margin-top: 16%;
-}
-
 .textoReporte, .textoReporteBold{
   display: table;
   margin-top: 10px;

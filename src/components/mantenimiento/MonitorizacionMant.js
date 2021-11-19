@@ -12,12 +12,6 @@ const src = "https://app.powerbi.com/view?r=eyJrIjoiNTE0YTEzZjQtYTU2ZC00ZmI2LThm
 return (
 <Fragment>
   <SideNav/>
-  <div className="divReporte">
-    <label className="textoReporteBold">Línea perfiladora 1</label>
-    <label className="textoReporte">Línea perfiladora 2</label>
-    <label className="textoReporte">Línea perfiladora 3</label>
-
-  </div>
   <iframe className="reporte" id="templates" title="reportePowerBI" src={src} frameborder="0" allowFullScreen={true}></iframe>;
   <button type="button" onClick={() => {urlChange('https://google.com');}}>Change</button>
 </Fragment>

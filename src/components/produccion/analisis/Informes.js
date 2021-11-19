@@ -23,15 +23,6 @@ const [linkReporte, setlinkReporte] = useState(null);
 return (
 <Fragment>
   <SideNav/>
-  <div className="divReporte">
-    <label className="textoReporteBold">Producciones por Referencia P1</label>
-    <label className="textoReporte">Otros gráficos Perfiladora 1</label>
-    <label className="textoReporte">Producciones por Referencia P2</label>
-    <label className="textoReporte">Otros gráficos Perfiladora 2</label>
-    <label className="textoReporte">Producciones por Referencia P3</label>
-    <label className="textoReporte">Otros gráficos Perfiladora 3</label>
-
-  </div>
   <iframe className="reporteInforme" id="templates" title="reportePowerBI" src={linkReporte} frameborder="0" allowFullScreen={true}></iframe>
 </Fragment>
 )

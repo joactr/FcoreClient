@@ -1,15 +1,7 @@
 .reporte{
   position: fixed;
   right:0;
-  width: 73%;
-  height: calc(100% - 40px);
-  z-index: 1;
-}
-
-.reporteInforme{
-  position: fixed;
-  right:0;
-  width: 65%;
+  width: 86%;
   height: calc(100% - 40px);
   z-index: 1;
 }
