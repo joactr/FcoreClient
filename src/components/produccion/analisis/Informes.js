@@ -10,6 +10,7 @@ export default function Reporte() {
 const [linkReporte, setlinkReporte] = useState(null);
 
   //Actualiza el link del reporte con el recogido del back-end
+  //https://factorybibackend.herokuapp.com
   useEffect(() => {
     fetch('https://factorybibackend.herokuapp.com/getReporteBI')
       .then(response => response.json())
