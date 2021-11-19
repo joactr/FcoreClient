@@ -1,7 +1,7 @@
 .divLimite{
   position: fixed;
-  padding-top: 2%;
-  margin-left: 20%;
+  top: 2%;
+  left: 20%;
   z-index: 10000;
 }
 
@@ -14,7 +14,7 @@
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/
   vertical-align:middle;
-  height: 28px;
+  height: 3vh;
   width: 150px;
   border-width: 2px;
   border-style: solid;
