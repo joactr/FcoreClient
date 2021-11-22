@@ -14,7 +14,7 @@
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/
   vertical-align:middle;
-  height: 3vh;
+  height: 25px;
   width: 150px;
   border-width: 2px;
   border-style: solid;
