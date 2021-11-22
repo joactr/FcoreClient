@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import SideNav from '../sideNav/SideNav';
 import './produccion.css'
+import NavBarProd from './NavBarProd';
 
 const Produccion = () => {
   const onEnterPress = (e) => {
@@ -27,6 +28,7 @@ const Produccion = () => {
 
     return (
         <Fragment>
+          <NavBarProd/>
           <SideNav/>
           <div className="divBorde">
 

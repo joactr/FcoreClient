@@ -53,7 +53,7 @@
 
 .formReportar {
   position: fixed;
-  top: 1.5%;
+  top: max(4%, 40px);
   left: 17%;
   z-index: 1;
 }

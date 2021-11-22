@@ -24,6 +24,7 @@ function App() {
 
         <BrowserRouter>
           <Redirect exact from="/" to="/login" />
+          <Redirect exact from="/produccion/automatizar/" to="/login" />
           <Switch>
             <Route path="/login" component={Login}/>
             <Route path="/home" component={Home}/>
@@ -36,9 +37,11 @@ function App() {
               <Route path="/produccion/analisis/causa-raiz" component={CausaRaiz}/>
               <Route path="/produccion/analisis/machine-learning" component={MachineLearning}/>
 
-
               <Route path="/produccion/automatizar/limites" component={Limites}/> {/*AQUI EMPIEZA LA PAGINA DE AUTOMATIZAR*/}
               <Route path="/produccion/automatizar/flujos" component={Flujos}/>
+
+
+
             <Route path="/produccion/config" component={ConfiguracionProduccion}/>
 
             <Route path="/mantenimiento/parametros" component={Parametros}/>
@@ -46,6 +49,9 @@ function App() {
             <Route path="/mantenimiento/reportar" component={ReportarMant}/>
             <Route path="/mantenimiento/automatizar/limites" component={LimitesMant}/>
 
+
+            <Route path="/produccion/automatizar" render={() => (
+              <Redirect exact to="/produccion/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
           </Switch>
         </BrowserRouter>
 

@@ -1,5 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import SideNav from '../sideNav/SideNav';
+import NavBarProd from './NavBarProd';
 import './configuracion.css'
 
 const ConfiguracionProduccion = () => {
@@ -46,6 +47,7 @@ const ConfiguracionProduccion = () => {
 
     return (
         <Fragment>
+          <NavBarProd/>
           <SideNav/>
           <div className="wrapper">
               <label className="tituloConfig">Perfil de usuario:</label>
