@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import SideNav from '../../sideNav/SideNav';
 import './machineLearning.css'
+import NavBarProd from '../NavBarProd';
 import grafico from './graficaML.png'
 
 const MachineLearning = () => {
@@ -25,54 +26,63 @@ const MachineLearning = () => {
 
     return (
         <Fragment>
+          <NavBarProd/>
           <SideNav/>
 
             <h1 className="titulo">Simulación</h1>
+            <div class="wrapperML" style={{display: 'flex', flexDirection: 'row'}}>
+              <div>
+                <div className="divML">
+                    <label className="textoML">Numero de perfiles</label>
+                    <input type="text" onKeyDown={onEnterPress}/>
+                </div>
+                <div className="divML">
+                    <label className="textoML">Hora Inicio Turno (dd/mm/aaaa hh:mm)</label>
+                    <input type="text" onKeyDown={onEnterPress}/>
+                </div>
+                <div className="divML">
+                    <label className="textoML">Línea de producción</label>
+                    <input type="text" onKeyDown={onEnterPress}/>
+                </div>
+                <div className="divML">
+                    <label className="textoML">Artículo</label>
+                    <input type="text" onKeyDown={onEnterPress}/>
+                </div>
+                <div className="divML">
+                    <label className="textoML">Tiempo de ciclo (s.)</label>
+                    <input type="text" onKeyDown={onEnterPress}/>
+                </div>
+                <div className="divML">
+                    <label className="textoML">Jefe de turno</label>
+                    <input type="text" onKeyDown={onEnterPress}/>
+                </div>
+                <div className="divML">
+                    <label className="textoML">Proveedor materia prima</label>
+                    <input type="text" onKeyDown={onEnterPress}/>
+                </div>
+                <div className="divML">
+                    <label className="textoML">Temperatura ambiente</label>
+                    <input type="text" onKeyDown={onEnterPress}/>
+                </div>
+              </div>
 
-            <div className="divML">
-                <label className="textoML">Numero de perfiles</label>
-                <input type="text" onKeyDown={onEnterPress}/>
+              <div style={{display: 'flex', flexDirection:'row'}}>
+                <div className="divMerma">
+                  <label className="subTitle">Prevision % Merma</label>
+                  <div><label class="porcentajeMerma">3,22%</label></div>
+                </div>
+                <div className="divOEEE">
+                  <label className="subTitle">Prevision % OEEE</label>
+                  <div><label class="porcentajeOEEE">97,19%</label></div>
+                </div>
+              </div>
             </div>
-            <div className="divML">
-                <label className="textoML">Hora Inicio Turno (dd/mm/aaaa hh:mm)</label>
-                <input type="text" onKeyDown={onEnterPress}/>
-            </div>
-            <div className="divML">
-                <label className="textoML">Línea de producción</label>
-                <input type="text" onKeyDown={onEnterPress}/>
-            </div>
-            <div className="divML">
-                <label className="textoML">Artículo</label>
-                <input type="text" onKeyDown={onEnterPress}/>
-            </div>
-            <div className="divML">
-                <label className="textoML">Tiempo de ciclo (s.)</label>
-                <input type="text" onKeyDown={onEnterPress}/>
-            </div>
-            <div className="divML">
-                <label className="textoML">Jefe de turno</label>
-                <input type="text" onKeyDown={onEnterPress}/>
-            </div>
-            <div className="divML">
-                <label className="textoML">Proveedor materia prima</label>
-                <input type="text" onKeyDown={onEnterPress}/>
-            </div>
-            <div className="divML">
-                <label className="textoML">Temperatura ambiente</label>
-                <input type="text" onKeyDown={onEnterPress}/>
-            </div>
+
             <h1 className="titulo2">Previsión Tendencia % OEEE</h1>
             <img class="grafico" src={grafico}/>
 
-            <div className="divMerma">
-              <label className="subTitle">Prevision % Merma</label>
-              <div><label class="porcentajeMerma">3,22%</label></div>
-            </div>
 
-            <div className="divOEEE">
-              <label className="subTitle">Prevision % OEEE</label>
-              <div><label class="porcentajeOEEE">97,19%</label></div>
-            </div>
+
 
 
 

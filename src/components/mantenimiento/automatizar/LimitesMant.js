@@ -1,5 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import SideNav from '../../sideNav/SideNav';
+import NavBarMant from'../NavBarMant'
+import logoLimites from './logoLimites.png'
 import './limitesMant.css';
 
 export default function LimitesMant() {
@@ -85,6 +87,7 @@ export default function LimitesMant() {
   //PARA AÑADIR VARIABLES PONER ID AL BOTON CON NOMBRE, Y EL FORM CON ESE NOMBRE+"FORM"
   return (
   <Fragment>
+    <NavBarMant/>
     <SideNav/>
     <div class="wrapperCambioPagMant">
     <label class="textoCambioPagMant">Página 1</label>
@@ -157,6 +160,7 @@ export default function LimitesMant() {
         <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMaxMant" name="max"/>
       </form>
     </div>
+    <img className="logoLimitesMant" src={logoLimites}/>
   </Fragment>
   )
 }

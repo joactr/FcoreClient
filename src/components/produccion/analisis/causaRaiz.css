@@ -1,7 +1,7 @@
 input{
   display: inline-block;
-  height: clamp(0.1rem, 1.8vh , 5rem);
-  margin-top: 0.7vh;
+  height: 20px;
+  margin-top: 0.3vh;
   width: 13vw;
   border-style: solid;
   border-color: #E0E0E0;
@@ -15,11 +15,11 @@ input{
 
 .selector{
   padding-left: 20%;
-  padding-top: 1.5%;
+  padding-top: 80px;
 }
 
 select{
-  height: clamp(0.1rem, 3.8vh , 5rem);
+  height: 32px;
   width: 22.93vw;
   border-width: 2px;
   border-style: solid;
@@ -30,53 +30,37 @@ select{
 
 }
 
-.titulo {
-  font-size: 26px;
-  margin-left: 16%;
+.tituloCausaRaiz {
+  font-size: 28px;
+  margin-left: 42%;
 }
 
-.columna1, .columna2, .columna3, .columna4, .columna5{
+.wrapperColumnasCausaRaiz{
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
+  padding-bottom: 60px;
+}
+
+.columna{
+  position: relative;
   margin-top: 1%;
+  margin-left: 3%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-}
-
-.columna1{
-  position: fixed;
-  left: 16%;
-}
-
-.columna2{
-  position: fixed;
-  left: 32%;
 }
 
 .primero2W{
   margin-top: 7.2vh;
 }
 
-.columna3{
-  position: fixed;
-  left: 48%;
-}
-
 .primero3W{
   margin-top: 13.7vh;
 }
 
-.columna4{
-  position: fixed;
-  left: 64%;
-}
-
 .primero4W{
   margin-top: 20.2vh;
-}
-
-.columna5{
-  position: fixed;
-  left: 80%;
 }
 
 .primero5W{

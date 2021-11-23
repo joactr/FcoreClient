@@ -1,13 +1,11 @@
 .divLimiteMant{
   position: fixed;
-  top: 7%;
+  top: 80px;
   left: 30vw;
-  z-index: 10000;
 }
 
 .formLimiteMant{
-
-  margin-top: min(1.2vh,40px);
+  margin-top: min(1vh,40px);
 }
 
 .inputLimiteMinMant,.inputLimiteMaxMant{
@@ -43,10 +41,6 @@
   font-size: 16px;
 }
 
-.textoCambioPagMant{
-
-}
-
 .botonCambioPagMant{
   margin-left: 15px;
   width: 30px;
@@ -66,6 +60,13 @@
 }
 
 .wrapperCambioPagMant{
-  padding-top: 20px;
+  padding-top: 50px;
   padding-left: 50vw;
+}
+
+.logoLimitesMant{
+  position:absolute;
+  left: max(60%,1250px);
+  top: 50%;
+  width: 300px;
 }

@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import { useForm } from "react-hook-form";
 import SideNav from '../../sideNav/SideNav';
+import NavBarProd from '../NavBarProd';
 import './causaRaiz.css'
 
 const CausaRaiz = () => {
@@ -30,7 +31,9 @@ const CausaRaiz = () => {
 
     return (
         <Fragment>
+          <NavBarProd/>
           <SideNav/>
+          <div>
           <div className="selector">
             <label className="textoSelect">Título del análisis</label>
             <select onChange={onChange} defaultValue={''} >
@@ -40,9 +43,9 @@ const CausaRaiz = () => {
               <option value="Titulo 3">Titulo 3</option>
             </select>
           </div>
-
-          <div className="columna1">
-              <label className="titulo">1W</label>
+          <div class="wrapperColumnasCausaRaiz">
+          <div className="columna">
+              <label className="tituloCausaRaiz">1W</label>
               <input type="text" onKeyDown={onEnterPress} />
               <input type="text" />
               <input type="text" {...register('col1-2', { required: true })}/>
@@ -68,8 +71,8 @@ const CausaRaiz = () => {
               <input type="text"/>
           </div>
 
-          <form className="columna2">
-            <label className="titulo">2W</label>
+          <form className="columna">
+            <label className="tituloCausaRaiz">2W</label>
             <input type="text" className="primero2W"/>
             <input type="text"/>
             <input type="text"/>
@@ -91,8 +94,8 @@ const CausaRaiz = () => {
             <input type="text"/>
           </form>
 
-          <form className="columna3">
-            <label className="titulo">3W</label>
+          <form className="columna">
+            <label className="tituloCausaRaiz">3W</label>
             <input type="text" className="primero3W" onKeyDown={onEnterPress}/>
             <input type="text"/>
             <input type="text"/>
@@ -110,8 +113,8 @@ const CausaRaiz = () => {
             <input type="text"/>
           </form>
 
-          <form className="columna4">
-            <label className="titulo">4W</label>
+          <form className="columna">
+            <label className="tituloCausaRaiz">4W</label>
             <input type="text" className="primero4W" onKeyDown={onEnterPress}/>
             <input type="text"/>
             <input type="text"/>
@@ -125,8 +128,8 @@ const CausaRaiz = () => {
             <input type="text"/>
           </form>
 
-          <form className="columna5">
-            <label className="titulo">5W</label>
+          <form className="columna">
+            <label className="tituloCausaRaiz">5W</label>
             <input type="text" className="primero5W" onKeyDown={onEnterPress}/>
             <input type="text"/>
             <input type="text"/>
@@ -135,6 +138,8 @@ const CausaRaiz = () => {
             <input type="text"/>
             <input type="text"/>
           </form>
+          </div>
+          </div>
 
         </Fragment>
     );

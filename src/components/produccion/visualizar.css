@@ -1,8 +1,9 @@
-.reporte{
+.reporteProd{
   position: fixed;
   right:0;
-  width: 73%;
-  height: calc(100% - 40px);
+  width: 86%;
+  margin-top: 40px;
+  height: calc(100% - 80px);
   z-index: 1;
 }
 

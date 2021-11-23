@@ -16,7 +16,7 @@ import MonitorizacionMant from "./components/mantenimiento/MonitorizacionMant";
 import ReportarMant from "./components/mantenimiento/ReportarMant";
 import LimitesMant from "./components/mantenimiento/automatizar/LimitesMant";
 
-
+//https://stackoverflow.com/questions/47602010/react-router-authentication-redirection
 function App() {
   return (
     <div className="App">
@@ -50,8 +50,12 @@ function App() {
             <Route path="/mantenimiento/automatizar/limites" component={LimitesMant}/>
 
 
+            <Route path="/produccion/analisis" render={() => (
+              <Redirect exact to="/produccion/analisis/informes" />)}/> {/*REDIRECCION A ANALISIS*/}
             <Route path="/produccion/automatizar" render={() => (
               <Redirect exact to="/produccion/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
+            <Route path="/mantenimiento/automatizar" render={() => (
+              <Redirect exact to="/mantenimiento/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
           </Switch>
         </BrowserRouter>
 

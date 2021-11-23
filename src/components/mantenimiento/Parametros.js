@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import SideNav from '../sideNav/SideNav';
 import './parametros.css';
+import NavBarMant from'./NavBarMant'
 import foto from './fotoMaquina.png'
 
 
@@ -27,6 +28,7 @@ const Parametros = () => {
     return (
         <Fragment>
           <SideNav/>
+          <NavBarMant/>
           <div className="divBorde">
 
             <div className="divMant">

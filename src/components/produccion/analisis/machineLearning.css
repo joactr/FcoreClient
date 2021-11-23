@@ -3,12 +3,15 @@ input{
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/
   vertical-align:middle;
-  height: clamp(0.1rem, 2vh , 5rem);
+  height: 20px;
   width: clamp(2px, 15vw , 350px);
   border-width: 2px;
   border-style: solid;
   border-color: #E0E0E0;
   background-color: #F2F2F2;
+}
+.wrapperML{
+  margin-left: 22.5%;
 }
 
 .textoML {
@@ -17,7 +20,7 @@ input{
   zoom:1;              /* for IE7*/
   text-align: left;
   vertical-align:middle;
-  width: 25%;
+  width: 20vw;
   font-size: 0.9rem;
 }
 
@@ -27,13 +30,13 @@ input{
 
 .divML{
   position: relative;
-  padding-left: 23%;
   padding-top: clamp(0.1rem, 0.5vh , 10rem);
 }
 
 .titulo{
   font-size:32px;
   height: 30px;
+  padding-top: 30px;
   padding-left: 26%;
   font-weight: normal;
   text-align: left;
@@ -42,7 +45,7 @@ input{
 .titulo2{
   font-size:32px;
   margin-left: 45%;
-  margin-top: 4%;
+  margin-top: 2%;
   font-weight: normal;
 
 }
@@ -52,17 +55,9 @@ input{
   margin-left: 23%;
 }
 
-.divMerma{
-  position: fixed;
-  top: 10%;
-  left: 63%;
-  width: 20%;
-}
-
-.divOEEE{
-  position: fixed;
-  top: 10%;
-  left: 80%;
+.divMerma, .divOEEE{
+  margin-left: 60px;
+  margin-top: 40px;
 }
 
 .subTitle{

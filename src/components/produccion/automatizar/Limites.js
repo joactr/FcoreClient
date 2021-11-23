@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import SideNav from '../../sideNav/SideNav';
 import NavBarProd from '../NavBarProd';
+import logoLimites from './logoLimites.png'
 import './limites.css';
 
 export default function Limites() {
@@ -86,7 +87,7 @@ export default function Limites() {
   //PARA AÑADIR VARIABLES PONER ID AL BOTON CON NOMBRE, Y EL FORM CON ESE NOMBRE+"FORM"
   return (
   <Fragment>
-    {/*<NavBarProd/>*/}
+    <NavBarProd/>
     <SideNav/>
     <div className="divLimite">
       <form className="formLimite" id="temperaturaForm">
@@ -159,12 +160,9 @@ export default function Limites() {
         <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
         <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
       </form>
-
-
-
-
-
     </div>
+    <img className="logoLimitesProd" src={logoLimites}/>
+
   </Fragment>
   )
 }

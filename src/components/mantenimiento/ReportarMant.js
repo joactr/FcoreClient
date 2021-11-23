@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import AsyncSelect from 'react-select/async';
 import SideNav from '../sideNav/SideNav';
+import NavBarMant from'./NavBarMant'
 import './reportarMant.css';
 
 const ReportarMant = () => {
@@ -103,6 +104,7 @@ const ReportarMant = () => {
 
     return (
         <Fragment>
+          <NavBarMant/>
           <SideNav/>
           <form className="formReportarMant" onSubmit={enviarDatos}>
               <div>

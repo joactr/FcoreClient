@@ -54,7 +54,7 @@ export default function Flujos() {
 
   return (
   <Fragment>
-    {/*<NavBarProd/>*/}
+    <NavBarProd/>
     <SideNav/>
     <script  type="text/javascript" src="https://flow.microsoft.com/Content/msflowsdk-1.1.js"></script>
     <div id="flowDiv" className="flowContainer"></div>
