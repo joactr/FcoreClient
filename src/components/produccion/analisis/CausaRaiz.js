@@ -2,6 +2,7 @@ import React, {Fragment, useState} from 'react';
 import { useForm } from "react-hook-form";
 import SideNav from '../../sideNav/SideNav';
 import NavBarProd from '../NavBarProd';
+import NavBarProdAna from './NavBarProdAna';
 import './causaRaiz.css'
 
 const CausaRaiz = () => {
@@ -32,6 +33,7 @@ const CausaRaiz = () => {
     return (
         <Fragment>
           <NavBarProd/>
+          <NavBarProdAna/>
           <SideNav/>
           <div>
           <div className="selector">

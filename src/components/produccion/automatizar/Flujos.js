@@ -1,6 +1,7 @@
 import React, {Fragment, useState, useEffect} from 'react';
 import SideNav from '../../sideNav/SideNav';
 import NavBarProd from '../NavBarProd';
+import NavBarProdAut from './NavBarProdAut';
 import './flujos.css';
 import  logo from './logoPowAuto.png'
 
@@ -55,6 +56,7 @@ export default function Flujos() {
   return (
   <Fragment>
     <NavBarProd/>
+    <NavBarProdAut/>
     <SideNav/>
     <script  type="text/javascript" src="https://flow.microsoft.com/Content/msflowsdk-1.1.js"></script>
     <div id="flowDiv" className="flowContainer"></div>

@@ -12,6 +12,7 @@ input{
 }
 .wrapperML{
   margin-left: 22.5%;
+  height: calc(100% - 150px);
 }
 
 .textoML {
@@ -36,7 +37,7 @@ input{
 .titulo{
   font-size:32px;
   height: 30px;
-  padding-top: 30px;
+  padding-top: 60px;
   padding-left: 26%;
   font-weight: normal;
   text-align: left;
@@ -53,6 +54,7 @@ input{
 .grafico{
   width: 65%;
   margin-left: 23%;
+  padding-bottom: 60px;
 }
 
 .divMerma, .divOEEE{

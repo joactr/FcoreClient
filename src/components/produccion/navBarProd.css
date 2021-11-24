@@ -13,10 +13,11 @@
 
 .linkProd{
   padding-top: 10px;
-  margin-left: 5vw;
+  margin-left: 4vw;
   text-decoration: none;
   text-align: center;
   width: 150px;
+  white-space: nowrap;
   color: black;
 }
 

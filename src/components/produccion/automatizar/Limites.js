@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import SideNav from '../../sideNav/SideNav';
 import NavBarProd from '../NavBarProd';
+import NavBarProdAut from './NavBarProdAut'
 import logoLimites from './logoLimites.png'
 import './limites.css';
 
@@ -88,6 +89,7 @@ export default function Limites() {
   return (
   <Fragment>
     <NavBarProd/>
+    <NavBarProdAut/>
     <SideNav/>
     <div className="divLimite">
       <form className="formLimite" id="temperaturaForm">

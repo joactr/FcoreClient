@@ -2,6 +2,7 @@ import React, {Fragment, useState} from 'react';
 import SideNav from '../../sideNav/SideNav';
 import './machineLearning.css'
 import NavBarProd from '../NavBarProd';
+import NavBarProdAna from './NavBarProdAna';
 import grafico from './graficaML.png'
 
 const MachineLearning = () => {
@@ -27,6 +28,7 @@ const MachineLearning = () => {
     return (
         <Fragment>
           <NavBarProd/>
+          <NavBarProdAna/>
           <SideNav/>
 
             <h1 className="titulo">Simulación</h1>

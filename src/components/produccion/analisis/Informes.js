@@ -2,6 +2,7 @@ import React, {Fragment, useState, useEffect} from 'react';
 import SideNav from '../../sideNav/SideNav';
 import informes from './informes.png';
 import NavBarProd from '../NavBarProd';
+import NavBarProdAna from './NavBarProdAna';
 export default function Reporte() {
 
 
@@ -24,6 +25,7 @@ const [linkReporte, setlinkReporte] = useState(null);
 return (
 <Fragment>
   <NavBarProd/>
+  <NavBarProdAna/>
   <SideNav/>
   <iframe className="reporteInforme" id="templates" title="reportePowerBI" src={linkReporte} frameborder="0" allowFullScreen={true}></iframe>
 </Fragment>
