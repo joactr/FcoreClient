@@ -50,12 +50,20 @@ function App() {
             <Route path="/mantenimiento/automatizar/limites" component={LimitesMant}/>
 
 
+
+            {/*REDIRECCIONES*/}
+
             <Route path="/produccion/analisis" render={() => (
               <Redirect exact to="/produccion/analisis/informes" />)}/> {/*REDIRECCION A ANALISIS*/}
             <Route path="/produccion/automatizar" render={() => (
               <Redirect exact to="/produccion/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
+            <Route path="/produccion" render={() => (
+              <Redirect exact to="/produccion/parametros-produccion" />)}/> {/*REDIRECCION A PRODUCIÓN*/}
+
             <Route path="/mantenimiento/automatizar" render={() => (
               <Redirect exact to="/mantenimiento/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
+            <Route path="/mantenimiento" render={() => (
+              <Redirect exact to="/mantenimiento/parametros" />)}/> {/*REDIRECCION A MANTENIMIENTO*/}
           </Switch>
         </BrowserRouter>
 
