@@ -9,11 +9,11 @@
   right: 0;
   list-style-type: none;
   background-color: white;
+  justify-content: space-between;
 }
 
 .linkProd{
   padding-top: 10px;
-  margin-left: 4vw;
   text-decoration: none;
   text-align: center;
   width: 150px;
@@ -24,4 +24,17 @@
 .linkProd:hover{
   padding-top: 12px;
   background-color: #F2F2F2;
+}
+
+.wrapperNavTurnos{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+  width: 86%;
+  height: 40px;
+  top: 40px;
+  right: 0;
+  list-style-type: none;
+  background-color: white;
 }

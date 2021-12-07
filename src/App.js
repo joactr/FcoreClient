@@ -8,6 +8,7 @@ import MachineLearning from "./components/produccion/analisis/MachineLearning";
 import Produccion from "./components/produccion/Produccion";
 import ConfiguracionProduccion from "./components/produccion/Configuracion";
 import Limites from "./components/produccion/automatizar/Limites";
+import Turnos from "./components/produccion/turnos/Turnos"
 import Flujos from "./components/produccion/automatizar/Flujos";
 import Login from "./components/login/Login";
 import Home from "./components/Home";
@@ -31,6 +32,9 @@ function App() {
 
             <Route path="/produccion/parametros-produccion" component={Produccion}/>
             <Route path="/produccion/reportar" component={Reportar}/>
+            <Route path="/produccion/turnos/1" component={Turnos}/>
+            <Route path="/produccion/turnos/2" component={Turnos}/>
+            <Route path="/produccion/turnos/3" component={Turnos}/>
             <Route path="/produccion/visualizar" component={Visualizar}/>
 
               <Route path="/produccion/analisis/informes" component={Informes}/>
@@ -57,8 +61,11 @@ function App() {
               <Redirect exact to="/produccion/analisis/informes" />)}/> {/*REDIRECCION A ANALISIS*/}
             <Route path="/produccion/automatizar" render={() => (
               <Redirect exact to="/produccion/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
+              <Route path="/produccion/turnos" render={() => (
+                <Redirect exact to="/produccion/turnos/1" />)}/> {/*REDIRECCION A TURNOS1*/}
             <Route path="/produccion" render={() => (
               <Redirect exact to="/produccion/parametros-produccion" />)}/> {/*REDIRECCION A PRODUCIÓN*/}
+
 
             <Route path="/mantenimiento/automatizar" render={() => (
               <Redirect exact to="/mantenimiento/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
