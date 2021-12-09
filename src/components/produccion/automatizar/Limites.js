@@ -138,7 +138,7 @@ export default function Limites() {
         <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
       </form>
       <form className="formLimite" id="horasForm">
-        <label className="textoLimite">% Lluvia previsión meteorológica AMET</label>
+        <label className="textoLimite">% Lluvia previsión meteorológica AEMET</label>
         <input type="number" placeholder="Mayor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMin" name="min"/>
         <input type="number" placeholder="Menor que" step="0.001" presicion={2} onChange={handleInputChange} onKeyDown={onEnterPress} className="inputLimiteMax" name="max"/>
       </form>

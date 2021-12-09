@@ -52,10 +52,6 @@
 }
 
 .formReportar {
-  position: fixed;
-  top: max(4%, 40px);
-  left: 17%;
-  z-index: 1;
 }
 
 .commentReportar{
@@ -78,4 +74,12 @@
   width: 50vw;
   margin-left: 10%;
   padding-top: 5vh;
+}
+
+.wrapperReportarProd{
+  position: relative;
+  margin-top: 50px;
+  margin-left: 17%;
+  height: calc(100% - 80px);
+  padding-bottom: 60px;
 }

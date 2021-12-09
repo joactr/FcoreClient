@@ -30,7 +30,7 @@ const Produccion = () => {
         <Fragment>
           <NavBarProd/>
           <SideNav/>
-          <div className="divBorde">
+          <div className="wrapperParamsProd">
 
             <div className="prod">
                 <label className="textoProd">Número de perfiles (#)</label>

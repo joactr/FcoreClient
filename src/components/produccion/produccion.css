@@ -1,7 +1,7 @@
 .inputProd {
   display:table;
   margin-left:10%;
-  height: clamp(0.1rem, 3.2vh , 5rem);
+  height: 30px;
   width: 22.4vw;
   border-style: solid;
   border-color: #E0E0E0;
@@ -14,7 +14,7 @@
   display:table;
   vertical-align:middle;
 
-  height: clamp(0.1rem, 3.8vh , 5rem);
+  height: 34px;
   width: 22.93vw;
   border-width: 2px;
   border-style: solid;
@@ -25,8 +25,7 @@
 
 .prod{
   position: relative;
-  padding-left: 5%;
-  padding-top: clamp(0.1rem, 2vh , 10rem);
+  padding-top: 18px;
 }
 
 .textoProd {
@@ -46,14 +45,10 @@
   padding-top: 6%;
 }
 
-.divBorde{
-  position: fixed;
-  border-radius: 15px;
-  border-width: 3px;
-  border-style: solid;
-  border-color: white;
-  margin-left: 15%;
-  margin-top: 5%;
-  width: 82%;
-  height: 80%;
+.wrapperParamsProd{
+  position: relative;
+  margin-left: 18%;
+  margin-top: 80px;
+  height: 100%;
+  padding-bottom: 60px;
 }
