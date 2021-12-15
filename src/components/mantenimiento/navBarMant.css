@@ -2,12 +2,12 @@
   position: fixed;
   display: flex;
   flex-direction: row;
+  list-style-type: none;
   z-index: 100;
   width: 86%;
   height: 40px;
   top: 0;
   right: 0;
-  list-style-type: none;
   background-color: white;
 }
 
