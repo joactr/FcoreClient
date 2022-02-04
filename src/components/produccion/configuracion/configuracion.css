@@ -1,0 +1,83 @@
+.wrapper {
+  margin-top: 15vh;
+  padding-bottom: 60px;
+}
+
+.tituloConfig{
+  left: 25%;
+  font-size: 1rem;
+}
+
+.config{
+  padding-left: 28%;
+  padding-top: 20px;
+}
+
+.textoConfig {
+    display:inline-block;
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    float: left;
+    padding-top: 10px;
+    text-align: left;
+    width: min(30vw,400px);
+}
+
+.selectConfig, .inputConfig{
+  display:inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  vertical-align:middle;
+  margin-left:20px;
+  height: 30px;
+  width: max(13vw,200px);
+  border-width: 2px;
+  border-color: #E2E2E2;
+  background-color: #F2F2F2;
+}
+
+.inputConfig{
+  width: min(25vw,350px);
+}
+
+.cambiarDatosProdWrapper{
+  display: flex;
+  flex-direction: row;
+  margin-top: 120px;
+  margin-left: 17%;
+}
+
+.commentCambiarDatosProd{
+  margin-top: 3vh;
+  margin-bottom: 5px;
+  display:inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  vertical-align:middle;
+  margin-left:3vw;
+  height: 40vh;
+  width: 20vw;
+  border-width: 2px;
+  border-color: #E0E0E0;
+  background-color: #F2F2F2;
+  border-radius: 7px;
+}
+
+.botonCambiarDatosProd{
+  zoom:1;              /* for IE7*/
+  vertical-align: middle;
+  margin-left: 3vw;
+  height: 30px;
+  width: 120px;
+  padding: 0.3rem 1rem;
+  font-weight: 550;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+  backface-visibility: hidden;
+  border: 0.15rem solid transparent;
+  border-radius: 0.5rem;
+  border-color: black;
+  cursor:pointer;
+  margin-top: 25vh;
+}

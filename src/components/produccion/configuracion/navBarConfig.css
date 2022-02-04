@@ -1,0 +1,27 @@
+.wrapperNavConfigProd{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+  width: 86%;
+  height: 40px;
+  margin-top: 40px;
+  top:0;
+  right: 0;
+  list-style-type: none;
+  background-color: white;
+}
+
+.linkConfigProd{
+  padding-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 240px;
+  white-space: nowrap;
+  color: black;
+}
+
+.linkConfigProd:hover{
+  padding-top: 12px;
+  background-color: #F2F2F2;
+}

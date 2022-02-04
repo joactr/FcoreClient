@@ -1,7 +1,10 @@
 import React, {Fragment, useState} from 'react';
 import SideNav from '../sideNav/SideNav';
+import App from '../../App'
+import ReactDOM from 'react-dom';
 import './produccion.css'
 import NavBarProd from './NavBarProd';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 const Produccion = () => {
   const onEnterPress = (e) => {
@@ -93,5 +96,6 @@ const Produccion = () => {
         </Fragment>
     );
 }
+
 
 export default Produccion;

@@ -1,0 +1,59 @@
+
+
+
+
+
+const Produccion = () => {
+
+  const onEnterPress = (e) => {
+    if(e.keyCode === 13 && e.shiftKey === false) {
+      const elements = Array.from(document.getElementsByClassName("inputProd"));
+      console.log(elements);
+      console.log(elements[1].value);//SE PUEDE HACER UN BUCLE QUE RECORRA TODOS Y PONGA VALUE = ''
+      if(e.target.value !== ''){
+        e.preventDefault();
+        window.alert(`Variable ${e.target.id} introducida con el valor: ${e.target.value}`);
+        e.target.value ='';
+      }else{
+        window.alert(`Por favor introduzca un valor válido`);
+      }
+    }
+  }
+
+  const campos = [ "Número de perfiles (#)",
+          "Hora Inicio Turno (dd/mm/aaa hh:mm)",
+          "Hora Final turno (dd/mm/aaa hh:mm)",
+          "Artículo (#)",
+          "Orden de Fabr. (#)",
+          "Tiempo de ciclo (s.)",
+          "Ratio de Merma (%)",
+          "Tiempo de Microparo (s.)",
+          "Tiempo de avería (s.)",
+          "Tiempo de Falta Material (s.)",
+          "Tiempo de Paro 1 (s.)",
+          "Pausa producción"];
+
+  function ListaFormulario(props) {
+    const campos = props.campos;
+    const listItems = campos.map((campo) =>
+    <div className="prod" key={campo.toString()}>
+        <label className="textoProd">{campo}</label>
+        <input type="text" className="inputProd" id={campo} onKeyDown={onEnterPress}/>
+    </div>
+    );
+    return (
+      <Fragment>
+
+        <div className="wrapperParamsProd" id="fulanito1">
+          <ul>{listItems}</ul>
+        </div>
+      </Fragment>
+    );
+  }
+
+  ReactDOM.render(
+    <ListaFormulario campos={campos} />,
+    document.getElementById("fulanito1")
+  );
+
+}
