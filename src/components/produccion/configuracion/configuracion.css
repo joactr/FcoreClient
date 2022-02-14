@@ -1,4 +1,4 @@
-.wrapper {
+.wrapperConfigProd {
   margin-top: 15vh;
   padding-bottom: 60px;
 }
@@ -6,6 +6,13 @@
 .tituloConfig{
   left: 25%;
   font-size: 1rem;
+}
+
+.filaConfigProd{
+  padding-left: 28%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 .config{
@@ -23,7 +30,7 @@
     width: min(30vw,400px);
 }
 
-.selectConfig, .inputConfig{
+.selectConfig, .inputConfig,.selectConfigLarge{
   display:inline-block;
   *display: inline;     /* for IE7*/
   zoom:1;              /* for IE7*/
@@ -38,6 +45,9 @@
 
 .inputConfig{
   width: min(25vw,350px);
+}
+.selectConfigLarge{
+  width: 19vw;
 }
 
 .cambiarDatosProdWrapper{
@@ -63,7 +73,7 @@
   border-radius: 7px;
 }
 
-.botonCambiarDatosProd{
+.botonCambiarDatosProd,.botonUsuariosConfig{
   zoom:1;              /* for IE7*/
   vertical-align: middle;
   margin-left: 3vw;
@@ -80,4 +90,8 @@
   border-color: black;
   cursor:pointer;
   margin-top: 25vh;
+}
+
+.botonUsuariosConfig{
+  margin-top: 4px;
 }

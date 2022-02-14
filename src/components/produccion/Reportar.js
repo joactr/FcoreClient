@@ -109,11 +109,26 @@ const Reportar = () => {
           <div className="wrapperReportarProd">
             <form className="formReportar" onSubmit={enviarDatos}>
                 <div>
-                  <label className="textoReportar">Línea:</label>
-                  <select className="selectReportar" >
+                  <label className="textoReportar">Línea / Proceso:</label>
+                  <select className="selectReportarsmall" >
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                  <select className="selectReportarsmall" >
+                    <option value="Cuadradillo">Cuadradillo</option>
+                    <option value="Testero">Testero</option>
+                    <option value="Lateral">Lateral</option>
+                    <option value="Fondo">Fondo</option>
+                    <option value="Envasado">Envasado</option>
+
                   </select>
                 </div>
                 <div>

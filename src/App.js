@@ -1,13 +1,15 @@
 import "./App.css";
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import ReactDOM from 'react-dom';
+import { Route, Redirect } from 'react-router-dom';
 import Reportar from "./components/produccion/Reportar";
-import Visualizar from "./components/produccion/Visualizar";
+import Visualizar from "./components/produccion/monitorizacion/Visualizar";
 import Informes from "./components/produccion/analisis/Informes";
 import CausaRaiz from "./components/produccion/analisis/CausaRaiz";
 import MachineLearning from "./components/produccion/analisis/MachineLearning";
 import Produccion from "./components/produccion/Produccion";
-import ConfiguracionProduccion from "./components/produccion/configuracion/Configuracion";
+import UploadingReportesProd from "./components/produccion/configuracion/UploadingReportesProd";
+import UsuariosConfigProd from "./components/produccion/configuracion/UsuariosConfigProd"
+import NivelesConfigProd from "./components/produccion/configuracion/NivelesConfigProd"
+import CambiarDatosProd from "./components/produccion/configuracion/CambiarDatosProd"
 import Limites from "./components/produccion/automatizar/Limites";
 import Turnos from "./components/produccion/turnos/Turnos"
 import Flujos from "./components/produccion/automatizar/Flujos";
@@ -17,7 +19,6 @@ import Parametros from "./components/mantenimiento/Parametros";
 import MonitorizacionMant from "./components/mantenimiento/MonitorizacionMant";
 import ReportarMant from "./components/mantenimiento/ReportarMant";
 import LimitesMant from "./components/mantenimiento/automatizar/LimitesMant";
-import CambiarDatosProd from "./components/produccion/configuracion/CambiarDatosProd"
 
 //https://stackoverflow.com/questions/47602010/react-router-authentication-redirection
 function App() {
@@ -25,9 +26,8 @@ function App() {
   return (
     <div className="App">
       <body className="App-body">
-
-          <Redirect exact from="/" to="/login" />
-          <Redirect exact from="/produccion/automatizar/" to="/login" />
+            <Redirect exact from="/" to="/login" />
+            <Redirect exact from="/produccion/automatizar/" to="/login" />
             <Route path="/login" component={Login}/>
             <Route path="/home" component={Home}/>
 
@@ -47,8 +47,10 @@ function App() {
 
 
 
-            <Route path="/produccion/config/base" component={ConfiguracionProduccion}/>
+            <Route path="/produccion/config/usuarios" component={UsuariosConfigProd}/>
             <Route path="/produccion/config/datos-prod" component={CambiarDatosProd}/>
+            <Route path="/produccion/config/niveles" component={NivelesConfigProd}/>
+            <Route path="/produccion/config/uploading-reportes" component={UploadingReportesProd}/>
 
             <Route path="/mantenimiento/parametros" component={Parametros}/>
             <Route path="/mantenimiento/monitorizacion" component={MonitorizacionMant}/>
@@ -59,7 +61,7 @@ function App() {
 
             {/*REDIRECCIONES*/}
             <Route path="/produccion/config" render={() => (
-              <Redirect exact to="/produccion/config/datos-prod" />)}/> {/*REDIRECCION A CONFIGURACION*/}
+              <Redirect exact to="/produccion/config/usuarios" />)}/> {/*REDIRECCION A CONFIGURACION*/}
             <Route path="/produccion/analisis" render={() => (
               <Redirect exact to="/produccion/analisis/informes" />)}/> {/*REDIRECCION A ANALISIS*/}
             <Route path="/produccion/automatizar" render={() => (

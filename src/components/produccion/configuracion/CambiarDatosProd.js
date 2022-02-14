@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment} from 'react';
 import SideNav from '../../sideNav/SideNav';
 import NavBarProd from '../NavBarProd';
 import NavBarConfig from './NavBarConfig';

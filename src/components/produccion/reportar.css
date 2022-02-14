@@ -15,6 +15,22 @@
   text-align: center;
 }
 
+.selectReportarsmall{
+  margin-top: 3vh;
+  margin-bottom: 5px;
+  display:inline-block;
+  *display: inline;     /* for IE7*/
+  zoom:1;              /* for IE7*/
+  vertical-align:middle;
+  margin-left:3vw;
+  height: 36px;
+  width: 11vw;
+  border-width: 2px;
+  border-color: #E0E0E0;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+
 .textoReportar {
     display:inline-block;
     vertical-align:middle;
