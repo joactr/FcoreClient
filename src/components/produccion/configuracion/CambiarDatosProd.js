@@ -16,18 +16,18 @@ const CambiarDatosProd = () => {
       <NavBarConfig/>
       <SideNav/>
       <div className="cambiarDatosProdWrapper">
-        <textarea className="commentCambiarDatosProd" defaultValue=" Número de perfiles (#)\n
-                Hora Inicio Turno (dd/mm/aaa hh:mm)\n
-                Hora Final turno (dd/mm/aaa hh:mm)\n
-                Artículo (#)\n
-                Orden de Fabr. (#)\n
-                Tiempo de ciclo (s.)\n
-                Ratio de Merma (%)\n
-                Tiempo de Microparo (s.)\n
-                Tiempo de avería (s.)\n
-                Tiempo de Falta Material (s.)\n
-                Tiempo de Paro 1 (s.)\n
-                Pausa producción\n"
+        <textarea className="commentCambiarDatosProd"  textmode="MultiLine" defaultValue=" Número de perfiles (#)
+                Hora Inicio Turno (dd/mm/aaa hh:mm)
+                Hora Final turno (dd/mm/aaa hh:mm)
+                Artículo (#)
+                Orden de Fabr. (#)
+                Tiempo de ciclo (s.)
+                Ratio de Merma (%)
+                Tiempo de Microparo (s.)
+                Tiempo de avería (s.)
+                Tiempo de Falta Material (s.)
+                Tiempo de Paro 1 (s.)
+                Pausa producción"
         rows="20">
 
         </textarea>
