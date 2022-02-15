@@ -20,12 +20,18 @@
   padding-top: 20px;
 }
 
+.configUploadReportes{
+  padding-left: 12%;
+  padding-top: 20px;
+
+}
+
 .textoConfig {
     display:inline-block;
     *display: inline;     /* for IE7*/
     zoom:1;              /* for IE7*/
     float: left;
-    padding-top: 10px;
+    padding-top: 5px;
     text-align: left;
     width: min(30vw,400px);
 }
@@ -71,7 +77,7 @@
   border-color: #E0E0E0;
   background-color: #F2F2F2;
   border-radius: 7px;
-  white-space: normal
+  white-space: pre-line;
 }
 
 .botonCambiarDatosProd,.botonUsuariosConfig{
@@ -95,4 +101,17 @@
 
 .botonUsuariosConfig{
   margin-top: 4px;
+}
+
+.contenedorConfigProd{
+  margin-top: 120px;
+  margin-left: 19%;
+}
+
+.wrapperconfigProdBorde{
+  border: 3px solid #0070C0;
+  width: 65vw;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  border-radius: 1rem;
 }

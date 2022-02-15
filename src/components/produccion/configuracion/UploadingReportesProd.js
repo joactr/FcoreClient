@@ -7,7 +7,7 @@ import './configuracion.css'
 const UploadingReportesProd = () => {
 
     const enviarDatos = (event) => {
-      window.alert("Datos enviados");
+      window.alert("Editado Reporte PowerBI");
     }
     function onChange() {
       alert('Permisos cambiados');
@@ -50,37 +50,81 @@ const UploadingReportesProd = () => {
           <NavBarProd/>
           <NavBarConfig/>
           <SideNav/>
-          <div className="wrapperConfigProd">
-            <div className="config">
-              <label className="textoConfig">Línea donde se inserta el reporte Monitorización TR:</label>
-              <select className="selectConfigLarge" >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
+          <div className="contenedorConfigProd">
+            <div className="wrapperconfigProdBorde">
+              <div className="configUploadReportes">
+                <label className="textoConfig">Línea donde se inserta el reporte Monitorización TR:</label>
+                <select className="selectConfigLarge" >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
 
+              </div>
+              <div className="configUploadReportes">
+                <label className="textoConfig">Proceso donde se inserta el reporte Monitorización TR:</label>
+                <select className="selectConfigLarge" >
+                  <option value="Cuadradillo">Cuadradillo</option>
+                  <option value="Testero">Testero</option>
+                  <option value="Lateral">Lateral</option>
+                  <option value="Fondo">Fondo</option>
+                  <option value="Envasado">Envasado</option>
+                </select>
+              </div>
+              <div className="configUploadReportes">
+                  <label className="textoConfig">Copiar Link Reporte Ms Power BI Monitorizacón TR:</label>
+                  <input type="text" className="inputConfig" onKeyDown={onEnterPress}/>
+                  <button type="submit" className="botonUsuariosConfig" onClick={enviarDatos}>Enviar</button>
+              </div>
             </div>
-            <div className="config">
-              <label className="textoConfig">Proceso donde se inserta el reporte Monitorización TR:</label>
-              <select className="selectConfigLarge" >
-                <option value="Cuadradillo">Cuadradillo</option>
-                <option value="Testero">Testero</option>
-                <option value="Lateral">Lateral</option>
-                <option value="Fondo">Fondo</option>
-                <option value="Envasado">Envasado</option>
-              </select>
-            </div>
-            <div className="config">
-                <label className="textoConfig">Link informe PowerBI</label>
-                <input type="text" className="inputConfig" onKeyDown={onEnterPress}/>
+            <div className="wrapperconfigProdBorde">
+              <div className="configUploadReportes">
+                <label className="textoConfig">Línea donde se inserta el reporte Análisis :</label>
+                <select className="selectConfigLarge" >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
 
+              </div>
+              <div className="configUploadReportes">
+                <label className="textoConfig">Proceso donde se inserta el reporte Análisis:</label>
+                <select className="selectConfigLarge" >
+                  <option value="Cuadradillo">Cuadradillo</option>
+                  <option value="Testero">Testero</option>
+                  <option value="Lateral">Lateral</option>
+                  <option value="Fondo">Fondo</option>
+                  <option value="Envasado">Envasado</option>
+                </select>
+              </div>
+              <div className="configUploadReportes">
+                <label className="textoConfig">Orden en el que se inserta el reporte Análisis:</label>
+                <select className="selectConfigLarge" >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+              <div className="configUploadReportes">
+                  <label className="textoConfig">Copiar Link Publicado Reporte Ms Power BI Análisis:</label>
+                  <input type="text" className="inputConfig" onKeyDown={onEnterPress}/>
+                  <button type="submit" className="botonUsuariosConfig" onClick={enviarDatos}>Enviar</button>
+              </div>
             </div>
           </div>
 
