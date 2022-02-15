@@ -36,7 +36,6 @@ const UsuariosConfigProd = () => {
                   </select>
               </div>
           </div>
-
         </Fragment>
     );
 }
