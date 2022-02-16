@@ -29,18 +29,12 @@ const Produccion = () => {
       }
     }
 
+    const src = "https://app.powerbi.com/view?r=eyJrIjoiMmFmNjMzMTktNzMxMi00MDg1LWE2ZjMtNzFlYmI4OGFkODY2IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9&pageName=ReportSection"
     return (
         <Fragment>
           <NavBarProd/>
           <SideNav/>
-          <div className="wrapperParamsProd">
-
-
-
-
-
-
-          </div>
+          <iframe className="reporteProd" id="templates" title="reportePowerBI" src={src} frameborder="0" allowFullScreen={true}></iframe>
         </Fragment>
     );
 }
