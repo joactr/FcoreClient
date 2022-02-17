@@ -8,7 +8,7 @@ import './visualizar.css'
 export default function reporte() {
 
 
-const src = "https://app.powerbi.com/view?r=eyJrIjoiZGZkMzRkMDMtZGQzNS00ZTljLWFiZDctYjU1MjYzNDU3MzQwIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9"
+const src = "https://app.powerbi.com/view?r=eyJrIjoiZGZkMzRkMDMtZGQzNS00ZTljLWFiZDctYjU1MjYzNDU3MzQwIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9&pageName=ReportSection"
 return (
 <Fragment>
     <NavBarProd/>
