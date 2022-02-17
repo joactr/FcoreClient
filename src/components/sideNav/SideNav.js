@@ -10,8 +10,8 @@ export default function SideNav() {
   return(
     <Fragment>
     <div className="sidenav">
-      <NavLink to="/produccion" className="sideText" activeStyle={activeStyle}>Producción</NavLink>
-      <NavLink to="/mantenimiento" className="sideText" activeStyle={activeStyle}>Mantenimiento</NavLink>
+      <NavLink to="/produccion/parametros-produccion" className="sideText" activeStyle={activeStyle}>Producción</NavLink>
+      <NavLink to="/mantenimiento/parametros" className="sideText" activeStyle={activeStyle}>Mantenimiento</NavLink>
       <NavLink to="/calidad" className="sideText" activeStyle={activeStyle}>Calidad</NavLink>
       <NavLink to="/costes" className="sideText" activeStyle={activeStyle}>Costes</NavLink>
       <NavLink to="/configuracion" className="sideText" activeStyle={activeStyle}>Configuración</NavLink>
