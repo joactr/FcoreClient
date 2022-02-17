@@ -29,7 +29,7 @@ const Produccion = () => {
       }
     }
 
-    const src = "https://app.powerbi.com/view?r=eyJrIjoiMmFmNjMzMTktNzMxMi00MDg1LWE2ZjMtNzFlYmI4OGFkODY2IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9&pageName=ReportSection"
+    const src = "https://app.powerbi.com/reportEmbed?reportId=909c7d25-7eef-4bb1-9008-a44121d89abe&autoAuth=true&ctid=9a23e74b-ea09-47cf-a6eb-46dfacd632f5&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtZXVyb3BlLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D"
     return (
         <Fragment>
           <NavBarProd/>

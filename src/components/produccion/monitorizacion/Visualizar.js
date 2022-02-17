@@ -8,7 +8,7 @@ import './visualizar.css'
 export default function reporte() {
 
 
-const src = "https://app.powerbi.com/view?r=eyJrIjoiNWFkZjE4MmMtNWM5ZS00NmNjLWE2YTAtYjQ0MWJlNjZmMmNjIiwidCI6ImJlNDY1NWRmLWFjNzMtNDAxZi1hN2FlLTE5OGMzYjcyZDBjNiIsImMiOjh9&pageName=ReportSection"
+const src = "https://app.powerbi.com/reportEmbed?reportId=10589d29-6972-4c87-ab92-f43c92117415&autoAuth=true&ctid=9a23e74b-ea09-47cf-a6eb-46dfacd632f5&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtZXVyb3BlLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D"
 return (
 <Fragment>
     <NavBarProd/>
