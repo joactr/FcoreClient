@@ -1,10 +1,13 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import SideNav from '../../sideNav/SideNav';
 import './turnos.css'
 import NavBarProd from '../NavBarProd';
 import NavBarTurnos from './NavBarTurnos'
 
 const Turnos = () => {
+  const[lineaState, setLineaState]=useState('Linea1');
+
+
   const onEnterPress = (e) => {
     if(e.keyCode === 13 && e.shiftKey === false) {
       const elements = Array.from(document.getElementsByClassName("inputProd"));
@@ -23,9 +26,9 @@ const Turnos = () => {
     return (
         <Fragment>
           <NavBarProd/>
-          <NavBarTurnos/>
+          <NavBarTurnos stateChanger={setLineaState}/>
           <SideNav/>
-
+          <label className="labelTurnos">{lineaState}</label>
           <div className="wrapperTurnosProd">
             {/* Inicio de los contenedores de turnos */}
             <div className="turnosContainer">
@@ -133,6 +136,7 @@ const Turnos = () => {
                   <input type="text" className="inputTurnos"></input>
                 <label className="labelTurnos">Minuto (mm) </label>
                   <input type="text" className="inputTurnos"></input>
+
               </form>
             </div>
 

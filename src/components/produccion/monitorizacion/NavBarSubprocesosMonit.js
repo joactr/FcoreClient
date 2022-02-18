@@ -1,18 +1,31 @@
 import {NavLink} from 'react-router-dom';
+import React, {useState} from 'react';
 import '../navBarProd.css'
-const NavBarSubprocesosMonit = () => {
+const NavBarSubprocesosMonit = ({stateChanger}) => {
 
-const style = {fontWeight: 'bold', borderBottom: '7px solid #0070C0'}
+  const [activeButton, setActiveButton] = useState("Global");
 
-return (
-  <div class="wrapperNavSubprocesos">
-    <NavLink to="/produccion/visualizar" activeStyle={style} className="linkProdsmall">Global</NavLink>
-    <NavLink to="/produccion/visualizar/a" activeStyle={style} className="linkProdsmall">Cuadradillo</NavLink>
-    <NavLink to="/produccion/visualizar/b" activeStyle={style} className="linkProdsmall">Testero</NavLink>
-    <NavLink to="/produccion/visualizar/c" activeStyle={style} className="linkProdsmall">Lateral</NavLink>
-    <NavLink to="/produccion/visualizar/d" activeStyle={style} className="linkProdsmall">Fondo</NavLink>
-    <NavLink to="/produccion/visualizar/e" activeStyle={style} className="linkProdsmall">Envasado</NavLink>
-  </div>
-)
+  const clickedButtonHandler = (name) => {
+    setActiveButton(name);
+    stateChanger(name);
+  };
+
+  const buttons = ["Global","Cuadradillo","Testero","Lateral","Fondo","Envasado"];
+
+  return (
+    <div class="wrapperNavSubprocesos">
+        {buttons.map((name) => (
+          <button
+            id={name}
+            className={activeButton === name ? `botonNavBarMonitorizacionActive` : "botonNavBarMonitorizacion"}
+            onClick={() => clickedButtonHandler(name)}
+          >
+            {name}
+          </button>
+        ))}
+    </div>
+  );
 }
+
+
 export default NavBarSubprocesosMonit;

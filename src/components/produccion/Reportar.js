@@ -60,8 +60,9 @@ const Reportar = () => {
                   var mes = element.Datetime.slice(5, 7)
                   var dia = element.Datetime.slice(8, 10)
                   var hora = element.Datetime.slice(11, 19)
+                  //var vibraciones = Math.round(element.Vibraciones * 100) / 100
                   tempArray.push({
-                    label: `${dia}/${mes}/${año}  ${hora}`,
+                    label: `${dia}/${mes}/${año}  ${hora} `,
                     value: element.Datetime,
                   });
                 });

@@ -1,22 +1,29 @@
 import {NavLink} from 'react-router-dom';
+import React, {useState} from 'react';
 import '../navBarProd.css'
-const NavBarMonitorizacionProd = () => {
+const NavBarMonitorizacionProd = ({stateChanger}) => {
 
-const style = {fontWeight: 'bold', borderBottom: '7px solid #0070C0'}
+  const [activeButton, setActiveButton] = useState("Linea1");
 
-return (
-  <div class="wrapperNavTurnos">
-    <NavLink to="/produccion/visualizar" activeStyle={style} className="linkProdsmall">Línea 1</NavLink>
-    <NavLink to="/produccion/visualizar/2" activeStyle={style} className="linkProdsmall">Línea 2</NavLink>
-    <NavLink to="/produccion/visualizar/3" activeStyle={style} className="linkProdsmall">Línea 3</NavLink>
-    <NavLink to="/produccion/visualizar/4" activeStyle={style} className="linkProdsmall">Línea 4</NavLink>
-    <NavLink to="/produccion/visualizar/5" activeStyle={style} className="linkProdsmall">Línea 5</NavLink>
-    <NavLink to="/produccion/visualizar/6" activeStyle={style} className="linkProdsmall">Línea 6</NavLink>
-    <NavLink to="/produccion/visualizar/7" activeStyle={style} className="linkProdsmall">Línea 7</NavLink>
-    <NavLink to="/produccion/visualizar/8" activeStyle={style} className="linkProdsmall">Línea 8</NavLink>
-    <NavLink to="/produccion/visualizar/9" activeStyle={style} className="linkProdsmall">Línea 9</NavLink>
-    <button className="botonNavBarMonitorizacion" activeStyle={style}>Línea 10</button>
-  </div>
-)
-}
-export default NavBarMonitorizacionProd;
+  const clickedButtonHandler = (name) => {
+    setActiveButton(name);
+    stateChanger(name);
+  };
+
+  const buttons = ["Linea1", "Linea2", "Linea3", "Linea4", "Linea5", "Linea6", "Linea7", "Linea8", "Linea9", "Linea10"];
+
+  return (
+    <div class="wrapperNavTurnos">
+        {buttons.map((name) => (
+          <button
+            id={name}
+            className={activeButton === name ? `botonNavBarMonitorizacionActive` : "botonNavBarMonitorizacion"}
+            onClick={() => clickedButtonHandler(name)}
+          >
+            {name}
+          </button>
+        ))}
+    </div>
+  );
+  }
+  export default NavBarMonitorizacionProd;

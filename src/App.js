@@ -33,9 +33,7 @@ function App() {
 
             <Route path="/produccion/parametros-produccion" component={Produccion}/>
             <Route path="/produccion/reportar" component={Reportar}/>
-            <Route path="/produccion/turnos/1" component={Turnos}/>
-            <Route path="/produccion/turnos/2" component={Turnos}/>
-            <Route path="/produccion/turnos/3" component={Turnos}/>
+            <Route path="/produccion/turnos" component={Turnos}/>
             <Route path="/produccion/visualizar" component={Visualizar}/>
 
             <Route path="/produccion/analisis/informes" component={Informes}/>
@@ -66,8 +64,6 @@ function App() {
               <Redirect exact to="/produccion/analisis/informes" />)}/> {/*REDIRECCION A ANALISIS*/}
             <Route path="/produccion/automatizar" render={() => (
               <Redirect exact to="/produccion/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
-              <Route path="/produccion/turnos" render={() => (
-                <Redirect exact to="/produccion/turnos/1" />)}/> {/*REDIRECCION A TURNOS1*/}
             <Route path="/produccion" render={() => (
               <Redirect exact to="/produccion/parametros-produccion" />)}/> {/*REDIRECCION A PRODUCIÓN*/}
 

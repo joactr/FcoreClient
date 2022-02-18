@@ -5,17 +5,19 @@ import NavBarMonitorizacionProd from './NavBarMonitorizacionProd'
 import NavBarSubprocesosMonit from './NavBarSubprocesosMonit'
 import './visualizar.css'
 
-export default function reporte() {
+export default function Visualizar() {
+  const[lineaState, setLineaState]=useState('Linea1');
+  const[subprocesoState, setSubprocesoState]=useState('Global');
 
-
-const src = "https://app.powerbi.com/reportEmbed?reportId=10589d29-6972-4c87-ab92-f43c92117415&autoAuth=true&ctid=9a23e74b-ea09-47cf-a6eb-46dfacd632f5&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtZXVyb3BlLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D"
+const src = "https://app.powerbi.com/view?r=eyJrIjoiZGZkMzRkMDMtZGQzNS00ZTljLWFiZDctYjU1MjYzNDU3MzQwIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9&pageName=ReportSectione3ea6f6954250cb503e0"
 return (
 <Fragment>
     <NavBarProd/>
-    <NavBarMonitorizacionProd/>
-    <NavBarSubprocesosMonit/>
+    <NavBarSubprocesosMonit stateChanger={setSubprocesoState}/>
     <SideNav/>
-  <iframe className="reporteProd" id="templates" title="reportePowerBI" src={src} frameborder="0" allowFullScreen={true}></iframe>
+    <NavBarMonitorizacionProd stateChanger={setLineaState}/>
+    <iframe className="reporteProd" id="templates" title="reportePowerBI" src={src} frameborder="0" allowFullScreen={true}></iframe>
+
 </Fragment>
 )
 

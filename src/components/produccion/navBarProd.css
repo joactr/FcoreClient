@@ -25,7 +25,7 @@
   width: 100px;
 }
 
-.botonNavBarMonitorizacion{
+.botonNavBarMonitorizacion,.botonNavBarMonitorizacionActive{
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
@@ -41,6 +41,11 @@
 .botonNavBarMonitorizacion:hover{
   padding-top: 5px;
   background-color: #F2F2F2;
+}
+
+.botonNavBarMonitorizacionActive{
+  border-bottom: 7px solid #0070C0;
+  font-weight: bold;
 }
 
 .linkProd:hover{
