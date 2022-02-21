@@ -10,8 +10,8 @@ function Login(){
 
 
   return (
-  <Fragment>
-  
+  <div className="loginContainer">
+
     <form className="loginForm">
       <label className="textoLogin">Usuario:</label>
       <input type="text" className="inputLogin"/>
@@ -31,7 +31,7 @@ function Login(){
       <img src={logoUE} className="logoUE" alt="logoUE" resizeMode="contain"/>
     </footer>
 
-  </Fragment>
+  </div>
   )
 
 }

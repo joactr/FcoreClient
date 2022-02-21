@@ -19,16 +19,20 @@ import Parametros from "./components/mantenimiento/Parametros";
 import MonitorizacionMant from "./components/mantenimiento/MonitorizacionMant";
 import ReportarMant from "./components/mantenimiento/ReportarMant";
 import LimitesMant from "./components/mantenimiento/automatizar/LimitesMant";
+import SideNav from './components/sideNav/SideNav';
 
 //https://stackoverflow.com/questions/47602010/react-router-authentication-redirection
 function App() {
 
   return (
     <div className="App">
+
       <body className="App-body">
+
             <Redirect exact from="/" to="/login" />
-            <Redirect exact from="/produccion/automatizar/" to="/login" />
             <Route path="/login" component={Login}/>
+            <Redirect exact from="/produccion/automatizar/" to="/login" />
+
             <Route path="/home" component={Home}/>
 
             <Route path="/produccion/parametros-produccion" component={Produccion}/>
@@ -72,9 +76,8 @@ function App() {
               <Redirect exact to="/mantenimiento/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
             <Route path="/mantenimiento" render={() => (
               <Redirect exact to="/mantenimiento/parametros" />)}/> {/*REDIRECCION A MANTENIMIENTO*/}
-
         <footer className="App-footer">
-          <label className="footerText">Copyright © 2021 Enira Engineering</label>
+          <label className="footerText"></label>
         </footer>
       </body>
 

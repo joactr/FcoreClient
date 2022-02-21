@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import AsyncSelect from 'react-select/async';
-import SideNav from '../sideNav/SideNav';
+import SideNav from '../sideNav/SideNav'
 import NavBarProd from './NavBarProd';
 import './reportar.css';
 
@@ -60,9 +60,9 @@ const Reportar = () => {
                   var mes = element.Datetime.slice(5, 7)
                   var dia = element.Datetime.slice(8, 10)
                   var hora = element.Datetime.slice(11, 19)
-                  //var vibraciones = Math.round(element.Vibraciones * 100) / 100
+                  var paro = element.Vibraciones
                   tempArray.push({
-                    label: `${dia}/${mes}/${año}  ${hora} `,
+                    label: `${dia}/${mes}/${año}  ${hora} Paro: ${paro}s`,
                     value: element.Datetime,
                   });
                 });
@@ -105,8 +105,8 @@ const Reportar = () => {
 
     return (
         <Fragment>
-          <NavBarProd/>
           <SideNav/>
+          <NavBarProd/>
           <div className="wrapperReportarProd">
             <form className="formReportar" onSubmit={enviarDatos}>
                 <div>
@@ -162,7 +162,7 @@ const Reportar = () => {
                   <textarea className="commentReportar" id="commentReportar"/>
                   <button type="submit" className="botonReportar">Enviar</button>
                 </div>
-                <iframe className="reporteReportar" id="reporteReportar" title="reporteReportar" src="https://app.powerbi.com/view?r=eyJrIjoiMTBkZmRhNzUtYjgwYy00OTBjLTg3MzMtNzM1OWI0NWY2MDA4IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9" frameBorder="0" allowFullScreen={true}></iframe>
+                <iframe className="reporteReportar" id="reporteReportar" title="reporteReportar" src="https://app.powerbi.com/view?r=eyJrIjoiNWI1ZTZiOTgtYzdiMC00ODAxLWI5NmUtNDExMzY0MWMzZmMzIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9&pageName=ReportSection" frameBorder="0" allowFullScreen={true}></iframe>
 
             </form>
           </div>

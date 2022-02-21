@@ -6,9 +6,8 @@ const Home = () => {
   return (
       <Fragment>
         <SideNav/>
-        <a href="http://www.enira.es" target="_blank" rel="noreferrer">
-          <img src={logo} className="homeLogo" alt="logo"/>
-        </a>
+
+        <img src={logo} className="homeLogo" alt="logo"/>
 
       </Fragment>
   );
