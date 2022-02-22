@@ -1,10 +1,10 @@
 
-.selectReportar{
+.selectReportar{ /* Dropdown */
   margin-top: 3vh;
   margin-bottom: 5px;
   display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
+  *display: inline;     /* for IE*/
+  zoom:1;              /* for IE*/
   vertical-align:middle;
   margin-left:3vw;
   height: 36px;
@@ -15,12 +15,12 @@
   text-align: center;
 }
 
-.selectReportarsmall{
+.selectReportarsmall{ /* Dropdown pequeño */
   margin-top: 3vh;
   margin-bottom: 5px;
   display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
+  *display: inline;     /* for IE*/
+  zoom:1;              /* for IE*/
   vertical-align:middle;
   margin-left:3vw;
   height: 36px;
@@ -31,11 +31,11 @@
   text-align: center;
 }
 
-.textoReportar {
+.textoReportar { /* Caja de input de texto */
     display:inline-block;
     vertical-align:middle;
-    *display: inline;     /* for IE7*/
-    zoom:1;              /* for IE7*/
+    *display: inline;     /* for IE*/
+    zoom:1;              /* for IE*/
     float: left;
     padding-top: 3.8vh;
     text-align: left;
@@ -46,8 +46,8 @@
 .botonReportar{
   margin-bottom: 10vh;
   display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
+  *display: inline;     /* for IE*/
+  zoom:1;              /* for IE*/
   vertical-align: middle;
   margin-left: 2vw;
   width: 8vw;
@@ -68,15 +68,12 @@
   transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }
 
-.formReportar {
-}
-
-.commentReportar{
+.commentReportar{ /* Caja de comentarios TextArea */
   margin-top: 3vh;
   margin-bottom: 5px;
   display:inline-block;
-  *display: inline;     /* for IE7*/
-  zoom:1;              /* for IE7*/
+  *display: inline;     /* for IE*/
+  zoom:1;              /* for IE*/
   vertical-align:middle;
   margin-left:3vw;
   height: 15vh;
@@ -86,7 +83,7 @@
   background-color: #F2F2F2;
 }
 
-.reporteReportar{
+.reporteReportar{ /* Reporte powerBI */
   height: 40vh;
   width: 50vw;
   margin-left: 10%;
