@@ -36,7 +36,10 @@ const Reportar = () => {
 
       setSelectedValue(value);
     }
-
+    var data = {
+      tabla: "Piloto",
+    }
+    var body = JSON.stringify(data)
     //Coge los datos de últimas fechas del back-end
     var fetchData = (inputValue, callback) => {
       setTimeout(() => {
@@ -56,19 +59,20 @@ const Reportar = () => {
                 data.forEach((element) => {
 
                   //SE LE DA FORMATO DESEADO A LA FECHA AL MOSTRAR
-                  var año = element.Datetime.slice(0, 4)
-                  var mes = element.Datetime.slice(5, 7)
-                  var dia = element.Datetime.slice(8, 10)
-                  var hora = element.Datetime.slice(11, 19)
-                  var paro = element.Vibraciones
+                  var año = element.Timestamp.slice(0, 4)
+                  var mes = element.Timestamp.slice(5, 7)
+                  var dia = element.Timestamp.slice(8, 10)
+                  var hora = element.Timestamp.slice(11, 19)
+                  var paro = element['Duracion Paro(s)']
+                  //var paro = element.Vibraciones
                   tempArray.push({
-                    label: `${dia}/${mes}/${año}  ${hora} Paro: ${paro}s`,
-                    value: element.Datetime,
+                    label: `${dia}/${mes}/${año}  ${hora} Paro: s`,
+                    value: element.Timestamp,
                   });
                 });
               } else {
                 tempArray.push({
-                  label: `${data.Datetime}`,
+                  label: `${data.Timestamp}`,
                   value: data.id,
                 });
               }
@@ -89,7 +93,9 @@ const Reportar = () => {
     var styles = {
       color: 'black'
   };
-
+  function handleChangeRep(){
+    alert("gola")
+  }
 
   const customStyles = {
     control: (base, state) => ({
@@ -123,7 +129,7 @@ const Reportar = () => {
                     <option value="9">9</option>
                     <option value="10">10</option>
                   </select>
-                  <select className="selectReportarsmall" >
+                  <select className="selectReportarsmall" onChange={handleChangeRep}>
                     <option value="Cuadradillo">Cuadradillo</option>
                     <option value="Testero">Testero</option>
                     <option value="Lateral">Lateral</option>
