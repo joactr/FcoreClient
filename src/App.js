@@ -23,7 +23,6 @@ import SideNav from './components/sideNav/SideNav';
 
 //https://stackoverflow.com/questions/47602010/react-router-authentication-redirection
 function App() {
-
   return (
     <div className="App">
 
