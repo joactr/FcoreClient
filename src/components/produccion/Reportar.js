@@ -64,9 +64,8 @@ const Reportar = () => {
                   var dia = element.Timestamp.slice(8, 10)
                   var hora = element.Timestamp.slice(11, 19)
                   var paro = element['Duracion Paro(s)']
-                  //var paro = element.Vibraciones
                   tempArray.push({
-                    label: `${dia}/${mes}/${año}  ${hora} Paro: s`,
+                    label: `${dia}/${mes}/${año}  ${hora} Paro: ${paro}s`,
                     value: element.Timestamp,
                   });
                 });
