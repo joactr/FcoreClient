@@ -79,7 +79,7 @@ const Reportar = () => {
             callback(tempArray);
           })
           .catch((error) => {
-            console.log(error, "catch the hoop");
+            console.log(error, "ERROR");
           });
       }, 1000);
     };

@@ -11,7 +11,6 @@ import UsuariosConfigProd from "./components/produccion/configuracion/UsuariosCo
 import NivelesConfigProd from "./components/produccion/configuracion/NivelesConfigProd"
 import CambiarDatosProd from "./components/produccion/configuracion/CambiarDatosProd"
 import Limites from "./components/produccion/automatizar/Limites";
-import Turnos from "./components/produccion/turnos/Turnos"
 import Flujos from "./components/produccion/automatizar/Flujos";
 import Login from "./components/login/Login";
 import Home from "./components/Home";
@@ -36,7 +35,6 @@ function App() {
 
             <Route path="/produccion/parametros-produccion" component={Produccion}/>
             <Route path="/produccion/reportar" component={Reportar}/>
-            <Route path="/produccion/turnos" component={Turnos}/>
             <Route path="/produccion/visualizar" component={Visualizar}/>
 
             <Route path="/produccion/analisis/informes" component={Informes}/>
