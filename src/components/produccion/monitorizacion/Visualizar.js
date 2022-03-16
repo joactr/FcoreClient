@@ -8,7 +8,7 @@ import './visualizar.css'
 export default function Visualizar() {
   const[lineaState, setLineaState]=useState('Linea8');
   const[subprocesoState, setSubprocesoState]=useState('Lateral');
-  const[reporteVisible,setReporteVisible]=useState(false);
+  const[reporteVisible,setReporteVisible]=useState(true);
 
   const src = "https://app.powerbi.com/view?r=eyJrIjoiZWY0MmI0ZGItZDUzZC00NzhlLWFlYjAtOGNjZTQ2NDE3ZjAzIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9"
 
@@ -18,11 +18,12 @@ export default function Visualizar() {
     {"firstName":"Peter", "lastName":"Jones"}
     ]}
 
-    useEffect(() => {
+  useEffect(() => {
       if(lineaState!='Linea8' || subprocesoState!='Lateral'){setReporteVisible(false);}  //De momento solo está la linea8 y lateral
       else{setReporteVisible(true);}
       document.getElementById('reporteMonitTR').src = src;
     },[lineaState, subprocesoState]);
+    
 
 
 
