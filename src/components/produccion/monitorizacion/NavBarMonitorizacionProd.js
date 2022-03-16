@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import '../navBarProd.css'
 const NavBarMonitorizacionProd = ({stateChanger}) => {
 
-  const [activeButton, setActiveButton] = useState("Linea1");
+  const [activeButton, setActiveButton] = useState("Linea8");
 
   const clickedButtonHandler = (name) => {
     setActiveButton(name);

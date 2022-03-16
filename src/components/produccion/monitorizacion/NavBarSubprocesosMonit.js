@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import '../navBarProd.css'
 const NavBarSubprocesosMonit = ({stateChanger}) => {
 
-  const [activeButton, setActiveButton] = useState("Global");
+  const [activeButton, setActiveButton] = useState("Lateral");
 
   const clickedButtonHandler = (name) => {
     setActiveButton(name);
