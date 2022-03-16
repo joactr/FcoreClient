@@ -23,7 +23,7 @@ export default function Visualizar() {
       else{setReporteVisible(true);}
       document.getElementById('reporteMonitTR').src = src;
     },[lineaState, subprocesoState]);
-    
+
 
 
 
