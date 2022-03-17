@@ -10,7 +10,7 @@ export default function Visualizar() {
   const[subprocesoState, setSubprocesoState]=useState('Lateral');
   const[reporteVisible,setReporteVisible]=useState(true);
 
-  const src = "https://app.powerbi.com/view?r=eyJrIjoiZjcxMzIzMWMtMzc4MS00NmJiLWFkMzAtYWM2MjM0NGExNDUxIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9&pageName=ReportSection"
+  const src = "https://app.powerbi.com/view?r=eyJrIjoiMWEyNDQ3NDktMDcyNy00MTBlLThmMGMtZGQyOGE3YmQ2ZDFmIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9"
 
   var links = {"Linea8":[
     {"firstName":"John", "lastName":"Doe"},
