@@ -5,7 +5,8 @@ import Visualizar from "./components/produccion/monitorizacion/Visualizar";
 import Informes from "./components/produccion/analisis/Informes";
 import CausaRaiz from "./components/produccion/analisis/CausaRaiz";
 import MachineLearning from "./components/produccion/analisis/MachineLearning";
-import Produccion from "./components/produccion/Produccion";
+import Produccion from "./components/produccion/datosProd/Produccion";
+import PausasProd from "./components/produccion/datosProd/Pausas"
 import UploadingReportesProd from "./components/produccion/configuracion/UploadingReportesProd";
 import UsuariosConfigProd from "./components/produccion/configuracion/UsuariosConfigProd"
 import NivelesConfigProd from "./components/produccion/configuracion/NivelesConfigProd"
@@ -33,7 +34,9 @@ function App() {
 
             <Route path="/home" component={Home}/>
 
-            <Route path="/produccion/parametros-produccion" component={Produccion}/>
+            <Route path="/produccion/datos/pausas" component={PausasProd}/>
+            <Route path="/produccion/datos/erp" component={Produccion}/>
+
             <Route path="/produccion/reportar" component={Reportar}/>
             <Route path="/produccion/visualizar" component={Visualizar}/>
 
@@ -66,7 +69,7 @@ function App() {
             <Route path="/produccion/automatizar" render={() => (
               <Redirect exact to="/produccion/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
             <Route path="/produccion" render={() => (
-              <Redirect exact to="/produccion/parametros-produccion" />)}/> {/*REDIRECCION A PRODUCIÓN*/}
+              <Redirect exact to="/produccion/datos/pausas" replace/>)}/> {/*REDIRECCION A PRODUCIÓN*/}
 
 
             <Route path="/mantenimiento/automatizar" render={() => (

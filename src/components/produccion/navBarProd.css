@@ -12,7 +12,7 @@
   justify-content: space-between;
 }
 
-.linkProd,.linkProdsmall,.botonNavBarMonitorizacion{
+.linkProd,.linkProdsmall,.linkProdBig,.botonNavBarMonitorizacion{
   padding-top: 10px;
   text-align: center;
   text-decoration: none;
@@ -23,6 +23,10 @@
 
 .linkProdsmall{
   width: 100px;
+}
+
+.linkProdBig{
+  width: 200px;
 }
 
 .botonNavBarMonitorizacion,.botonNavBarMonitorizacionActive{
@@ -48,12 +52,7 @@
   font-weight: bold;
 }
 
-.linkProd:hover{
-  padding-top: 12px;
-  background-color: #F2F2F2;
-}
-
-.linkProdsmall:hover{
+.linkProd:hover, .linkProdsmall:hover, .linkProdBig:hover{
   padding-top: 12px;
   background-color: #F2F2F2;
 }

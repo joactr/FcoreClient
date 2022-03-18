@@ -1,0 +1,24 @@
+.timePickerPausa{
+  left:40%;
+  width:80px;
+  text-align:center;
+  margin-left: 40px;
+}
+
+.wrapperDatosPausa{
+  margin-left:20%;
+  margin-top:150px;
+}
+
+.filaPausa{
+  display:flex;
+  flex-direction: row;
+  gap: 20%;
+  margin-top: 40px;
+}
+
+.textoDatosPausa{
+  padding-top: 6px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator { background: none; display:none; }
