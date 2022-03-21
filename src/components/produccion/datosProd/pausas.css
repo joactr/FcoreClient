@@ -7,7 +7,8 @@
 
 .wrapperDatosPausa{
   margin-left:20%;
-  margin-top:150px;
+  margin-top:160px;
+  padding-bottom: 80px;
 }
 
 .filaPausa{
@@ -19,6 +20,24 @@
 
 .textoDatosPausa{
   padding-top: 6px;
+}
+
+.wrapperBarraPausas {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+    width: 86%;
+    height: 40px;
+    top: 80px;
+    right: 0;
+    list-style-type: none;
+    background-color: white;
+}
+
+.buttonEnviarPausas{
+  margin-top: 50px;
+  margin-left: 45vw;
 }
 
 input[type="time"]::-webkit-calendar-picker-indicator { background: none; display:none; }

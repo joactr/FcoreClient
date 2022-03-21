@@ -15,6 +15,7 @@
 .linkProd,.linkProdsmall,.linkProdBig,.botonNavBarMonitorizacion{
   padding-top: 10px;
   text-align: center;
+  font-weight: normal;
   text-decoration: none;
   width: 150px;
   white-space: nowrap;

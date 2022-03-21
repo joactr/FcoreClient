@@ -8,11 +8,17 @@ import IntervaloPausa from './IntervaloPausa'
 
 const PausasProd = ({num,inicio,setInicio,fin,setFin}) => {
 
-  const [valueInicio, onChangeInicio] = useState('09:30');
-  const [valueFin, onChangeFin] = useState('10:00');
+  const [valueInicio, onChangeInicio] = useState(null);
+  const [valueFin, onChangeFin] = useState(null);
 
   let textoInicio = "Hora inicio pausa programada " + num
   let textoFin = "Hora fin pausa programada " + num
+
+  /*useEffect(() => {
+    if(typeof(inicio) != typeof(fin)){ //Si alguno no es nulo
+      if(typeof(inicio)!='string'){document.getElementById("tiempoInicio"+num).required=true}
+    }
+  },[inicio,fin])*/
 
 
 return (
@@ -24,11 +30,11 @@ return (
       <div>
         <label className="textoDatosPausa">{textoInicio}</label>
 
-        <input className="timePickerPausa" type="time" onChange={e => setInicio(e.target.value)} value={inicio}/>
+        <input className="timePickerPausa" type="time" id={"tiempoInicio"+num} onChange={e => setInicio(e.target.value)} value={inicio}/>
       </div>
       <div>
         <label className="textoDatosPausa">{textoFin}</label>
-        <input className="timePickerPausa" type="time" onChange={e => setFin(e.target.value)} value={fin}/>
+        <input className="timePickerPausa" type="time" id={"tiempoFin"+num} onChange={e => setFin(e.target.value)} value={fin}/>
       </div>
     </div>
 

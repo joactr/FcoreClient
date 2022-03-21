@@ -5,6 +5,7 @@ import NavBarProdDatos from './NavBarProdDatos';
 import TimePicker from 'react-time-picker'
 import './pausas.css';
 import IntervaloPausa from './IntervaloPausa'
+import NavBarLineas from './NavBarLineas'
 
 const PausasProd = () => {
 
@@ -33,22 +34,82 @@ const PausasProd = () => {
   let fines = [fin1,fin2,fin3,fin4,fin5,fin6,fin7];
 
   useEffect(() => {  //CHECK FUNCIONAL, IMPRIME VALOR DE FIN 1 cuando cambia el valor de inicio1
-
     console.log(inicios)
     console.log(fines)
     console.log("printing--------------")
   },[inicio1])
 
-  function enviarDatos(){
-    alert("inicios: " + inicios)
-    alert("fines: " + inicios)
-  }
+
+  function enviarDatos(event){
+      event.preventDefault()
+      let error = false;
+      if(typeof(inicio1)!=typeof(fin1)){
+        alert("Debe especificar ambos campos en pausa 1")
+        error = true;}
+      if(typeof(inicio2)!=typeof(fin2)){
+        alert("Debe especificar ambos campos en pausa 2")
+        error = true;}
+      if(typeof(inicio3)!=typeof(fin3)){
+        alert("Debe especificar ambos campos en pausa 3")
+        error = true;}
+      if(typeof(inicio4)!=typeof(fin4)){
+        alert("Debe especificar ambos campos en pausa 4")
+        error = true;}
+      if(typeof(inicio5)!=typeof(fin5)){
+        alert("Debe especificar ambos campos en pausa 5")
+        error = true;}
+      if(typeof(inicio6)!=typeof(fin6)){
+        alert("Debe especificar ambos campos en pausa 6")
+        error = true;}
+      if(typeof(inicio7)!=typeof(fin7)){
+        alert("Debe especificar ambos campos en pausa 7")
+        error = true;}
+
+      console.log("inicios: " + inicios)
+      console.log("fines: " + inicios)
+
+      if(!error){
+        var reply = {
+          linea:8,
+          intervalos:[{inicio:inicio1,fin:fin1},
+          {inicio:inicio2,fin:fin2},
+          {inicio:inicio3,fin:fin3},
+          {inicio:inicio4,fin:fin4},
+          {inicio:inicio5,fin:fin5},
+          {inicio:inicio6,fin:fin6},
+          {inicio:inicio7,fin:fin7}]
+        }
+        console.log(reply)
+
+        var data = JSON.stringify(reply)
+          console.log('enviando intervalos')
+          //http://localhost:8080
+          //https://factorybibackend.herokuapp.com
+          fetch("http://localhost:8080/setPausas" ,
+          {
+            headers: {
+             'Content-type': 'application/json; charset=UTF-8',
+             'Access-Control-Allow-Origin': '*'
+           },
+               method: "POST",
+               body: data
+
+          }).then((response)=> {
+            if(response.ok){
+                window.alert(`Modificación publicada con éxito`);
+            }else {
+                window.alert(`Error al publicar datos, vuelva a intentarlo en unos segundos`);
+            }
+          })
+      }
+    }
 
 return (
   <Fragment>
     <NavBarProd/>
     <NavBarProdDatos/>
     <SideNav/>
+    <NavBarLineas/>
 
     <div className="wrapperDatosPausa">
       <IntervaloPausa num="1" inicio={inicio1} setInicio={setInicio1} fin={fin1} setFin={setFin1}/>
@@ -58,7 +119,7 @@ return (
       <IntervaloPausa num="5" inicio={inicio5} setInicio={setInicio5} fin={fin5} setFin={setFin5}/>
       <IntervaloPausa num="6" inicio={inicio6} setInicio={setInicio6} fin={fin6} setFin={setFin6}/>
       <IntervaloPausa num="7" inicio={inicio7} setInicio={setInicio7} fin={fin7} setFin={setFin7}/>
-      <button onClick={enviarDatos}>Enviar</button>
+      <button className="buttonEnviarPausas" onClick={enviarDatos}>Enviar</button>
     </div>
 
   </Fragment>

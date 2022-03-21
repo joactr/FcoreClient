@@ -105,3 +105,19 @@
   margin-left: 50%;
   color: white;
 }
+
+button{
+    zoom: 1;
+    vertical-align: middle;
+    margin-left: 2vw;
+    padding: 0.3rem 1rem;
+    font-weight: 550;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    backface-visibility: hidden;
+    border: 0.15rem solid transparent;
+    border-radius: 0.5rem;
+    border-color: black;
+    cursor: pointer;
+}
