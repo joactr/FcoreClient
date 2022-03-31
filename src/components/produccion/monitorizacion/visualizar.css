@@ -2,8 +2,8 @@
   position: fixed;
   right:0;
   width: 86%;
-  margin-top: 120px;
-  height: calc(100% - 160px);
+  margin-top: 20px;
+  height: calc(100% - 145px);
   z-index: 1;
 }
 
@@ -15,6 +15,17 @@
   cursor: pointer;
 }
 
+.wrapperLineaMonit{
+  margin-left:20%;
+  margin-top: 60px;
+}
+
+.selectLineaMonit{
+  height: 25px;
+  width: 90px;
+  margin-right: 60px;
+  margin-left:20px;
+}
 
 .textoReporteBold{
   font-weight: bold;
