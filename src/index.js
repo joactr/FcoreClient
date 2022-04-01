@@ -5,8 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter} from 'react-router-dom';
 //http://localhost:8080
-//https://serraenvasfcore-es.herokuapp.com
-global.backend = "https://serraenvasfcore-es.herokuapp.com"
+//https://factorybibackend.herokuapp.com
+global.backend = "https://factorybibackend.herokuapp.com"
 
 ReactDOM.render(
   <React.StrictMode>
