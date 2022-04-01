@@ -83,11 +83,10 @@ const PausasProd = () => {
 
         var data = JSON.stringify(reply)
           console.log('enviando intervalos')
-          //http://localhost:8080
-          //https://factorybibackend.herokuapp.com
-          fetch("http://localhost:8080/setPausas" ,
+          fetch(global.backend+"/setPausas" ,
           {
             headers: {
+            'token': localStorage.getItem('jwt_token'),
              'Content-type': 'application/json; charset=UTF-8',
              'Access-Control-Allow-Origin': '*'
            },

@@ -6,18 +6,55 @@ import logoUE from "./logoUE.png";
 import logoIVACE from "./logoIVACE.png";
 import './login.css'
 import {Link} from 'react-router-dom';
+const bcrypt = require('bcryptjs');
+var salt = bcrypt.genSaltSync(10);
+
 function Login(){
 
+  const[loginState, setLoginState]=useState({username:'', password:''});
+
+  const onChange = (e) => setLoginState({ ...loginState, [e.target.name]: e.target.value });
+
+  const enviarDatos = (e) => {
+    e.preventDefault();
+
+
+    const pwd = bcrypt.hashSync(loginState.password, salt);
+    const data = JSON.stringify({username: loginState.username, password: pwd});
+
+    fetch(global.backend+"/login" ,
+    {
+      headers: {
+       'Content-type': 'application/json; charset=UTF-8',
+       'Access-Control-Allow-Origin': '*'
+     },
+         method: "POST",
+         body: data
+
+    }).then((response)=> {
+      if(response.ok){
+          window.alert(`Login correcto`);
+          response.json().then(json => {
+            localStorage.setItem('jwt_token', json.token);
+          });
+          localStorage.setItem('user',loginState.username);
+
+      }else {
+          window.alert(`Usuario o contraseña no son correctos`);
+      }
+    })
+  }
 
   return (
   <div className="loginContainer">
 
     <form className="loginForm">
       <label className="textoLogin">Usuario:</label>
-      <input type="text" className="inputLogin"/>
+      <input name="username" type="text" className="inputLogin" onChange={onChange}/>
       <label className="textoLogin">Contraseña:</label>
-      <input type="password" className="inputLogin"/>
+      <input name="password" type="password" className="inputLogin" onChange={onChange}/>
       <Link to="/home" className="buttonLogin">Entrar</Link>
+      <button className="buttonLogin" type="button" onClick={enviarDatos}>LoginTest</button>
     </form>
 
     <img src={background} className="backgroundLogin" alt="backgroundLogin"/>

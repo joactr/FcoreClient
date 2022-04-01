@@ -14,13 +14,18 @@ const [linkReporte, setlinkReporte] = useState(null);
   //Actualiza el link del reporte con el recogido del back-end
   //https://factorybibackend.herokuapp.com
   useEffect(() => {
-    fetch('https://factorybibackend.herokuapp.com/getReporteBI')
+    fetch(global.backend+'/getReporteBI',
+      {
+        headers: {
+         'token': localStorage.getItem('jwt_token'),
+       }
+      })
       .then(response => response.json())
       .then(data => {
         setlinkReporte(data);
       }
     );
-  });
+  },[]);
 
 return (
 <Fragment>

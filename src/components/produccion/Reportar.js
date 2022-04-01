@@ -43,8 +43,11 @@ const Reportar = () => {
     //Coge los datos de últimas fechas del back-end
     var fetchData = (inputValue, callback) => {
       setTimeout(() => {
-        fetch("https://factorybibackend.herokuapp.com/getFechas",
+        fetch(global.backend+"/getFechas",
           {
+            headers: {
+             'token': localStorage.getItem('jwt_token'),
+            },
             method: "GET",
           }
         )
@@ -92,9 +95,6 @@ const Reportar = () => {
     var styles = {
       color: 'black'
   };
-  function handleChangeRep(){
-    alert("gola")
-  }
 
   const customStyles = {
     control: (base, state) => ({
@@ -128,7 +128,7 @@ const Reportar = () => {
                     <option value="9">9</option>
                     <option value="10">10</option>
                   </select>
-                  <select className="selectReportarsmall" onChange={handleChangeRep}>
+                  <select className="selectReportarsmall">
                     <option value="Cuadradillo">Cuadradillo</option>
                     <option value="Testero">Testero</option>
                     <option value="Lateral">Lateral</option>
