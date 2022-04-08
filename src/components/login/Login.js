@@ -19,34 +19,33 @@ function Login({setState: setState}){
   const enviarDatos = (e) => {
     e.preventDefault();
 
+    if(loginState.password !== '' && loginState.username !== ''){
+        const pwd = bcrypt.hashSync(loginState.password, salt);
+        const data = JSON.stringify({username: loginState.username, password: pwd});
 
-    const pwd = bcrypt.hashSync(loginState.password, salt);
-    const data = JSON.stringify({username: loginState.username, password: pwd});
+        fetch(global.backend+"/login" ,
+        {
+          headers: {
+           'Content-type': 'application/json; charset=UTF-8',
+           'Access-Control-Allow-Origin': '*'
+         },
+             method: "POST",
+             body: data
 
-    fetch(global.backend+"/login" ,
-    {
-      headers: {
-       'Content-type': 'application/json; charset=UTF-8',
-       'Access-Control-Allow-Origin': '*'
-     },
-         method: "POST",
-         body: data
+        }).then((response)=> {
+          if(response.ok){
+              response.json().then(json => {
+                localStorage.setItem('jwt_token', json.token);
+              });
+              localStorage.setItem('user',loginState.username);
+              localStorage.setItem('isLoggedIn', true);
+              setState(true);
+              history.push("/home");
 
-    }).then((response)=> {
-      if(response.ok){
-          response.json().then(json => {
-            localStorage.setItem('jwt_token', json.token);
-          });
-          localStorage.setItem('user',loginState.username);
-          localStorage.setItem('isLoggedIn', true);
-          setState(true);
-          history.push("/home");
-
-      }else {
-          window.alert(`Usuario o contraseña no son correctos`);
-      }
-    })
-  }
+          }else {window.alert(`Usuario o contraseña no son correctos`);}
+        })
+      }else{window.alert(`Introduzca usuario y contraseña`);}
+    }
 
   return (
   <div className="loginContainer">
