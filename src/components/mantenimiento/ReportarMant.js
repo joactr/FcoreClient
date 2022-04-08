@@ -116,7 +116,7 @@ const ReportarMant = () => {
                     <option value="3">3</option>
                   </select>
 
-                  <label class="textoReportarMantDer">Equipo:</label>
+                  <label className="textoReportarMantDer">Equipo:</label>
                   <select className="selectReportarMant">
                     <option value="Perfiladora A01">Perfiladora A01</option>
                     <option value="Perfiladora A02">Perfiladora A02</option>

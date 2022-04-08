@@ -33,12 +33,6 @@ const PausasProd = () => {
   let inicios = [inicio1,inicio2,inicio3,inicio4,inicio5,inicio6,inicio7];
   let fines = [fin1,fin2,fin3,fin4,fin5,fin6,fin7];
 
-  useEffect(() => {  //CHECK FUNCIONAL, IMPRIME VALOR DE FIN 1 cuando cambia el valor de inicio1
-    console.log(inicios)
-    console.log(fines)
-    console.log("printing--------------")
-  },[inicio1])
-
 
   function enviarDatos(event){
       event.preventDefault()

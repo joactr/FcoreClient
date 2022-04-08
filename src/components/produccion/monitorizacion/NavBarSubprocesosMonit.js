@@ -13,7 +13,7 @@ const NavBarSubprocesosMonit = ({stateChanger}) => {
   const buttons = ["Global","Cuadradillo","Testero","Lateral","Fondo","Envasado"];
 
   return (
-    <div class="wrapperNavSubprocesos">
+    <div className="wrapperNavSubprocesos">
         {buttons.map((name) => (
           <button
             id={name}

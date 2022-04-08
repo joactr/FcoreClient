@@ -45,7 +45,7 @@ const CausaRaiz = () => {
                 <option value="Titulo 3">Titulo 3</option>
               </select>
             </div>
-          <div class="wrapperColumnasCausaRaiz">
+          <div className="wrapperColumnasCausaRaiz">
             <div className="columna">
                 <label className="tituloCausaRaiz">1W</label>
                 <input type="text" onKeyDown={onEnterPress} />

@@ -5,18 +5,30 @@ import './visualizar.css'
 
 export default function Visualizar() {
   const[lineaState, setLineaState]=useState('8');
-  const[subprocesoState, setSubprocesoState]=useState('laterales');
+  const[subprocesoState, setSubprocesoState]=useState('cuadradillo');
   const[reporteVisible,setReporteVisible]=useState(true);
 
-  const src = "https://app.powerbi.com/view?r=eyJrIjoiZWRhOWExM2UtMjY1OS00YmVmLWJlMDQtYzc0OGNmMTkxNWEzIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9"
+  const src = {
+    cuadradillo: "https://app.powerbi.com/view?r=eyJrIjoiOTk4ODBmMmQtYmFjYy00MzIwLWEzNWMtZjQ4NzJmNTljZDlmIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9&pageName=ReportSectiondb953015749241372025",
+    laterales: "https://app.powerbi.com/view?r=eyJrIjoiZWRhOWExM2UtMjY1OS00YmVmLWJlMDQtYzc0OGNmMTkxNWEzIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9"
+  }
 
   useEffect(() => {
-      console.log(lineaState)
-      console.log(subprocesoState)
-      if(lineaState!='8' || subprocesoState!='laterales'){setReporteVisible(false);}  //De momento solo está la linea8 y lateral
-      else{setReporteVisible(true);}
-      document.getElementById('reporteMonitTR').src = src;
+      if(lineaState!='8' || (subprocesoState!='laterales' && subprocesoState!='cuadradillo')){setReporteVisible(false);}  //De momento solo está la linea8 y lateral
+      else{
+        if(reporteVisible){
+          document.getElementById('reporteMonitTR').src=src[subprocesoState]
+        }
+        else{
+          setReporteVisible(true);
+          setTimeout(() =>document.getElementById('reporteMonitTR').src=src[subprocesoState],200)
+        }
+
+
+      }
     },[lineaState, subprocesoState]);
+
+
 
 return (
 <Fragment>
@@ -40,9 +52,9 @@ return (
       </select>
       <label>Subproceso:</label>
       <select className="selectLineaMonit" onChange={(e)=>{setSubprocesoState(e.target.value)}}>
-        <option value="cuadradillo">Cuadradillo</option>
+        <option selected value="cuadradillo">Cuadradillo</option>
         <option value="testeros">Testeros</option>
-        <option selected value="laterales">Laterales</option>
+        <option value="laterales">Laterales</option>
         <option value="fondo">Fondo</option>
         <option value="envase">Envase</option>
         <option value="piloto">Piloto</option>

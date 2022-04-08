@@ -1,5 +1,6 @@
 import "./App.css";
 import { Route, Redirect } from 'react-router-dom';
+import {useState,useEffect} from 'react';
 import Reportar from "./components/produccion/Reportar";
 import Visualizar from "./components/produccion/monitorizacion/Visualizar";
 import Informes from "./components/produccion/analisis/Informes";
@@ -20,68 +21,73 @@ import MonitorizacionMant from "./components/mantenimiento/MonitorizacionMant";
 import ReportarMant from "./components/mantenimiento/ReportarMant";
 import LimitesMant from "./components/mantenimiento/automatizar/LimitesMant";
 import SideNav from './components/sideNav/SideNav';
+import PrivateRoute from "./components/PrivateRoute";
 
 //https://stackoverflow.com/questions/47602010/react-router-authentication-redirection
 function App() {
+  const[isAuth, setIsAuth]=useState(localStorage.getItem('isLoggedIn'));
+
+  useEffect(() => {console.log(isAuth);},[isAuth])
+
   return (
-    <div className="App">
+    <body className="App-body">
 
-      <body className="App-body">
+          {/*Si está loggeado va a home, si no tiene que loggearse*/}
+          <Redirect exact from="/" to={isAuth ? "/home" : "/login"} />
 
-            <Redirect exact from="/" to="/login" />
-            <Route path="/login" component={Login}/>
-            <Redirect exact from="/produccion/automatizar/" to="/login" />
+          <Route path="/login" render={(props) => (
+              <Login setState={setIsAuth}/>
+          )} />
 
-            <Route path="/home" component={Home}/>
-
-            <Route path="/produccion/datos/pausas" component={PausasProd}/>
-            <Route path="/produccion/datos/erp" component={Produccion}/>
-
-            <Route path="/produccion/reportar" component={Reportar}/>
-            <Route path="/produccion/visualizar" component={Visualizar}/>
-
-            <Route path="/produccion/analisis/informes" component={Informes}/>
-            <Route path="/produccion/analisis/causa-raiz" component={CausaRaiz}/>
-            <Route path="/produccion/analisis/machine-learning" component={MachineLearning}/>
-
-            <Route path="/produccion/automatizar/limites" component={Limites}/> {/*AQUI EMPIEZA LA PAGINA DE AUTOMATIZAR*/}
-            <Route path="/produccion/automatizar/flujos" component={Flujos}/>
+          <PrivateRoute path="/home" component={Home} isAuth={isAuth}/>
 
 
+          <PrivateRoute path="/produccion/datos/pausas" component={PausasProd} isAuth={isAuth}/>
+          <PrivateRoute path="/produccion/datos/erp" component={Produccion} isAuth={isAuth}/>
 
-            <Route path="/produccion/config/usuarios" component={UsuariosConfigProd}/>
-            <Route path="/produccion/config/datos-prod" component={CambiarDatosProd}/>
-            <Route path="/produccion/config/niveles" component={NivelesConfigProd}/>
-            <Route path="/produccion/config/uploading-reportes" component={UploadingReportesProd}/>
+          <PrivateRoute path="/produccion/reportar" component={Reportar} isAuth={isAuth}/>
+          <PrivateRoute path="/produccion/visualizar" component={Visualizar} isAuth={isAuth}/>
 
-            <Route path="/mantenimiento/parametros" component={Parametros}/>
-            <Route path="/mantenimiento/monitorizacion" component={MonitorizacionMant}/>
-            <Route path="/mantenimiento/reportar" component={ReportarMant}/>
-            <Route path="/mantenimiento/automatizar/limites" component={LimitesMant}/>
+          <PrivateRoute path="/produccion/analisis/informes" component={Informes} isAuth={isAuth}/>
+          <PrivateRoute path="/produccion/analisis/causa-raiz" component={CausaRaiz} isAuth={isAuth}/>
+          <PrivateRoute path="/produccion/analisis/machine-learning" component={MachineLearning} isAuth={isAuth}/>
+
+          <PrivateRoute path="/produccion/automatizar/limites" component={Limites} isAuth={isAuth}/> {/*AQUI EMPIEZA LA PAGINA DE AUTOMATIZAR*/}
+          <PrivateRoute path="/produccion/automatizar/flujos" component={Flujos} isAuth={isAuth}/>
 
 
 
-            {/*REDIRECCIONES*/}
-            <Route path="/produccion/config" render={() => (
-              <Redirect exact to="/produccion/config/usuarios" />)}/> {/*REDIRECCION A CONFIGURACION*/}
-            <Route path="/produccion/analisis" render={() => (
-              <Redirect exact to="/produccion/analisis/informes" />)}/> {/*REDIRECCION A ANALISIS*/}
-            <Route path="/produccion/automatizar" render={() => (
-              <Redirect exact to="/produccion/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
-            <Route path="/produccion" render={() => (
-              <Redirect exact to="/produccion/datos/pausas" replace/>)}/> {/*REDIRECCION A PRODUCIÓN*/}
+          <PrivateRoute path="/produccion/config/usuarios" component={UsuariosConfigProd} isAuth={isAuth}/>
+          <PrivateRoute path="/produccion/config/datos-prod" component={CambiarDatosProd} isAuth={isAuth}/>
+          <PrivateRoute path="/produccion/config/niveles" component={NivelesConfigProd} isAuth={isAuth}/>
+          <PrivateRoute path="/produccion/config/uploading-reportes" component={UploadingReportesProd} isAuth={isAuth}/>
+
+          <PrivateRoute path="/mantenimiento/parametros" component={Parametros} isAuth={isAuth}/>
+          <PrivateRoute path="/mantenimiento/monitorizacion" component={MonitorizacionMant} isAuth={isAuth}/>
+          <PrivateRoute path="/mantenimiento/reportar" component={ReportarMant} isAuth={isAuth}/>
+          <PrivateRoute path="/mantenimiento/automatizar/limites" component={LimitesMant} isAuth={isAuth}/>
 
 
-            <Route path="/mantenimiento/automatizar" render={() => (
-              <Redirect exact to="/mantenimiento/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
-            <Route path="/mantenimiento" render={() => (
-              <Redirect exact to="/mantenimiento/parametros" />)}/> {/*REDIRECCION A MANTENIMIENTO*/}
-        <footer className="App-footer">
-          <label className="footerText"></label>
-        </footer>
-      </body>
 
-    </div>
+          {/*REDIRECCIONES*/}
+          <Route path="/produccion/config" render={() => (
+            <Redirect exact to="/produccion/config/usuarios" />)}/> {/*REDIRECCION A CONFIGURACION*/}
+          <Route path="/produccion/analisis" render={() => (
+            <Redirect exact to="/produccion/analisis/informes" />)}/> {/*REDIRECCION A ANALISIS*/}
+          <Route path="/produccion/automatizar" render={() => (
+            <Redirect exact to="/produccion/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
+          <Route path="/produccion" render={() => (
+            <Redirect exact to="/produccion/datos/pausas" replace/>)}/> {/*REDIRECCION A PRODUCIÓN*/}
+
+
+          <Route path="/mantenimiento/automatizar" render={() => (
+            <Redirect exact to="/mantenimiento/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
+          <Route path="/mantenimiento" render={() => (
+            <Redirect exact to="/mantenimiento/parametros" />)}/> {/*REDIRECCION A MANTENIMIENTO*/}
+      <footer className="App-footer">
+        <label className="footerText"></label>
+      </footer>
+    </body>
 
   );
 

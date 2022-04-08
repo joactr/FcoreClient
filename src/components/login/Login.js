@@ -5,12 +5,13 @@ import logoGeneralitat from "./logoGeneralitat.png";
 import logoUE from "./logoUE.png";
 import logoIVACE from "./logoIVACE.png";
 import './login.css'
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 const bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(10);
 
-function Login(){
 
+function Login({setState: setState}){
+  const history = useHistory();
   const[loginState, setLoginState]=useState({username:'', password:''});
 
   const onChange = (e) => setLoginState({ ...loginState, [e.target.name]: e.target.value });
@@ -33,11 +34,13 @@ function Login(){
 
     }).then((response)=> {
       if(response.ok){
-          window.alert(`Login correcto`);
           response.json().then(json => {
             localStorage.setItem('jwt_token', json.token);
           });
           localStorage.setItem('user',loginState.username);
+          localStorage.setItem('isLoggedIn', true);
+          setState(true);
+          history.push("/home");
 
       }else {
           window.alert(`Usuario o contraseña no son correctos`);
@@ -53,8 +56,7 @@ function Login(){
       <input name="username" type="text" className="inputLogin" onChange={onChange}/>
       <label className="textoLogin">Contraseña:</label>
       <input name="password" type="password" className="inputLogin" onChange={onChange}/>
-      <Link to="/home" className="buttonLogin">Entrar</Link>
-      <button className="buttonLogin" type="button" onClick={enviarDatos}>LoginTest</button>
+      <button className="buttonLogin" type="button" onClick={enviarDatos}>Entrar</button>
     </form>
 
     <img src={background} className="backgroundLogin" alt="backgroundLogin"/>

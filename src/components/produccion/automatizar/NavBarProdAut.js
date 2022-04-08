@@ -6,7 +6,7 @@ const NavBarProdAut = () => {
   const style = {fontWeight: 'bold', borderBottom: '7px solid #0070C0'}
 
 return (
-  <div class="wrapperNavProdAut">
+  <div className="wrapperNavProdAut">
   <NavLink to="/produccion/automatizar/limites"  activeStyle={style} className="linkProd">Límites disparo</NavLink>
   <NavLink to="/produccion/automatizar/flujos" activeStyle={style} className="linkProd">Mis flujos</NavLink>
 

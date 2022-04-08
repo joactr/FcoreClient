@@ -1,9 +1,4 @@
-.App {
-  color: black;
-  font-family: calibri;
-  font-size: 16px;
-  overflow-y: auto;
-}
+
 
 .homeLogo {
   width: 30%;
@@ -29,6 +24,10 @@
 }
 
 .App-body {
+  color: black;
+  font-family: calibri;
+  font-size: 16px;
+  overflow-y: auto;
   font-family: calibri;
 }
 

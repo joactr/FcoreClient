@@ -7,7 +7,7 @@ const NavBarProd = () => {
 
 
 return (
-  <div class="wrapperNav">
+  <div className="wrapperNav">
   <NavLink to="/mantenimiento/parametros"  activeStyle={style} className="linkMant">Parámetros máquina</NavLink>
   <NavLink to="/mantenimiento/monitorizacion" activeStyle={style} className="linkMant">Monitorizacion TR</NavLink>
   <NavLink to="/mantenimiento/reportar" activeStyle={style} className="linkMant">Reportar</NavLink>

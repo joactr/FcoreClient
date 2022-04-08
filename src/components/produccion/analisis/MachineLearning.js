@@ -32,7 +32,7 @@ const MachineLearning = () => {
           <SideNav/>
 
             <h1 className="titulo">Simulación</h1>
-            <div class="wrapperML" style={{display: 'flex', flexDirection: 'row'}}>
+            <div className="wrapperML" style={{display: 'flex', flexDirection: 'row'}}>
               <div>
                 <div className="divML">
                     <label className="textoML">Numero de perfiles</label>
@@ -71,17 +71,17 @@ const MachineLearning = () => {
               <div style={{display: 'flex', flexDirection:'row'}}>
                 <div className="divMerma">
                   <label className="subTitle">Prevision % Merma</label>
-                  <div><label class="porcentajeMerma">3,22%</label></div>
+                  <div><label className="porcentajeMerma">3,22%</label></div>
                 </div>
                 <div className="divOEEE">
                   <label className="subTitle">Prevision % OEEE</label>
-                  <div><label class="porcentajeOEEE">97,19%</label></div>
+                  <div><label className="porcentajeOEEE">97,19%</label></div>
                 </div>
               </div>
             </div>
 
             <h1 className="titulo2">Previsión Tendencia % OEEE</h1>
-            <img class="grafico" src={grafico}/>
+            <img className="grafico" src={grafico}/>
 
 
 

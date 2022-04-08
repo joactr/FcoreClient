@@ -6,7 +6,7 @@ const NavBarProd = () => {
   const style = {fontWeight: 'bold', borderBottom: '7px solid #0070C0'}
 
 return (
-  <div class="wrapperNavProd">
+  <div className="wrapperNavProd">
   <NavLink to="/produccion/datos/pausas"  activeStyle={style} className="linkProd">Datos Producción</NavLink>
   <NavLink to="/produccion/visualizar" activeStyle={style} className="linkProd">Monitorizacion TR</NavLink>
   <NavLink to="/produccion/reportar" activeStyle={style} className="linkProd">Reportar</NavLink>

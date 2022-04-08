@@ -89,9 +89,9 @@ export default function LimitesMant() {
   <Fragment>
     <NavBarMant/>
     <SideNav/>
-    <div class="wrapperCambioPagMant">
-    <label class="textoCambioPagMant">Página 1</label>
-    <button type="button" class="botonCambioPagMant">></button>
+    <div className="wrapperCambioPagMant">
+    <label className="textoCambioPagMant">Página 1</label>
+    <button type="button" className="botonCambioPagMant">></button>
     </div>
     <div className="divLimiteMant">
       <form className="formLimiteMant" id="temperaturaForm">
