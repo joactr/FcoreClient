@@ -9,7 +9,8 @@
   right: 0;
   list-style-type: none;
   background-color: white;
-  justify-content: space-between;
+  *justify-content: space-between;
+  gap: 1vw;
 }
 
 .linkProd,.linkProdsmall,.linkProdBig,.botonNavBarMonitorizacion{

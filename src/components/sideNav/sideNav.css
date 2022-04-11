@@ -1,6 +1,6 @@
 .sidenav {
   height: 100%; /* Full-height */
-  width: 13%; /* Set the width of the sidebar */
+  width: 14%; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (No se mueve al scrollear) */
   z-index: 1000; /* Stay on top */
   top: 0; /* Stay at the top */

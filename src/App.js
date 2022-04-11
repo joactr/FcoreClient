@@ -26,6 +26,7 @@ import PrivateRoute from "./components/PrivateRoute";
 //https://stackoverflow.com/questions/47602010/react-router-authentication-redirection
 function App() {
   const[isAuth, setIsAuth]=useState(localStorage.getItem('isLoggedIn'));
+  const[userLevel, setUserLevel]=useState(localStorage.getItem('nivel'));
 
   useEffect(() => {console.log(isAuth);},[isAuth])
 
@@ -36,36 +37,36 @@ function App() {
           <Redirect exact from="/" to={isAuth ? "/home" : "/login"} />
 
           <Route path="/login" render={(props) => (
-              <Login setState={setIsAuth}/>
+              <Login setAuth={setIsAuth} setNivel={setUserLevel} />
           )} />
 
-          <PrivateRoute path="/home" component={Home} isAuth={isAuth}/>
+          <PrivateRoute path="/home" component={Home} isAuth={isAuth} nivel={userLevel} requiredLevel='1'/>
 
 
-          <PrivateRoute path="/produccion/datos/pausas" component={PausasProd} isAuth={isAuth}/>
-          <PrivateRoute path="/produccion/datos/erp" component={Produccion} isAuth={isAuth}/>
+          <PrivateRoute path="/produccion/datos/pausas" component={PausasProd} isAuth={isAuth} nivel={userLevel} requiredLevel='1'/>
+          <PrivateRoute path="/produccion/datos/erp" component={Produccion} isAuth={isAuth} nivel={userLevel} requiredLevel='1'/>
 
-          <PrivateRoute path="/produccion/reportar" component={Reportar} isAuth={isAuth}/>
-          <PrivateRoute path="/produccion/visualizar" component={Visualizar} isAuth={isAuth}/>
+          <PrivateRoute path="/produccion/reportar" component={Reportar} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
+          <PrivateRoute path="/produccion/visualizar" component={Visualizar} isAuth={isAuth} nivel={userLevel} requiredLevel='1'/>
 
-          <PrivateRoute path="/produccion/analisis/informes" component={Informes} isAuth={isAuth}/>
-          <PrivateRoute path="/produccion/analisis/causa-raiz" component={CausaRaiz} isAuth={isAuth}/>
-          <PrivateRoute path="/produccion/analisis/machine-learning" component={MachineLearning} isAuth={isAuth}/>
+          <PrivateRoute path="/produccion/analisis/informes" component={Informes} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
+          <PrivateRoute path="/produccion/analisis/causa-raiz" component={CausaRaiz} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
+          <PrivateRoute path="/produccion/analisis/machine-learning" component={MachineLearning} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
 
-          <PrivateRoute path="/produccion/automatizar/limites" component={Limites} isAuth={isAuth}/> {/*AQUI EMPIEZA LA PAGINA DE AUTOMATIZAR*/}
-          <PrivateRoute path="/produccion/automatizar/flujos" component={Flujos} isAuth={isAuth}/>
+          <PrivateRoute path="/produccion/automatizar/limites" component={Limites} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/> {/*AQUI EMPIEZA LA PAGINA DE AUTOMATIZAR*/}
+          <PrivateRoute path="/produccion/automatizar/flujos" component={Flujos} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
 
 
 
-          <PrivateRoute path="/produccion/config/usuarios" component={UsuariosConfigProd} isAuth={isAuth}/>
-          <PrivateRoute path="/produccion/config/datos-prod" component={CambiarDatosProd} isAuth={isAuth}/>
-          <PrivateRoute path="/produccion/config/niveles" component={NivelesConfigProd} isAuth={isAuth}/>
-          <PrivateRoute path="/produccion/config/uploading-reportes" component={UploadingReportesProd} isAuth={isAuth}/>
+          <PrivateRoute path="/produccion/config/usuarios" component={UsuariosConfigProd} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
+          <PrivateRoute path="/produccion/config/datos-prod" component={CambiarDatosProd} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
+          <PrivateRoute path="/produccion/config/niveles" component={NivelesConfigProd} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
+          <PrivateRoute path="/produccion/config/uploading-reportes" component={UploadingReportesProd} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
 
-          <PrivateRoute path="/mantenimiento/parametros" component={Parametros} isAuth={isAuth}/>
-          <PrivateRoute path="/mantenimiento/monitorizacion" component={MonitorizacionMant} isAuth={isAuth}/>
-          <PrivateRoute path="/mantenimiento/reportar" component={ReportarMant} isAuth={isAuth}/>
-          <PrivateRoute path="/mantenimiento/automatizar/limites" component={LimitesMant} isAuth={isAuth}/>
+          <PrivateRoute path="/mantenimiento/parametros" component={Parametros} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
+          <PrivateRoute path="/mantenimiento/monitorizacion" component={MonitorizacionMant} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
+          <PrivateRoute path="/mantenimiento/reportar" component={ReportarMant} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
+          <PrivateRoute path="/mantenimiento/automatizar/limites" component={LimitesMant} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
 
 
 

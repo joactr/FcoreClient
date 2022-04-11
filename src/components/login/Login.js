@@ -10,7 +10,7 @@ const bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(10);
 
 
-function Login({setState: setState}){
+function Login({setAuth: setAuth, setNivel: setNivel}){
   const history = useHistory();
   const[loginState, setLoginState]=useState({username:'', password:''});
 
@@ -36,10 +36,12 @@ function Login({setState: setState}){
           if(response.ok){
               response.json().then(json => {
                 localStorage.setItem('jwt_token', json.token);
+                localStorage.setItem('nivel', json.nivel);
+                setNivel(json.nivel);
               });
               localStorage.setItem('user',loginState.username);
               localStorage.setItem('isLoggedIn', true);
-              setState(true);
+              setAuth(true);
               history.push("/home");
 
           }else {window.alert(`Usuario o contraseña no son correctos`);}

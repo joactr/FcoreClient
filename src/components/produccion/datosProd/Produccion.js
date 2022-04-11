@@ -36,7 +36,7 @@ const Produccion = () => {
           <NavBarProd/>
           <NavBarProdDatos/>
           <SideNav/>
-          <iframe className="reporteProd" id="templates" title="reportePowerBI" src={src} frameborder="0" allowFullScreen={true}></iframe>
+          <iframe className="reporteDatosProd" id="templates" title="reportePowerBI" src={src} frameborder="0" allowFullScreen={true}></iframe>
         </Fragment>
     );
 }
