@@ -20,15 +20,12 @@ import Parametros from "./components/mantenimiento/Parametros";
 import MonitorizacionMant from "./components/mantenimiento/MonitorizacionMant";
 import ReportarMant from "./components/mantenimiento/ReportarMant";
 import LimitesMant from "./components/mantenimiento/automatizar/LimitesMant";
-import SideNav from './components/sideNav/SideNav';
 import PrivateRoute from "./components/PrivateRoute";
 
 //https://stackoverflow.com/questions/47602010/react-router-authentication-redirection
 function App() {
   const[isAuth, setIsAuth]=useState(localStorage.getItem('isLoggedIn'));
   const[userLevel, setUserLevel]=useState(localStorage.getItem('nivel'));
-
-  useEffect(() => {console.log(isAuth);},[isAuth])
 
   return (
     <body className="App-body">
@@ -40,7 +37,7 @@ function App() {
               <Login setAuth={setIsAuth} setNivel={setUserLevel} />
           )} />
 
-          <PrivateRoute path="/home" component={Home} isAuth={isAuth} nivel={userLevel} requiredLevel='1'/>
+          <PrivateRoute path="/home" component={Home} isAuth={isAuth} nivel={userLevel} requiredLevel='0'/>
 
 
           <PrivateRoute path="/produccion/datos/pausas" component={PausasProd} isAuth={isAuth} nivel={userLevel} requiredLevel='1'/>
