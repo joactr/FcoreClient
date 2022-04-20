@@ -3,6 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 import {useState,useEffect} from 'react';
 import Reportar from "./components/produccion/Reportar";
 import Visualizar from "./components/produccion/monitorizacion/Visualizar";
+import Tendencia from "./components/produccion/monitorizacion/Tendencia";
 import Informes from "./components/produccion/analisis/Informes";
 import CausaRaiz from "./components/produccion/analisis/CausaRaiz";
 import MachineLearning from "./components/produccion/analisis/MachineLearning";
@@ -45,6 +46,7 @@ function App() {
 
           <PrivateRoute path="/produccion/reportar" component={Reportar} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
           <PrivateRoute path="/produccion/visualizar" component={Visualizar} isAuth={isAuth} nivel={userLevel} requiredLevel='1'/>
+          <PrivateRoute path="/produccion/tendencia" component={Tendencia} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
 
           <PrivateRoute path="/produccion/analisis/informes" component={Informes} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
           <PrivateRoute path="/produccion/analisis/causa-raiz" component={CausaRaiz} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>

@@ -12,7 +12,10 @@ const NavBarProd = () => {
     },{
       link:"/produccion/visualizar",
       texto: "Monitorizacion TR"
-    },{
+    }/*,{
+      link:"/produccion/tendencia",
+      texto: "Gráficos tendencia"
+    }*/,{
       link:"/produccion/reportar",
       texto: "Reportar"
     },{

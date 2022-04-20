@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import SideNav from '../../sideNav/SideNav';
 import NavBarProd from '../NavBarProd';
 import NavBarConfig from './NavBarConfig';
@@ -6,42 +6,42 @@ import './configuracion.css'
 
 const UploadingReportesProd = () => {
 
-    const enviarDatos = (event) => {
-      window.alert("Editado Reporte PowerBI");
-    }
+  const[lineaState, setLineaState]=useState('8');
+  const[procesoState, setProcesoState]=useState('cuadradillo');
+  const[linkReporte, setLinkReporte]=useState('');
+
     function onChange() {
       alert('Permisos cambiados');
     }
 
-    const onEnterPress = (e) => {
-      if(e.keyCode === 13 && e.shiftKey === false) {
-        //Si el link no es vacío y empieza por la string seguimos
-        if(e.target.value.trim() !== '' && e.target.value.trim().startsWith('https://app.powerbi.com')){
-          e.preventDefault();
-          var data = {link: e.target.value}
-          data = JSON.stringify(data);
-          //https://factorybibackend.herokuapp.com/setReporteBI
-          //http://localhost:8080/setReporteBI
-            fetch("https://factorybibackend.herokuapp.com/setReporteBI" ,
-            {
-              headers: {
-               'Content-type': 'application/json; charset=UTF-8',
-               'Access-Control-Allow-Origin': '*'
-             },
-                 method: "POST",
-                 body: data
+    const enviarDatos = (e) => {
+      //Si el link no es vacío y empieza por la string seguimos
+      if(linkReporte.startsWith('https://app.powerbi.com')){
+        e.preventDefault();
+        var data = {linea: lineaState, proceso: procesoState,link: linkReporte}
+        data = JSON.stringify(data);
+        //https://factorybibackend.herokuapp.com/setReporteBI
+        //http://localhost:8080/setReporteBI
+          fetch(global.backend+"/setReporteMonitTR" ,
+          {
+            headers: {
+             'Content-type': 'application/json; charset=UTF-8',
+             'Access-Control-Allow-Origin': '*',
+             'token': localStorage.getItem('jwt_token')
+           },
+               method: "POST",
+               body: data
 
-            }).then((response)=> {
-              if(response.ok){
-                  window.alert(`Link de PowerBI actualizado`);
-              }else {
-                  window.alert('Error al publicar link, contacte al administrador');
-              }
-            }).catch((error) => {window.alert("Error de conexión");})
-          e.target.value ='';
-        }else{
-          window.alert(`Para que el link sea válido debe empezar por "https://app.powerbi.com"`);
-        }
+          }).then((response)=> {
+            if(response.ok){
+                window.alert(`Link de PowerBI actualizado`);
+            }else {
+                window.alert('Error al publicar link, contacte al administrador');
+            }
+          }).catch((error) => {window.alert("Error de conexión");})
+        e.target.value ='';
+      }else{
+        window.alert(`El link debe empezar por "https://app.powerbi.com/"`);
       }
     }
 
@@ -54,7 +54,7 @@ const UploadingReportesProd = () => {
             <div className="wrapperconfigProdBorde">
               <div className="configUploadReportes">
                 <label className="textoConfig">Línea donde se inserta el reporte Monitorización TR:</label>
-                <select className="selectConfigLarge" >
+                <select className="selectConfigLarge" onChange={(e => setLineaState(e.target.value))}>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -70,17 +70,19 @@ const UploadingReportesProd = () => {
               </div>
               <div className="configUploadReportes">
                 <label className="textoConfig">Proceso donde se inserta el reporte Monitorización TR:</label>
-                <select className="selectConfigLarge" >
-                  <option value="Cuadradillo">Cuadradillo</option>
-                  <option value="Testero">Testero</option>
-                  <option value="Lateral">Lateral</option>
-                  <option value="Fondo">Fondo</option>
-                  <option value="Envasado">Envasado</option>
+                <select className="selectConfigLarge" onChange={(e => setProcesoState(e.target.value))}>
+                  <option value="cuadradillo">Cuadradillo</option>
+                  <option value="testero">Testero</option>
+                  <option value="lateral">Lateral</option>
+                  <option value="fondo">Fondo</option>
+                  <option value="envasado">Envasado</option>
+                  <option value="piloto">Piloto</option>
+                  <option value="total">Total</option>
                 </select>
               </div>
               <div className="configUploadReportes">
                   <label className="textoConfig">Copiar Link Reporte Ms Power BI Monitorizacón TR:</label>
-                  <input type="text" className="inputConfig" onKeyDown={onEnterPress}/>
+                  <input type="text" className="inputConfig" onChange={(e => setLinkReporte(e.target.value))}/>
                   <button type="submit" className="botonUsuariosConfig" onClick={enviarDatos}>Enviar</button>
               </div>
             </div>
@@ -122,7 +124,7 @@ const UploadingReportesProd = () => {
               </div>
               <div className="configUploadReportes">
                   <label className="textoConfig">Copiar Link Publicado Reporte Ms Power BI Análisis:</label>
-                  <input type="text" className="inputConfig" onKeyDown={onEnterPress}/>
+                  <input type="text" className="inputConfig"/>
                   <button type="submit" className="botonUsuariosConfig" onClick={enviarDatos}>Enviar</button>
               </div>
             </div>

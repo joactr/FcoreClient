@@ -57,7 +57,7 @@ function Login({setAuth: setAuth, setNivel: setNivel}){
       <input name="username" type="text" className="inputLogin" onChange={onChange}/>
       <label className="textoLogin">Contraseña:</label>
       <input name="password" type="password" className="inputLogin" onChange={onChange}/>
-      <button className="buttonLogin" type="button" onClick={enviarDatos}>Entrar</button>
+      <button className="buttonLogin" type="submit" onClick={enviarDatos}>Entrar</button>
     </form>
 
     <img src={background} className="backgroundLogin" alt="backgroundLogin"/>

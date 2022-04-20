@@ -3,7 +3,7 @@ import SideNav from '../../sideNav/SideNav';
 import NavBarProd from '../NavBarProd';
 import './visualizar.css'
 
-export default function Visualizar() {
+export default function Tendencia() {
   const[lineaState, setLineaState]=useState('8');
   const[subprocesoState, setSubprocesoState]=useState('cuadradillo');
   const[reporteVisible,setReporteVisible]=useState(true);
@@ -11,11 +11,8 @@ export default function Visualizar() {
   const[linkActual,setLinkActual]=useState('');
 
   const src = {
-    cuadradillo: "https://app.powerbi.com/view?r=eyJrIjoiOTk4ODBmMmQtYmFjYy00MzIwLWEzNWMtZjQ4NzJmNTljZDlmIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
-    testeros: "https://app.powerbi.com/view?r=eyJrIjoiYmQxYmVmYjEtYTE2OC00NGZiLTk3MTEtMjE1ZmE3MmVhYWNmIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
-    laterales: "https://app.powerbi.com/view?r=eyJrIjoiZWRhOWExM2UtMjY1OS00YmVmLWJlMDQtYzc0OGNmMTkxNWEzIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
-    fondo: "https://app.powerbi.com/view?r=eyJrIjoiYzlmZDI5NTMtZTNhZS00MmZhLWIwNzUtYmY3MjkyODY3MDFjIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
-    envase: "https://app.powerbi.com/view?r=eyJrIjoiY2YzODY5MTktNjllOS00ZWUyLWE4ZWMtOTc5MmY1NjRjOGRmIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9"
+    cuadradillo: "https://app.powerbi.com/view?r=eyJrIjoiMDQ3OTgyMjctMzA0NC00NmM4LTg5YTItOTgwNWQxM2EyMjJjIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
+    testeros: "https://app.powerbi.com/view?r=eyJrIjoiYWYzNmM2MzUtNzg1OS00MGQ0LTlmOWYtMzY3YjNhYTJlZjU5IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9"
   }
 
   useEffect(() => {
@@ -37,7 +34,7 @@ export default function Visualizar() {
 
   useEffect(() => {
       //if(reportes !== null){
-          if(lineaState!=='8' || (subprocesoState==='piloto' || subprocesoState==='total')){setReporteVisible(false);}  //De momento solo está la linea8 y lateral
+          if(lineaState!=='8' || (subprocesoState!=='cuadradillo' && subprocesoState!=='testeros')){setReporteVisible(false);}  //De momento solo está la linea8 y lateral
           else{
             if(reporteVisible){
               setLinkActual(src[subprocesoState]);
