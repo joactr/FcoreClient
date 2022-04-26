@@ -72,10 +72,10 @@ const UploadingReportesProd = () => {
                 <label className="textoConfig">Proceso donde se inserta el reporte Monitorización TR:</label>
                 <select className="selectConfigLarge" onChange={(e => setProcesoState(e.target.value))}>
                   <option value="cuadradillo">Cuadradillo</option>
-                  <option value="testero">Testero</option>
+                  <option value="testeros">Testero</option>
                   <option value="lateral">Lateral</option>
                   <option value="fondo">Fondo</option>
-                  <option value="envasado">Envasado</option>
+                  <option value="envase">Envasado</option>
                   <option value="piloto">Piloto</option>
                   <option value="total">Total</option>
                 </select>

@@ -13,7 +13,7 @@ export default function Visualizar() {
   const src = {
     cuadradillo: "https://app.powerbi.com/view?r=eyJrIjoiOTk4ODBmMmQtYmFjYy00MzIwLWEzNWMtZjQ4NzJmNTljZDlmIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
     testeros: "https://app.powerbi.com/view?r=eyJrIjoiYmQxYmVmYjEtYTE2OC00NGZiLTk3MTEtMjE1ZmE3MmVhYWNmIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
-    laterales: "https://app.powerbi.com/view?r=eyJrIjoiZWRhOWExM2UtMjY1OS00YmVmLWJlMDQtYzc0OGNmMTkxNWEzIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
+    lateral: "https://app.powerbi.com/view?r=eyJrIjoiODJiYjBhNTgtZDY0YS00NDk0LTg3ODctZGU1OWIxMTFhOWE0IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
     fondo: "https://app.powerbi.com/view?r=eyJrIjoiYzlmZDI5NTMtZTNhZS00MmZhLWIwNzUtYmY3MjkyODY3MDFjIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
     envase: "https://app.powerbi.com/view?r=eyJrIjoiY2YzODY5MTktNjllOS00ZWUyLWE4ZWMtOTc5MmY1NjRjOGRmIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9"
   }
@@ -36,20 +36,19 @@ export default function Visualizar() {
   },[]);
 
   useEffect(() => {
-      //if(reportes !== null){
-          if(lineaState!=='8' || (subprocesoState==='piloto' || subprocesoState==='total')){setReporteVisible(false);}  //De momento solo está la linea8 y lateral
+      if(reportes !== null){
+          if(reportes[lineaState][subprocesoState] === ''){setReporteVisible(false);}
           else{
             if(reporteVisible){
-              setLinkActual(src[subprocesoState]);
+              setLinkActual(reportes[lineaState][subprocesoState]);
             }
             else{
               setReporteVisible(true);
-              setLinkActual(src[subprocesoState]);
-              //setTimeout(() =>document.getElementById('reporteMonitTR').src=src[subprocesoState],200)
+              setLinkActual(reportes[lineaState][subprocesoState]);
             }
           }
-      //}else{setReporteVisible(false);}
-    },[lineaState, subprocesoState]);
+      }else{setReporteVisible(false);}
+    },[lineaState, subprocesoState,reportes]);
 
 
 
@@ -77,7 +76,7 @@ return (
       <select className="selectLineaMonit" onChange={(e)=>{setSubprocesoState(e.target.value)}}>
         <option selected value="cuadradillo">Cuadradillo</option>
         <option value="testeros">Testeros</option>
-        <option value="laterales">Laterales</option>
+        <option value="lateral">Laterales</option>
         <option value="fondo">Fondo</option>
         <option value="envase">Envase</option>
         <option value="piloto">Piloto</option>
