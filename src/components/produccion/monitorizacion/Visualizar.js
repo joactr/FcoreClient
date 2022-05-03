@@ -79,7 +79,6 @@ return (
         <option value="lateral">Laterales</option>
         <option value="fondo">Fondo</option>
         <option value="envase">Envase</option>
-        <option value="piloto">Piloto</option>
         <option value="total">Total</option>
       </select>
     </div>

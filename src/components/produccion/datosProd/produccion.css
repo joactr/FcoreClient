@@ -57,7 +57,7 @@
   position: fixed;
   right:0;
   width: 86%;
-  margin-top: 80px;
-  height: calc(100% - 120px);
+  margin-top: 60px;
+  height: calc(100% - 100px);
   z-index: 1;
 }

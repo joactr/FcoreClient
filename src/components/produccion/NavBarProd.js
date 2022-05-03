@@ -7,7 +7,7 @@ const NavBarProd = () => {
 
   const rolLimitado = ["Datos Producción", "Monitorizacion TR"]
   const links = [{
-      link:"/produccion/datos/pausas",
+      link:"/produccion/datos/erp",
       texto: "Datos Producción"
     },{
       link:"/produccion/visualizar",

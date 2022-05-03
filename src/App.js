@@ -8,7 +8,6 @@ import Informes from "./components/produccion/analisis/Informes";
 import CausaRaiz from "./components/produccion/analisis/CausaRaiz";
 import MachineLearning from "./components/produccion/analisis/MachineLearning";
 import Produccion from "./components/produccion/datosProd/Produccion";
-import PausasProd from "./components/produccion/datosProd/Pausas"
 import UploadingReportesProd from "./components/produccion/configuracion/UploadingReportesProd";
 import UsuariosConfigProd from "./components/produccion/configuracion/UsuariosConfigProd"
 import NivelesConfigProd from "./components/produccion/configuracion/NivelesConfigProd"
@@ -41,7 +40,6 @@ function App() {
           <PrivateRoute path="/home" component={Home} isAuth={isAuth} nivel={userLevel} requiredLevel='0'/>
 
 
-          <PrivateRoute path="/produccion/datos/pausas" component={PausasProd} isAuth={isAuth} nivel={userLevel} requiredLevel='1'/>
           <PrivateRoute path="/produccion/datos/erp" component={Produccion} isAuth={isAuth} nivel={userLevel} requiredLevel='1'/>
 
           <PrivateRoute path="/produccion/reportar" component={Reportar} isAuth={isAuth} nivel={userLevel} requiredLevel='5'/>
@@ -77,7 +75,7 @@ function App() {
           <Route path="/produccion/automatizar" render={() => (
             <Redirect exact to="/produccion/automatizar/limites" />)}/> {/*REDIRECCION A LIMITES*/}
           <Route path="/produccion" render={() => (
-            <Redirect exact to="/produccion/datos/pausas" replace/>)}/> {/*REDIRECCION A PRODUCIÓN*/}
+            <Redirect exact to="/produccion/datos/erp" replace/>)}/> {/*REDIRECCION A PRODUCIÓN*/}
 
 
           <Route path="/mantenimiento/automatizar" render={() => (

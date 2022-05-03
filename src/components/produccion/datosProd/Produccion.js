@@ -4,7 +4,6 @@ import App from '../../../App'
 import ReactDOM from 'react-dom';
 import './produccion.css'
 import NavBarProd from '../NavBarProd';
-import NavBarProdDatos from './NavBarProdDatos';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 const Produccion = () => {
@@ -34,7 +33,6 @@ const Produccion = () => {
     return (
         <Fragment>
           <NavBarProd/>
-          <NavBarProdDatos/>
           <SideNav/>
           <iframe className="reporteDatosProd" id="templates" title="reportePowerBI" src={src} frameborder="0" allowFullScreen={true}></iframe>
         </Fragment>
