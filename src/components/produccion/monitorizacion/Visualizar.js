@@ -31,7 +31,7 @@ export default function Visualizar() {
         return resp.json();
       })
       .then((data) => {
-        setReportes(JSON.parse(data));
+        setReportes(data);
       })
   },[]);
 
