@@ -76,7 +76,6 @@ const UploadingReportesProd = () => {
                   <option value="lateral">Lateral</option>
                   <option value="fondo">Fondo</option>
                   <option value="envase">Envasado</option>
-                  <option value="piloto">Piloto</option>
                   <option value="total">Total</option>
                 </select>
               </div>
