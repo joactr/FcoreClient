@@ -6,7 +6,7 @@ import './configuracion.css'
 
 const UploadingReportesProd = () => {
 
-  const[lineaState, setLineaState]=useState('8');
+  const[lineaState, setLineaState]=useState('1');
   const[procesoState, setProcesoState]=useState('cuadradillo');
   const[linkReporte, setLinkReporte]=useState('');
 
