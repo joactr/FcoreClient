@@ -75,6 +75,7 @@ return (
       <label>Subproceso:</label>
       <select className="selectLineaMonit" onChange={(e)=>{setSubprocesoState(e.target.value)}}>
         <option selected value="cuadradillo">Cuadradillo</option>
+        <option value="cuadradillo_prototipo">Cuadradillo Prototipo</option>
         <option value="testeros">Testeros</option>
         <option value="lateral">Laterales</option>
         <option value="fondo">Fondo</option>
