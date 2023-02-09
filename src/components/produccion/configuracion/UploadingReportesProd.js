@@ -20,8 +20,6 @@ const UploadingReportesProd = () => {
         e.preventDefault();
         var data = {linea: lineaState, proceso: procesoState,link: linkReporte}
         data = JSON.stringify(data);
-        //https://factorybibackend.herokuapp.com/setReporteBI
-        //http://localhost:8080/setReporteBI
           fetch(global.backend+"/setReporteMonitTR" ,
           {
             headers: {

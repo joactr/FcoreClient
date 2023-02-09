@@ -11,11 +11,12 @@ export default function Tendencia() {
   const[linkActual,setLinkActual]=useState('');
 
   const src = {
-    cuadradillo: "https://app.powerbi.com/view?r=eyJrIjoiMDQ3OTgyMjctMzA0NC00NmM4LTg5YTItOTgwNWQxM2EyMjJjIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
-    testeros: "https://app.powerbi.com/view?r=eyJrIjoiYWYzNmM2MzUtNzg1OS00MGQ0LTlmOWYtMzY3YjNhYTJlZjU5IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
-    laterales: "https://app.powerbi.com/view?r=eyJrIjoiNDZiYjJhYWYtN2M0ZC00NThiLWExYzUtNGVlY2RkNWMxN2E2IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
-    fondo: "https://app.powerbi.com/view?r=eyJrIjoiOWFjYzk0ZTAtYjI2OC00YzZkLWI4OGQtMzQxYTUxYzQxOTY0IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
-    envase: "https://app.powerbi.com/view?r=eyJrIjoiOTFhYTJmMjAtZGIwMy00ZjY1LTg5M2EtNTRjNmJiNDViZDJlIiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9"
+    cuadradillo: "https://app.powerbi.com/view?r=eyJrIjoiNzQyNTNmMTctYzkwYi00Mjg4LWExOWMtZmM0ZTI2Mzg1MmM1IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
+    testeros: "https://app.powerbi.com/view?r=eyJrIjoiNzQyNTNmMTctYzkwYi00Mjg4LWExOWMtZmM0ZTI2Mzg1MmM1IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
+    laterales: "https://app.powerbi.com/view?r=eyJrIjoiNzQyNTNmMTctYzkwYi00Mjg4LWExOWMtZmM0ZTI2Mzg1MmM1IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
+    fondo: "https://app.powerbi.com/view?r=eyJrIjoiNzQyNTNmMTctYzkwYi00Mjg4LWExOWMtZmM0ZTI2Mzg1MmM1IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
+    envase: "https://app.powerbi.com/view?r=eyJrIjoiNzQyNTNmMTctYzkwYi00Mjg4LWExOWMtZmM0ZTI2Mzg1MmM1IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9",
+    total: "https://app.powerbi.com/view?r=eyJrIjoiNzQyNTNmMTctYzkwYi00Mjg4LWExOWMtZmM0ZTI2Mzg1MmM1IiwidCI6IjlhMjNlNzRiLWVhMDktNDdjZi1hNmViLTQ2ZGZhY2Q2MzJmNSIsImMiOjl9"
   }
 
   useEffect(() => {
@@ -37,7 +38,7 @@ export default function Tendencia() {
 
   useEffect(() => {
       //if(reportes !== null){
-          if(lineaState!=='8' || subprocesoState=='total'){setReporteVisible(false);}  //De momento solo está la linea8 y lateral
+          if(lineaState!=='8'){setReporteVisible(false);}  //De momento solo está la linea8 y lateral
           else{
             if(reporteVisible){
               setLinkActual(src[subprocesoState]);
